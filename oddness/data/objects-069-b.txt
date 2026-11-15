@@ -1,0 +1,251 @@
+# 069
+
+@ Bank branch
++ Cashier's counter; Security screen; Cash drawer; Banknotes; Coins; Coin bags; Note counter; Coin counter; Cash machine; Card reader
++ Bank card; Chequebook; Paying-in slip; Statement; Passbook; Account form; Pen on a chain; Queue barrier; Ticket machine; Leaflet rack
++ Vault; Safe deposit boxes; Safe; Security camera; Alarm button; Computer monitor; Keyboard; Printer; Desk; Swivel chair
++ Interview room; Name badge; Uniform; Rubber stamp; Ink pad; Calculator; Currency board; Foreign currency; Money bag; Counterfeit detector pen
++ Deposit machine; Night safe; Signature pad; Identity document; Interest rate poster; Clock; Waiting chairs; Banker's lamp; Filing cabinet; Tablet
+- Rolling pin; Stethoscope; Spanner; Hair rollers; Test tube; Hard hat; Fishing net; Anvil; Welding mask; Dental drill
+- Gavel; Tractor; Chainsaw; Cement mixer; Pottery wheel; Bread oven; Saddle; Syringe; Beehive; Milking machine
+- Scalpel; Mixing desk; Drum kit; Trawl net; Car jack
+
+@ Hotel reception
++ Reception desk; Desk bell; Key cards; Key rack; Guest register; Computer monitor; Card reader; Telephone; Luggage trolley; Suitcase
++ Concierge desk; City map; Leaflet rack; Lobby sofa; Coffee table; Flower arrangement; Chandelier; Revolving door; Doormat; Umbrella stand
++ Uniform; Name badge; Room list; Booking system; Invoice; Printer; Safe; Lost property box; Newspaper; Welcome sign
++ Lift; Staircase; Wall clocks; Wi-Fi card; Breakfast menu; Tourist guidebook; Taxi card; Luggage tag; Cloakroom ticket; Pen
++ Hand sanitiser; Mints bowl; Water dispenser; Porter's cap; Room-service tray; Notice board; Rug; Table lamp; Mirror; Do-not-disturb sign
+- Rolling pin; Stethoscope; Spanner; Test tube; Hard hat; Fishing net; Anvil; Welding mask; Dental drill; Gavel
+- Tractor; Chainsaw; Cement mixer; Pottery wheel; Bread oven; Saddle; Syringe; Beehive; Milking machine; Scalpel
+- Mixing desk; Drum kit; Trawl net; Car jack; Burette
+
+@ Lifeguard station
++ Lifeguard chair; Rescue tube; Rescue board; Life ring; Throw line; Whistle; Binoculars; Megaphone; Red and yellow flags; Red flag
++ First aid kit; Defibrillator; Oxygen cylinder; Spinal board; Stretcher; Blanket; Radio; Lifeguard uniform; Sunglasses; Sun hat
++ Sun cream; Water bottle; Rescue fins; Wetsuit; Rescue watercraft; Quad bike; Patrol vehicle; Tide table; Weather board; Warning sign
++ Logbook; Pen; Lost child wristbands; Loudspeaker; Sting treatment; Bandage; Plasters; Rescue mask; Latex gloves; Towel
++ Lookout tower; Parasol; Stopwatch; Buoy line; Swim zone markers; Telephone; Torch; Rescue sled; Clock; Life jacket
+- Rolling pin; Spanner; Hair rollers; Test tube; Hard hat; Anvil; Welding mask; Dental drill; Gavel; Tractor
+- Chainsaw; Cement mixer; Pottery wheel; Bread oven; Saddle; Beehive; Milking machine; Mixing desk; Drum kit; Car jack
+- Library card; Sewing machine; Judge's wig; Blueprint; Clapperboard
+
+@ Zoo keeper's yard
++ Wheelbarrow; Shovel; Broom; Rake; Hosepipe; Bucket; Feed bucket; Feed store; Fruit crate; Hay bale
++ Straw bedding; Meat fridge; Chopping board; Weighing scales; Feeding tongs; Enrichment toy; Puzzle feeder; Browse branches; Water trough; Salt lick
++ Keys; Padlock; Radio; Keeper's uniform; Wellington boots; Work gloves; Animal crate; Net; Catch pole; Target stick
++ Clicker; Whistle; Daily record sheet; Diet sheet; Whiteboard; First aid kit; Disinfectant; Footbath; Pressure washer; Heat lamp
++ Thermometer; Incubator; Nest box; Perch; Climbing rope; Scratching post; Mud wallow; Enclosure gate; Safety sign; Animal medicine
+- Rolling pin; Hair rollers; Test tube; Anvil; Welding mask; Dental drill; Gavel; Cement mixer; Pottery wheel; Bread oven
+- Mixing desk; Drum kit; Car jack; Library card; Sewing machine; Judge's wig; Blueprint; Clapperboard; Piping bag; Autocue
+- Trawl net; Prescription; Burette; Witness box; Salon chair
+
+@ Radio station
++ Microphone; Pop shield; Headphones; Mixing desk; Faders; On-air light; Studio clock; Computer monitor; Playout software; Jingle buttons
++ Script; Running order; News bulletin; Weather report; Traffic report; Telephone; Phone-in screen; Guest chair; Guest microphone; Acoustic panels
++ Soundproof window; Producer's desk; Talkback; Record deck; CD player; Music library; Vinyl records; Transmitter; Aerial mast; Satellite dish
++ Voice recorder; Laptop; Tablet; Coffee mug; Water glass; Swivel chair; Cough button; Monitor speakers; Cable; Headphone amplifier
++ Schedule board; Competition prize; Listener texts screen; Station logo sign; Outside broadcast van; Portable mixer; Windshield; Microphone stand; Logbook; Notepad
+- Rolling pin; Stethoscope; Spanner; Hair rollers; Test tube; Hard hat; Fishing net; Anvil; Welding mask; Dental drill
+- Gavel; Tractor; Chainsaw; Cement mixer; Pottery wheel; Bread oven; Saddle; Syringe; Beehive; Milking machine
+- Scalpel; Trawl net; Car jack; Sewing machine; Piping bag
+
+@ Carpenter's workshop
++ Workbench; Vice; Hand saw; Tenon saw; Coping saw; Plane; Chisel; Mallet; Hammer; Nails
++ Screws; Screwdriver; Drill; Drill bits; Tape measure; Try square; Spirit level; Pencil; Marking gauge; Clamps
++ Wood glue; Sandpaper; Sanding block; Wood file; Rasp; Timber planks; Plywood sheet; Sawhorse; Circular saw; Jigsaw
++ Router; Lathe; Band saw; Dust mask; Safety glasses; Ear defenders; Apron; Sawdust; Wood shavings; Broom
++ Varnish; Wood stain; Paintbrush; Wax polish; Dowels; Hinges; Wood offcuts; Tool rack; Dust extractor; Bradawl
+- Rolling pin; Stethoscope; Hair rollers; Test tube; Fishing net; Dental drill; Gavel; Tractor; Pottery wheel; Bread oven
+- Saddle; Syringe; Milking machine; Scalpel; Mixing desk; Drum kit; Trawl net; Library card; Judge's wig; Prescription
+- Clapperboard; Piping bag; Autocue; Burette; Witness box
+
+@ Blacksmith's forge
++ Anvil; Forge; Bellows; Hammer; Tongs; Quenching trough; Coal; Coke; Poker; Clinker
++ Leather apron; Gloves; Safety glasses; Iron bar; Steel rod; Horseshoe; Horseshoe nails; Swage block; Hardy tool; Chisel
++ Punch; Vice; Wire brush; File; Rasp; Grinding wheel; Sledgehammer; Fuller; Flatter; Leg vice
++ Chimney hood; Water bucket; Shovel; Fire rake; Wrought-iron gate; Hook; Chain; Nails; Fire basket; Candlestick
++ Workbench; Tool rack; Scrollwork; Rivets; Bolt cutters; Oil can; Beeswax; Ear defenders; Sparks; Measuring calipers
+- Rolling pin; Stethoscope; Hair rollers; Test tube; Fishing net; Dental drill; Gavel; Tractor; Pottery wheel; Bread oven
+- Syringe; Milking machine; Scalpel; Mixing desk; Drum kit; Trawl net; Library card; Judge's wig; Prescription; Clapperboard
+- Piping bag; Autocue; Burette; Sewing machine; Telescope
+
+@ Pottery studio
++ Pottery wheel; Kiln; Clay; Slip; Glaze; Glaze bucket; Wire cutter; Sponge; Wooden rib; Metal kidney
++ Needle tool; Loop tool; Turning tool; Wooden modelling tool; Rolling pin; Rolling guides; Canvas cloth; Bat; Banding wheel; Calipers
++ Apron; Towel; Water bowl; Bucket; Wedging bench; Plaster slab; Drying rack; Kiln shelf; Kiln props; Pyrometric cones
++ Kiln gloves; Glaze tongs; Brushes; Underglaze; Oxide jar; Sieve; Mould; Slab roller; Extruder; Pug mill
++ Bisque ware; Mug; Bowl; Vase; Plate; Teapot; Tile; Stamp; Dust mask; Display shelf
+- Stethoscope; Spanner; Hair rollers; Test tube; Hard hat; Fishing net; Anvil; Welding mask; Dental drill; Gavel
+- Tractor; Chainsaw; Cement mixer; Saddle; Syringe; Beehive; Milking machine; Scalpel; Mixing desk; Drum kit
+- Trawl net; Car jack; Library card; Judge's wig; Clapperboard
+
+@ Jeweller's bench
++ Bench peg; Piercing saw; Saw blades; Needle files; Pliers; Round-nose pliers; Flat-nose pliers; Wire cutters; Tweezers; Loupe
++ Ring mandrel; Ring sizer; Rawhide mallet; Jeweller's hammer; Soldering torch; Solder; Flux; Soldering block; Pickle pot; Polishing motor
++ Polishing cloth; Pendant drill; Burrs; Gold wire; Silver sheet; Gemstones; Diamond; Pearls; Ring; Necklace chain
++ Earrings; Brooch; Bracelet; Clasp; Jump rings; Setting tool; Burnisher; Calipers; Scales; Hallmark stamp
++ Ring box; Display tray; Safe; Magnifying lamp; Apron; Leather catch tray; Engraving tool; Ultrasonic cleaner; Bench brush; Wax carving block
+- Rolling pin; Stethoscope; Hair rollers; Test tube; Hard hat; Fishing net; Gavel; Tractor; Chainsaw; Cement mixer
+- Pottery wheel; Bread oven; Saddle; Syringe; Beehive; Milking machine; Mixing desk; Drum kit; Trawl net; Car jack
+- Library card; Judge's wig; Clapperboard; Piping bag; Plough
+
+@ Print shop
++ Printing press; Digital printer; Large-format printer; Photocopier; Guillotine; Paper trimmer; Laminator; Binding machine; Stapler; Folding machine
++ Paper reams; Card stock; Ink cartridges; Toner; Ink tins; Rollers; Printing plates; Proof sheet; Colour swatch book; Loupe
++ Computer monitor; Keyboard; Design software; USB stick; Order form; Job ticket; Cutting mat; Craft knife; Steel ruler; Bone folder
++ Business cards; Flyers; Posters; Leaflets; Banners; Stickers; Envelopes; Booklets; Packing boxes; Parcel tape
++ Drying rack; Paper trolley; Pallet; Cleaning rags; Gloves; Apron; Till; Counter; Sample book; Vinyl cutter
+- Rolling pin; Stethoscope; Hair rollers; Test tube; Hard hat; Fishing net; Anvil; Welding mask; Dental drill; Gavel
+- Tractor; Chainsaw; Cement mixer; Pottery wheel; Bread oven; Saddle; Syringe; Beehive; Milking machine; Scalpel
+- Mixing desk; Drum kit; Trawl net; Car jack; Judge's wig
+
+@ Software office
++ Laptop; Computer monitor; Second monitor; Keyboard; Mouse; Mouse mat; Docking station; Headset; Webcam; Standing desk
++ Swivel chair; Whiteboard; Marker pens; Sticky notes; Task board; Code editor; Version control; Bug tracker; Test phone; Tablet
++ Server rack; Router; Network cable; Charger; Power strip; USB stick; Hard drive; Notebook; Pen; Coffee machine
++ Coffee mug; Water bottle; Snack bowl; Beanbag; Meeting room screen; Video call camera; Conference speaker; Wall calendar; Roadmap chart; Lanyard
++ Security pass; Backpack; Desk plant; Desk lamp; Stress ball; Rubber duck; Reference book; Sprint chart; Printer; Recycling bin
+- Rolling pin; Stethoscope; Spanner; Hair rollers; Test tube; Hard hat; Fishing net; Anvil; Welding mask; Dental drill
+- Gavel; Tractor; Chainsaw; Cement mixer; Pottery wheel; Bread oven; Saddle; Syringe; Beehive; Milking machine
+- Scalpel; Drum kit; Trawl net; Car jack; Sewing machine
+
+@ Weather station
++ Thermometer; Barometer; Hygrometer; Anemometer; Wind vane; Rain gauge; Stevenson screen; Sunshine recorder; Snow gauge; Soil thermometer
++ Weather balloon; Radiosonde; Helium cylinder; Data logger; Solar panel; Battery; Mast; Guy wires; Lightning detector; Weather radar
++ Satellite dish; Computer monitor; Keyboard; Weather map; Pressure chart; Satellite image; Forecast sheet; Logbook; Pen; Clock
++ Radio; Telephone; Binoculars; Cloud chart; Visibility markers; Evaporation pan; Ceilometer; Pyranometer; Barograph; Thermograph
++ Measuring cylinder; Fence; Grass plot; Ladder; Torch; Waterproof jacket; Wellington boots; Notebook; Antenna; Windsock
+- Rolling pin; Stethoscope; Spanner; Hair rollers; Test tube; Fishing net; Anvil; Welding mask; Dental drill; Gavel
+- Tractor; Chainsaw; Cement mixer; Pottery wheel; Bread oven; Saddle; Syringe; Beehive; Milking machine; Scalpel
+- Mixing desk; Drum kit; Trawl net; Car jack; Sewing machine
+
+@ Lighthouse
++ Lamp; Fresnel lens; Lantern room; Gallery rail; Spiral staircase; Foghorn; Rotation motor; Clockwork mechanism; Lamp oil; Wick
++ Bulb changer; Generator; Battery bank; Solar panel; Radio; Radar beacon; Binoculars; Telescope; Logbook; Pen
++ Sea chart; Tide table; Barometer; Thermometer; Weathervane; Signal flags; Flagpole; Life ring; Rope; Oilskins
++ Sea boots; Keeper's cap; Bunk; Stove; Kettle; Oil lamp; Paint tin; Paintbrush; Brass polish; Polishing cloth
++ Window shutters; Lightning conductor; Boat landing; Rowing boat; Winch; Storm lantern; Clock; Curved cupboard; Water tank; Seagulls
+- Stethoscope; Hair rollers; Test tube; Hard hat; Anvil; Welding mask; Dental drill; Gavel; Tractor; Chainsaw
+- Cement mixer; Pottery wheel; Bread oven; Saddle; Syringe; Beehive; Milking machine; Scalpel; Mixing desk; Drum kit
+- Car jack; Sewing machine; Library card; Clapperboard; Judge's wig
+
+@ Observatory
++ Telescope; Dome; Dome shutter; Telescope mount; Eyepiece; Finder scope; Mirror; Lens cap; CCD camera; Spectrograph
++ Computer monitor; Keyboard; Star chart; Planisphere; Red torch; Observing log; Pen; Clock; Sidereal clock; Control desk
++ Ladder; Observing chair; Filter wheel; Dew shield; Counterweight; Drive motor; Cable; Weather station mast; Cloud sensor; All-sky camera
++ Warm jacket; Gloves; Woolly hat; Flask; Laptop; Hard drive; Astronomy atlas; Moon map; Planet poster; Meteorite sample
++ Binoculars; Tripod; Radio dish; Laser pointer; Visitor gallery; Model solar system; Globe; Almanac; Calculator; Step stool
+- Rolling pin; Stethoscope; Hair rollers; Test tube; Fishing net; Anvil; Welding mask; Dental drill; Gavel; Tractor
+- Chainsaw; Cement mixer; Pottery wheel; Bread oven; Saddle; Syringe; Beehive; Milking machine; Scalpel; Mixing desk
+- Drum kit; Trawl net; Car jack; Sewing machine; Microscope
+
+@ Archaeological dig
++ Trowel; Hand shovel; Mattock; Spade; Bucket; Wheelbarrow; Sieve; Brush; Dental pick; Kneeling mat
++ Finds tray; Finds bag; Finds label; Permanent marker; Context sheet; Clipboard; Pencil; Planning frame; Drawing board; Graph paper
++ Tape measure; Ranging pole; Photo scale; Camera; North arrow; String line; Pegs; Line level; Total station; Tripod
++ Site hut; Tarpaulin; Sun hat; Work gloves; Safety boots; High-visibility jacket; Water bottle; Sun cream; Spoil heap; Trench edge
++ Pottery sherd; Flint tool; Coin; Animal bone; Metal detector; GPS unit; Site plan; Notebook; Wet sieve; Sample tub
+- Rolling pin; Stethoscope; Hair rollers; Test tube; Fishing net; Anvil; Welding mask; Gavel; Tractor; Chainsaw
+- Pottery wheel; Bread oven; Saddle; Syringe; Beehive; Milking machine; Mixing desk; Drum kit; Trawl net; Car jack
+- Sewing machine; Library card; Clapperboard; Judge's wig; Piping bag
+
+@ Courier depot
++ Parcels; Conveyor belt; Barcode scanner; Handheld terminal; Label printer; Address label; Parcel tape; Tape gun; Cardboard box; Bubble wrap
++ Roll cage; Pallet; Pallet truck; Forklift; Sack truck; Loading bay; Delivery van; Van keys; Route sheet; Sat nav
++ High-visibility jacket; Safety boots; Work gloves; Uniform; Lanyard; Weighing scales; Measuring frame; Sorting chute; Shelving; Tote box
++ Fragile sticker; Signature pad; Delivery card; Returns bin; Shrink wrap; Strapping machine; Time clock; Shift rota; Notice board; Safety sign
++ Fire extinguisher; First aid kit; Computer monitor; Dispatch desk; Radio; Dock leveller; Warning beacon; Trolley; Parcel locker; Clipboard
+- Rolling pin; Stethoscope; Hair rollers; Test tube; Fishing net; Anvil; Welding mask; Dental drill; Gavel; Tractor
+- Chainsaw; Cement mixer; Pottery wheel; Bread oven; Saddle; Syringe; Beehive; Milking machine; Scalpel; Mixing desk
+- Drum kit; Trawl net; Judge's wig; Telescope; Piping bag
+
+@ Recycling centre
++ Glass bank; Paper bank; Can bank; Textile bank; Plastic bottles; Cardboard bales; Aluminium cans; Glass bottles; Newspapers; Garden waste
++ Skip; Wheelie bin; Compactor; Baler; Conveyor belt; Sorting line; Magnet separator; Shredder; Forklift; Loading shovel
++ Weighbridge; High-visibility jacket; Hard hat; Safety boots; Work gloves; Safety glasses; Ear defenders; Dust mask; Litter picker; Broom
++ Old fridge; Old television; Batteries box; Scrap metal; Wood pile; Rubble; Tyres; Paint tins; Engine oil tank; Light bulbs box
++ Signage; Traffic cone; Barrier; Site office; Radio; Clipboard; Compost heap; Reuse shop; Bicycle; Mattress
+- Witness box; Judge's wig; Beehive; Milking machine; Trawl net; Fresnel lens; Dental chair; Radar screen; Vault; Kiln
+- Operating lamp; Autocue; Mixing desk; Burette; Petri dish; Stenograph machine; Phoropter; Camera dolly; Pop shield; Sheepdog
+- Hydraulic lift; Bread oven; Tower crane; Lifeguard chair; Weather balloon
+
+@ Wind farm
++ Wind turbine; Turbine blade; Nacelle; Tower; Hub; Gearbox; Generator; Anemometer; Wind vane; Aviation warning light
++ Access ladder; Service lift; Safety harness; Lanyard; Hard hat; High-visibility jacket; Safety boots; Work gloves; Climbing helmet; Fall arrester
++ Torque wrench; Spanner; Grease gun; Multimeter; Laptop; Control cabinet; Transformer; Substation; Underground cable; Switchgear
++ Service van; Crane; Access track; Met mast; Lightning conductor; Inspection drone; Binoculars; Radio; First aid kit; Fire extinguisher
++ Rescue kit; Tool bag; Oil filter; Brake pads; Yaw motor; Pitch motor; Sensor; Control room screen; Site map; Warning sign
+- Rolling pin; Stethoscope; Hair rollers; Test tube; Fishing net; Anvil; Dental drill; Gavel; Pottery wheel; Bread oven
+- Saddle; Syringe; Beehive; Milking machine; Scalpel; Mixing desk; Drum kit; Trawl net; Library card; Judge's wig
+- Clapperboard; Piping bag; Sewing machine; Salon chair; Windmill sails
+
+@ Offshore oil platform
++ Drilling derrick; Drill pipe; Drill bit; Drill floor; Mud pump; Blowout preventer; Wellhead; Flare stack; Helideck; Helicopter
++ Crane; Supply boat; Lifeboat; Life raft; Life jacket; Survival suit; Hard hat; Safety glasses; Safety boots; Work gloves
++ Coveralls; Ear defenders; Gas detector; Fire hose; Fire extinguisher; Muster point sign; Alarm; Control room screen; Radio; Pipeline
++ Valve; Pressure gauge; Separator vessel; Storage tank; Generator; Accommodation block; Bunk; Galley; Gym; Recreation room
++ Pipe wrench; Spanner; Chain tongs; Winch; Wire rope; Shackle; Grating walkway; Handrail; Weather station mast; Navigation lights
+- Hair rollers; Fishing net; Anvil; Dental drill; Gavel; Tractor; Pottery wheel; Saddle; Beehive; Milking machine
+- Mixing desk; Drum kit; Trawl net; Library card; Judge's wig; Clapperboard; Piping bag; Sewing machine; Salon chair; Plough
+- Hay bale; Witness box; Autocue; Combine harvester; Turbine blade
+
+@ Mine
++ Miner's helmet; Cap lamp; Battery pack; Self-rescuer; Safety boots; Work gloves; Overalls; Ear defenders; Dust mask; Pickaxe
++ Shovel; Pneumatic drill; Drill rig; Roof bolts; Pit props; Steel arches; Conveyor belt; Mine cart; Rail track; Winding gear
++ Cage lift; Headframe; Ventilation fan; Air duct; Gas detector; Safety lamp; Water pump; Coal face; Ore; Rock samples
++ Shearer machine; Loader; Dump truck; Refuge chamber; First aid kit; Stretcher; Telephone; Radio; Tally board; Lamp room
++ Map of workings; Survey instrument; Warning sign; Fire extinguisher; Water bottle; Lunch tin; Stone dust; Cable; Winch; Blasting siren
+- Rolling pin; Stethoscope; Hair rollers; Test tube; Fishing net; Dental drill; Gavel; Tractor; Pottery wheel; Bread oven
+- Saddle; Syringe; Beehive; Milking machine; Scalpel; Mixing desk; Drum kit; Trawl net; Library card; Judge's wig
+- Clapperboard; Piping bag; Sewing machine; Salon chair; Telescope
+
+@ Shipyard
++ Dry dock; Slipway; Hull; Keel; Propeller; Rudder; Steel plates; Welding torch; Welding mask; Angle grinder
++ Rivets; Gantry crane; Tower crane; Scaffolding; Ladder; Blueprint; Hard hat; High-visibility jacket; Safety boots; Work gloves
++ Ear defenders; Safety glasses; Paint spray gun; Anti-fouling paint; Paint roller; Shot blaster; Plate cutter; Plate roller; Forklift; Chain hoist
++ Wire rope; Shackle; Anchor; Anchor chain; Bollard; Mooring rope; Tugboat; Engine; Pipework; Cable drum
++ Porthole; Deck plates; Bulkhead; Launch bottle; Tape measure; Spirit level; Sledgehammer; Spanner; Oxygen cylinder; Fire extinguisher
+- Rolling pin; Stethoscope; Hair rollers; Test tube; Fishing net; Dental drill; Gavel; Tractor; Pottery wheel; Bread oven
+- Saddle; Syringe; Beehive; Milking machine; Scalpel; Mixing desk; Drum kit; Library card; Judge's wig; Clapperboard
+- Piping bag; Sewing machine; Salon chair; Telescope; Hay bale
+
+@ Railway signal box
++ Lever frame; Signal levers; Block instrument; Signal bell; Track diagram; Train register; Pen; Clock; Telephone; Hand lamp
++ Red flag; Green flag; Yellow flag; Token; Token machine; Lever collar; Duster; Stove; Kettle; Armchair
++ Desk; Window; Steps; Nameboard; Semaphore signal; Colour light signal; Points; Point rods; Signal wires; Level crossing gates
++ Barrier controls; Crossing bell; Track circuit indicator; Computer monitor; Control panel; Radio; Timetable; Rule book; Notice board; Fire bucket
++ Oil can; Polishing cloth; Brass lever plates; Coal scuttle; Coat hook; Tea mug; Binoculars; Horn; First aid kit; Fire extinguisher
+- Rolling pin; Stethoscope; Hair rollers; Test tube; Fishing net; Anvil; Welding mask; Dental drill; Gavel; Tractor
+- Chainsaw; Cement mixer; Pottery wheel; Bread oven; Saddle; Syringe; Beehive; Milking machine; Scalpel; Mixing desk
+- Drum kit; Trawl net; Car jack; Sewing machine; Telescope
+
+@ Ambulance
++ Stretcher; Carry chair; Spinal board; Scoop stretcher; Defibrillator; Heart monitor; Oxygen cylinder; Oxygen mask; Bag valve mask; Suction unit
++ Stethoscope; Blood pressure cuff; Pulse oximeter; Thermometer; Blood glucose meter; Pen torch; Syringe; Cannula; Drip bag; Drip stand
++ Bandage; Dressing; Sling; Splint; Neck collar; Burn gel; Plasters; Medical tape; Tough-cut scissors; Latex gloves
++ Face mask; Apron; Sharps bin; Clinical waste bag; Blanket; Pillow; Vomit bowl; Hand sanitiser; Disinfectant wipes; Medicine pouch
++ Paramedic bag; Radio; Tablet; Patient record form; Sat nav; Blue lights; Siren; High-visibility jacket; Helmet; Fire extinguisher
+- Rolling pin; Hair rollers; Test tube; Fishing net; Anvil; Welding mask; Dental drill; Gavel; Tractor; Chainsaw
+- Cement mixer; Pottery wheel; Bread oven; Saddle; Beehive; Milking machine; Mixing desk; Drum kit; Trawl net; Sewing machine
+- Library card; Judge's wig; Clapperboard; Piping bag; Telescope
+
+@ Dairy
++ Milk tanker; Bulk tank; Pasteuriser; Homogeniser; Separator; Stainless steel pipes; Valve; Pump; Thermometer; Milk churn
++ Milk bottle; Milk carton; Bottle filler; Capping machine; Crate; Conveyor belt; Cheese vat; Curd knife; Cheese mould; Cheese press
++ Cheese cloth; Cheese wheel; Rennet; Starter culture; Brine tank; Maturing shelves; Cheese iron; Butter churn; Butter pats; Butter block
++ Cream; Yoghurt pot; Whey; Cold store; White coat; Hairnet; Wellington boots; Rubber gloves; Apron; Hosepipe
++ Cleaning chemicals; Sample bottle; Lab test kit; pH meter; Weighing scales; Label printer; Pallet; Forklift; Delivery lorry; Floor drain
+- Rolling pin; Stethoscope; Hair rollers; Fishing net; Anvil; Welding mask; Dental drill; Gavel; Chainsaw; Cement mixer
+- Pottery wheel; Saddle; Beehive; Mixing desk; Drum kit; Trawl net; Car jack; Sewing machine; Library card; Judge's wig
+- Clapperboard; Telescope; Salon chair; Blueprint; Witness box
+
+@ Beekeeper's apiary
++ Beehive; Brood box; Super; Frames; Wax foundation; Queen excluder; Crown board; Hive roof; Hive stand; Entrance block
++ Bee suit; Veil; Beekeeping gloves; Wellington boots; Smoker; Smoker fuel; Hive tool; Bee brush; Queen cage; Queen marking pen
++ Honeybees; Queen bee; Drones; Honeycomb; Honey; Beeswax; Pollen; Propolis; Royal jelly; Nectar
++ Honey extractor; Uncapping knife; Uncapping fork; Honey strainer; Settling tank; Honey jar; Jar label; Feeder; Sugar syrup; Fondant
++ Swarm box; Nucleus hive; Mouse guard; Varroa board; Record card; Notebook; Wildflowers; Water dish; Hedge; Observation hive
+- Rolling pin; Stethoscope; Spanner; Hair rollers; Test tube; Hard hat; Fishing net; Anvil; Welding mask; Dental drill
+- Gavel; Tractor; Chainsaw; Cement mixer; Pottery wheel; Bread oven; Saddle; Syringe; Milking machine; Scalpel
+- Mixing desk; Drum kit; Trawl net; Car jack; Wasps' nest
