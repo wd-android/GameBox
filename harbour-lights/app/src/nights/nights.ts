@@ -71,7 +71,7 @@ export const TUTORIAL: NightDef[] = [
   {
     n: 0, chart: 'bay', seed: 1, boats: 1, mix: ['fishing'], interval: 0, fog: 0, currentStrength: 0, maxOnSea: 1,
     title: 'Light the boat',
-    scripted: [{ t: 1.2, kind: 'fishing', x: 5.6, y: 0.05, heading: toward(5.6, 0, 5.6, 6.6) }],
+    scripted: [{ t: 1.2, kind: 'fishing', x: 0.05, y: 4, heading: toward(0, 4, 5.6, 6.6) }],
   },
   {
     n: 0, chart: 'bay', seed: 2, boats: 2, mix: ['fishing'], interval: 0, fog: 0, currentStrength: 0, maxOnSea: 2,

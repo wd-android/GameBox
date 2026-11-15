@@ -1,0 +1,350 @@
+/* Harbour Lights – game-specific styles on the kit (violet glow cards, cyan pills, Readex Pro). */
+:root {
+  --warm: #ffd27a;
+  --sab: env(safe-area-inset-bottom, 0px);
+}
+#bg {
+  background: #06122b;
+}
+#bg::before,
+#bg::after {
+  display: none;
+}
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.center {
+  text-align: center;
+}
+.spacer-flex {
+  flex: 1;
+}
+.coin {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fff3b0, #f2c14e 50%, #a8741c);
+  box-shadow: inset 0 0 0 2px #a8741c;
+  vertical-align: -2px;
+  margin-right: 4px;
+}
+.btn .coin {
+  margin-right: 6px;
+}
+.btn.danger {
+  background: #d8434b;
+}
+.icon-btn svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ── Night HUD ───────────────────────────── */
+.night .topbar {
+  gap: 6px;
+}
+.night-chip {
+  font-weight: 700;
+}
+.boat-icon {
+  display: inline-flex;
+}
+.strikes {
+  display: flex;
+  gap: 5px;
+  padding: 0 4px;
+}
+.strike {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  background: rgba(0, 0, 0, 0.3);
+  transition: background 0.3s, transform 0.3s;
+}
+.strike.on {
+  background: #ff5a4a;
+  border-color: #ffb3a8;
+  transform: scale(1.15);
+  box-shadow: 0 0 10px #ff5a4a;
+}
+.hand-hint.sideways {
+  top: auto;
+  bottom: calc(var(--sab) + 18%);
+  transition: opacity 0.4s;
+}
+.hand-hint.sideways .hand-icon {
+  animation: sideways 1.8s ease-in-out infinite;
+}
+.hand-hint.touch .hand-icon {
+  animation: tapHere 1.4s ease-in-out infinite;
+}
+.hand-hint.gone {
+  opacity: 0;
+}
+@keyframes sideways {
+  0%,
+  100% {
+    transform: translateX(-70px);
+  }
+  50% {
+    transform: translateX(70px);
+  }
+}
+@keyframes tapHere {
+  0%,
+  100% {
+    transform: translate(-40px, -120px) scale(1);
+  }
+  50% {
+    transform: translate(40px, -160px) scale(0.9);
+  }
+}
+.reduce-motion .hand-hint .hand-icon {
+  animation: none;
+}
+
+/* ── Result ──────────────────────────────── */
+.result {
+  gap: 10px;
+}
+.result .title {
+  font-size: 28px;
+}
+.result-table {
+  width: 100%;
+}
+.result-table .row {
+  min-height: 36px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.total {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--warm);
+}
+.total .coin {
+  width: 24px;
+  height: 24px;
+}
+.result-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+}
+.result-actions .btn {
+  flex: 1;
+  min-width: 120px;
+}
+.result-actions .btn.wide {
+  flex-basis: 100%;
+}
+
+/* ── Requests ────────────────────────────── */
+.request-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 18px;
+  background: linear-gradient(160deg, rgba(91, 51, 160, 0.85), rgba(39, 9, 81, 0.85));
+  border: 1px solid rgba(255, 210, 122, 0.35);
+  text-align: left;
+  margin-bottom: 10px;
+}
+.request-card small {
+  color: var(--warm);
+}
+.request-card .bar-track {
+  height: 8px;
+  flex: none;
+  margin: 4px 0 2px;
+}
+.request-card .bar-fill {
+  background: var(--warm);
+}
+.request-card.done {
+  border-color: var(--accent);
+}
+
+/* ── Home ────────────────────────────────── */
+.home-title {
+  text-align: center;
+  font-size: 38px;
+  margin-top: 6px;
+  text-shadow: 0 0 22px rgba(255, 210, 122, 0.7);
+}
+.home-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.home-actions .next {
+  min-height: 60px;
+  font-size: 20px;
+  flex-direction: column;
+  gap: 0;
+  line-height: 1.15;
+}
+.home-actions .next small {
+  font-size: 12px;
+  font-weight: 500;
+  opacity: 0.75;
+}
+.three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.three .btn {
+  padding: 0 8px;
+  min-height: 56px;
+}
+.collect {
+  align-self: center;
+  position: relative;
+  min-height: 48px;
+  min-width: 260px;
+  padding: 0 18px;
+  border-radius: 127px;
+  background: rgba(27, 4, 59, 0.75);
+  border: 1.5px solid rgba(255, 210, 122, 0.55);
+  overflow: hidden;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+.collect.full {
+  box-shadow: 0 0 18px rgba(255, 210, 122, 0.7);
+}
+.store-track {
+  position: absolute;
+  inset: 0;
+}
+.store-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(255, 210, 122, 0.22);
+  transition: width 0.5s;
+}
+.collect-text {
+  position: relative;
+}
+
+/* ── Sheets ──────────────────────────────── */
+.sheet-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sheet-head h2 {
+  font-size: 22px;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.shop-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+}
+.shop-card.locked {
+  opacity: 0.55;
+}
+.shop-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.shop-info .also {
+  color: var(--warm);
+  font-size: 12px;
+}
+.buy {
+  min-width: 112px;
+  padding: 0 14px;
+  min-height: 52px;
+}
+.dots {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+}
+.dots span {
+  width: 14px;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.dots span.on {
+  background: var(--warm);
+}
+.settings {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.setting-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 6px 4px;
+}
+.setting-block .segmented button {
+  flex: 1;
+  min-height: 44px;
+}
+.range {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.range input {
+  width: 130px;
+  accent-color: #06ffff;
+}
+.night-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+.night-cell {
+  min-height: 58px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.night-cell.locked {
+  opacity: 0.35;
+}
+.cell-stars {
+  font-size: 11px;
+  color: var(--warm);
+  letter-spacing: 1px;
+}
+.toast {
+  max-width: 86%;
+  text-align: center;
+}
