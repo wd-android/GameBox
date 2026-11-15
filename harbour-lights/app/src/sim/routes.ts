@@ -214,3 +214,8 @@ class MinHeap {
     [this.p[i], this.p[j]] = [this.p[j], this.p[i]];
   }
 }
+
+/** For the chart editor: forget cached grids after a chart is edited. */
+export function clearRouteCache(): void {
+  gridCache.clear();
+}

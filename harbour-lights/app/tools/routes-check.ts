@@ -35,7 +35,7 @@ export function runAlert(chart: 'bay' | 'skerries', kind: BoatKind, x: number, y
   return sim.boats[0]?.outcome ?? 'none';
 }
 
-if (process.argv[1]?.endsWith('routes-check.ts')) {
+if (typeof process !== 'undefined' && process.argv?.[1]?.endsWith('routes-check.ts')) {
   let fails = 0;
   let total = 0;
   for (const chart of ['bay', 'skerries'] as const)
