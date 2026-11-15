@@ -98,4 +98,5 @@ export const TUNING = {
   // ── Look ───────────────────────────────────────────────────
   TRAIL_POINTS: 48,
   CAMERA_ANGLE_DEG: 20,
+  HAPTIC_ROLL_INTERVAL_MS: 70,
 } as const;

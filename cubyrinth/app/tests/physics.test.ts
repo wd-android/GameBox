@@ -138,7 +138,7 @@ describe('ball physics', () => {
       const gc = cellFace(4, g.cellA) === sim.face ? g.cellA : g.cellB;
       const mid = { x: cellCol(4, gc) + 0.5 + [0.6, 0, -0.6, 0][entrySide], y: cellRow(4, gc) + 0.5 + [0, 0.6, 0, -0.6][entrySide] };
       for (let i = 0; i < 400 && sim.state === 'ROLLING'; i++) steerLocal(sim, mid.x - sim.p.x, mid.y - sim.p.y);
-      while (sim.state === 'TURNING') sim.step(0, 0);
+      while ((sim.state as string) === "TURNING") sim.step(0, 0);
       expect(sim.face).toBe(startFace);
       expect(sim.R).toEqual(startR);
     }

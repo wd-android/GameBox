@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <radialGradient id="bg" cx="30%" cy="20%" r="90%"><stop offset="0" stop-color="#5b33a0"/><stop offset=".55" stop-color="#270951"/><stop offset="1" stop-color="#1b043b"/></radialGradient>
+    <linearGradient id="t" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a678ff"/><stop offset="1" stop-color="#5b33a0"/></linearGradient>
+    <linearGradient id="l" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#482585"/><stop offset="1" stop-color="#270951"/></linearGradient>
+    <linearGradient id="r" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5b33a0"/><stop offset="1" stop-color="#1b043b"/></linearGradient>
+    <radialGradient id="ball" cx="35%" cy="30%" r="70%"><stop offset="0" stop-color="#fff3b0"/><stop offset=".6" stop-color="#ffc93c"/><stop offset="1" stop-color="#b8820a"/></radialGradient>
+    <filter id="g" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="30"/></filter>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <ellipse cx="512" cy="560" rx="330" ry="300" fill="#9259fe" opacity=".35" filter="url(#g)"/>
+  <path d="M512 150 850 335 512 520 174 335Z" fill="url(#t)"/>
+  <path d="M174 335 512 520v370L174 705Z" fill="url(#l)"/>
+  <path d="M850 335 512 520v370l338-185Z" fill="url(#r)"/>
+  <g stroke="#f1ecff" stroke-width="26" stroke-linecap="round" fill="none">
+    <path d="M343 243 681 428"/><path d="M258 289l180 99"/><path d="M427 197l130 71"/><path d="M512 243 343 335"/><path d="M640 312 512 382"/><path d="M766 382 681 428"/>
+  </g>
+  <g stroke="#f1ecff" stroke-width="22" stroke-linecap="round" fill="none" opacity=".75">
+    <path d="M174 470l170 93"/><path d="M344 563v150"/><path d="M512 655l170-93v150"/><path d="M682 562l168-92"/>
+  </g>
+  <path d="M760 383l90-48" stroke="#06ffff" stroke-width="30" stroke-linecap="round"/>
+  <circle cx="560" cy="300" r="46" fill="url(#ball)"/>
+</svg>
