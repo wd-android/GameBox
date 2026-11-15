@@ -1,0 +1,1138 @@
+{
+ "chapters": [
+  [
+   {
+    "id": "c1-1",
+    "chapter": 1,
+    "index": 1,
+    "tier": "wooden",
+    "seed": 1953422651,
+    "locks": [
+     {
+      "type": "padlock",
+      "parts": 3,
+      "information": "full",
+      "depth": 0
+     }
+    ]
+   },
+   {
+    "id": "c1-2",
+    "chapter": 1,
+    "index": 2,
+    "tier": "wooden",
+    "seed": 2254330360,
+    "locks": [
+     {
+      "type": "padlock",
+      "parts": 3,
+      "information": "full",
+      "depth": 0
+     }
+    ]
+   },
+   {
+    "id": "c1-3",
+    "chapter": 1,
+    "index": 3,
+    "tier": "wooden",
+    "seed": 3555359390,
+    "locks": [
+     {
+      "type": "padlock",
+      "parts": 3,
+      "information": "full",
+      "depth": 0
+     }
+    ]
+   },
+   {
+    "id": "c1-4",
+    "chapter": 1,
+    "index": 4,
+    "tier": "wooden",
+    "seed": 698423553,
+    "locks": [
+     {
+      "type": "bottles",
+      "parts": 3,
+      "information": "full",
+      "depth": 0
+     }
+    ]
+   },
+   {
+    "id": "c1-5",
+    "chapter": 1,
+    "index": 5,
+    "tier": "wooden",
+    "seed": 849779268,
+    "locks": [
+     {
+      "type": "bottles",
+      "parts": 3,
+      "information": "full",
+      "depth": 0
+     }
+    ]
+   },
+   {
+    "id": "c1-6",
+    "chapter": 1,
+    "index": 6,
+    "tier": "wooden",
+    "seed": 187807735,
+    "locks": [
+     {
+      "type": "bottles",
+      "parts": 3,
+      "information": "full",
+      "depth": 0
+     }
+    ]
+   },
+   {
+    "id": "c1-7",
+    "chapter": 1,
+    "index": 7,
+    "tier": "wooden",
+    "seed": 3322727895,
+    "locks": [
+     {
+      "type": "padlock",
+      "parts": 3,
+      "information": "clued",
+      "depth": 0
+     }
+    ]
+   },
+   {
+    "id": "c1-8",
+    "chapter": 1,
+    "index": 8,
+    "tier": "wooden",
+    "seed": 1111027640,
+    "locks": [
+     {
+      "type": "bottles",
+      "parts": 3,
+      "information": "clued",
+      "depth": 0
+     }
+    ]
+   },
+   {
+    "id": "c1-9",
+    "chapter": 1,
+    "index": 9,
+    "tier": "iron",
+    "seed": 2432696125,
+    "locks": [
+     {
+      "type": "bottles",
+      "parts": 3,
+      "information": "clued",
+      "depth": 0
+     }
+    ]
+   },
+   {
+    "id": "c1-10",
+    "chapter": 1,
+    "index": 10,
+    "tier": "iron",
+    "seed": 1843760758,
+    "locks": [
+     {
+      "type": "bottles",
+      "parts": 3,
+      "information": "clued",
+      "depth": 0
+     }
+    ]
+   },
+   {
+    "id": "c1-11",
+    "chapter": 1,
+    "index": 11,
+    "tier": "iron",
+    "seed": 3607573691,
+    "locks": [
+     {
+      "type": "padlock",
+      "parts": 4,
+      "information": "clued",
+      "depth": 0
+     }
+    ]
+   },
+   {
+    "id": "c1-12",
+    "chapter": 1,
+    "index": 12,
+    "tier": "iron",
+    "seed": 3758864900,
+    "locks": [
+     {
+      "type": "padlock",
+      "parts": 4,
+      "information": "clued",
+      "depth": 0
+     }
+    ]
+   },
+   {
+    "id": "c1-13",
+    "chapter": 1,
+    "index": 13,
+    "tier": "iron",
+    "seed": 3350377285,
+    "locks": [
+     {
+      "type": "padlock",
+      "parts": 3,
+      "information": "feedback",
+      "depth": 0
+     }
+    ]
+   },
+   {
+    "id": "c1-14",
+    "chapter": 1,
+    "index": 14,
+    "tier": "iron",
+    "seed": 1577004892,
+    "locks": [
+     {
+      "type": "bottles",
+      "parts": 3,
+      "information": "feedback",
+      "depth": 0
+     }
+    ]
+   },
+   {
+    "id": "c1-15",
+    "chapter": 1,
+    "index": 15,
+    "tier": "iron",
+    "seed": 2990918782,
+    "locks": [
+     {
+      "type": "padlock",
+      "parts": 3,
+      "information": "feedback",
+      "depth": 0
+     }
+    ]
+   },
+   {
+    "id": "c1-16",
+    "chapter": 1,
+    "index": 16,
+    "tier": "iron",
+    "seed": 3909496129,
+    "locks": [
+     {
+      "type": "bottles",
+      "parts": 3,
+      "information": "feedback",
+      "depth": 0
+     }
+    ]
+   },
+   {
+    "id": "c1-17",
+    "chapter": 1,
+    "index": 17,
+    "tier": "iron",
+    "seed": 3776325171,
+    "locks": [
+     {
+      "type": "padlock",
+      "parts": 4,
+      "information": "feedback",
+      "depth": 0
+     }
+    ]
+   },
+   {
+    "id": "c1-18",
+    "chapter": 1,
+    "index": 18,
+    "tier": "iron",
+    "seed": 3571180825,
+    "locks": [
+     {
+      "type": "padlock",
+      "parts": 4,
+      "information": "feedback",
+      "depth": 0
+     }
+    ]
+   },
+   {
+    "id": "c1-19",
+    "chapter": 1,
+    "index": 19,
+    "tier": "silver",
+    "seed": 234213762,
+    "locks": [
+     {
+      "type": "padlock",
+      "parts": 4,
+      "information": "clued",
+      "depth": 0
+     },
+     {
+      "type": "bottles",
+      "parts": 4,
+      "information": "feedback",
+      "depth": 0
+     }
+    ]
+   },
+   {
+    "id": "c1-20",
+    "chapter": 1,
+    "index": 20,
+    "tier": "silver",
+    "seed": 779228293,
+    "locks": [
+     {
+      "type": "bottles",
+      "parts": 4,
+      "information": "clued",
+      "depth": 0
+     },
+     {
+      "type": "padlock",
+      "parts": 4,
+      "information": "feedback",
+      "depth": 0
+     }
+    ]
+   },
+   {
+    "id": "c1-21",
+    "chapter": 1,
+    "index": 21,
+    "tier": "silver",
+    "seed": 1538121575,
+    "locks": [
+     {
+      "type": "padlock",
+      "parts": 4,
+      "information": "clued",
+      "depth": 0
+     },
+     {
+      "type": "bottles",
+      "parts": 4,
+      "information": "feedback",
+      "depth": 0
+     }
+    ]
+   },
+   {
+    "id": "c1-22",
+    "chapter": 1,
+    "index": 22,
+    "tier": "silver",
+    "seed": 4044534825,
+    "locks": [
+     {
+      "type": "padlock",
+      "parts": 4,
+      "information": "clued",
+      "depth": 0
+     },
+     {
+      "type": "bottles",
+      "parts": 4,
+      "information": "feedback",
+      "depth": 0
+     }
+    ]
+   },
+   {
+    "id": "c1-23",
+    "chapter": 1,
+    "index": 23,
+    "tier": "silver",
+    "seed": 941033545,
+    "locks": [
+     {
+      "type": "padlock",
+      "parts": 4,
+      "information": "clued",
+      "depth": 0
+     },
+     {
+      "type": "bottles",
+      "parts": 4,
+      "information": "feedback",
+      "depth": 0
+     }
+    ]
+   },
+   {
+    "id": "c1-24",
+    "chapter": 1,
+    "index": 24,
+    "tier": "silver",
+    "seed": 2679624101,
+    "locks": [
+     {
+      "type": "padlock",
+      "parts": 4,
+      "information": "clued",
+      "depth": 0
+     },
+     {
+      "type": "bottles",
+      "parts": 4,
+      "information": "feedback",
+      "depth": 0
+     }
+    ]
+   },
+   {
+    "id": "c1-25",
+    "chapter": 1,
+    "index": 25,
+    "tier": "silver",
+    "seed": 3605104670,
+    "locks": [
+     {
+      "type": "padlock",
+      "parts": 4,
+      "information": "clued",
+      "depth": 0
+     },
+     {
+      "type": "bottles",
+      "parts": 4,
+      "information": "feedback",
+      "depth": 0
+     }
+    ]
+   },
+   {
+    "id": "c1-26",
+    "chapter": 1,
+    "index": 26,
+    "tier": "silver",
+    "seed": 3379173454,
+    "locks": [
+     {
+      "type": "padlock",
+      "parts": 5,
+      "information": "feedback",
+      "depth": 0
+     },
+     {
+      "type": "padlock",
+      "parts": 5,
+      "information": "feedback",
+      "depth": 0
+     }
+    ]
+   },
+   {
+    "id": "c1-27",
+    "chapter": 1,
+    "index": 27,
+    "tier": "gold",
+    "seed": 85211779,
+    "locks": [
+     {
+      "type": "padlock",
+      "parts": 4,
+      "information": "clued",
+      "depth": 0
+     },
+     {
+      "type": "padlock",
+      "parts": 4,
+      "information": "clued",
+      "depth": 0
+     }
+    ]
+   },
+   {
+    "id": "c1-28",
+    "chapter": 1,
+    "index": 28,
+    "tier": "gold",
+    "seed": 1984112786,
+    "locks": [
+     {
+      "type": "bottles",
+      "parts": 4,
+      "information": "clued",
+      "depth": 0
+     },
+     {
+      "type": "padlock",
+      "parts": 4,
+      "information": "clued",
+      "depth": 0
+     }
+    ]
+   },
+   {
+    "id": "c1-29",
+    "chapter": 1,
+    "index": 29,
+    "tier": "gold",
+    "seed": 2123502460,
+    "locks": [
+     {
+      "type": "padlock",
+      "parts": 4,
+      "information": "clued",
+      "depth": 0
+     },
+     {
+      "type": "padlock",
+      "parts": 4,
+      "information": "clued",
+      "depth": 0
+     }
+    ]
+   },
+   {
+    "id": "c1-30",
+    "chapter": 1,
+    "index": 30,
+    "tier": "gold",
+    "seed": 3747458776,
+    "locks": [
+     {
+      "type": "padlock",
+      "parts": 5,
+      "information": "feedback",
+      "depth": 0
+     },
+     {
+      "type": "padlock",
+      "parts": 4,
+      "information": "clued",
+      "depth": 0
+     }
+    ]
+   }
+  ],
+  [
+   {
+    "id": "c2-1",
+    "chapter": 2,
+    "index": 1,
+    "tier": "wooden",
+    "seed": 550043013,
+    "locks": [
+     {
+      "type": "rings",
+      "parts": 2,
+      "information": "full",
+      "linkages": 0,
+      "steps": 8
+     }
+    ]
+   },
+   {
+    "id": "c2-2",
+    "chapter": 2,
+    "index": 2,
+    "tier": "wooden",
+    "seed": 806054485,
+    "locks": [
+     {
+      "type": "rings",
+      "parts": 2,
+      "information": "full",
+      "linkages": 0,
+      "steps": 8
+     }
+    ]
+   },
+   {
+    "id": "c2-3",
+    "chapter": 2,
+    "index": 3,
+    "tier": "wooden",
+    "seed": 1359157707,
+    "locks": [
+     {
+      "type": "rings",
+      "parts": 3,
+      "information": "full",
+      "linkages": 0,
+      "steps": 8
+     }
+    ]
+   },
+   {
+    "id": "c2-4",
+    "chapter": 2,
+    "index": 4,
+    "tier": "wooden",
+    "seed": 2801605620,
+    "locks": [
+     {
+      "type": "rings",
+      "parts": 3,
+      "information": "full",
+      "linkages": 0,
+      "steps": 8
+     }
+    ]
+   },
+   {
+    "id": "c2-5",
+    "chapter": 2,
+    "index": 5,
+    "tier": "wooden",
+    "seed": 976026151,
+    "locks": [
+     {
+      "type": "rings",
+      "parts": 3,
+      "information": "clued",
+      "linkages": 1,
+      "steps": 8
+     }
+    ]
+   },
+   {
+    "id": "c2-6",
+    "chapter": 2,
+    "index": 6,
+    "tier": "wooden",
+    "seed": 3334122395,
+    "locks": [
+     {
+      "type": "rings",
+      "parts": 3,
+      "information": "clued",
+      "linkages": 1,
+      "steps": 8
+     }
+    ]
+   },
+   {
+    "id": "c2-7",
+    "chapter": 2,
+    "index": 7,
+    "tier": "wooden",
+    "seed": 3171560213,
+    "locks": [
+     {
+      "type": "rings",
+      "parts": 3,
+      "information": "clued",
+      "linkages": 2,
+      "steps": 8
+     }
+    ]
+   },
+   {
+    "id": "c2-8",
+    "chapter": 2,
+    "index": 8,
+    "tier": "wooden",
+    "seed": 1273361548,
+    "locks": [
+     {
+      "type": "rings",
+      "parts": 3,
+      "information": "clued",
+      "linkages": 2,
+      "steps": 8
+     }
+    ]
+   },
+   {
+    "id": "c2-9",
+    "chapter": 2,
+    "index": 9,
+    "tier": "iron",
+    "seed": 2390706840,
+    "locks": [
+     {
+      "type": "bolts",
+      "parts": 4,
+      "information": "full",
+      "size": 5
+     }
+    ]
+   },
+   {
+    "id": "c2-10",
+    "chapter": 2,
+    "index": 10,
+    "tier": "iron",
+    "seed": 3484883444,
+    "locks": [
+     {
+      "type": "bolts",
+      "parts": 5,
+      "information": "full",
+      "size": 5
+     }
+    ]
+   },
+   {
+    "id": "c2-11",
+    "chapter": 2,
+    "index": 11,
+    "tier": "iron",
+    "seed": 3766286555,
+    "locks": [
+     {
+      "type": "bolts",
+      "parts": 6,
+      "information": "full",
+      "size": 5
+     }
+    ]
+   },
+   {
+    "id": "c2-12",
+    "chapter": 2,
+    "index": 12,
+    "tier": "iron",
+    "seed": 2298470970,
+    "locks": [
+     {
+      "type": "bolts",
+      "parts": 6,
+      "information": "full",
+      "size": 5
+     }
+    ]
+   },
+   {
+    "id": "c2-13",
+    "chapter": 2,
+    "index": 13,
+    "tier": "iron",
+    "seed": 902583931,
+    "locks": [
+     {
+      "type": "padlock",
+      "parts": 4,
+      "information": "feedback",
+      "depth": 1
+     },
+     {
+      "type": "bolts",
+      "parts": 8,
+      "information": "full",
+      "size": 6
+     }
+    ]
+   },
+   {
+    "id": "c2-14",
+    "chapter": 2,
+    "index": 14,
+    "tier": "iron",
+    "seed": 3374445649,
+    "locks": [
+     {
+      "type": "bolts",
+      "parts": 7,
+      "information": "full",
+      "size": 5
+     },
+     {
+      "type": "bottles",
+      "parts": 4,
+      "information": "clued",
+      "depth": 1
+     }
+    ]
+   },
+   {
+    "id": "c2-15",
+    "chapter": 2,
+    "index": 15,
+    "tier": "iron",
+    "seed": 3228784262,
+    "locks": [
+     {
+      "type": "bolts",
+      "parts": 8,
+      "information": "full",
+      "size": 6
+     },
+     {
+      "type": "bottles",
+      "parts": 4,
+      "information": "feedback",
+      "depth": 1
+     }
+    ]
+   },
+   {
+    "id": "c2-16",
+    "chapter": 2,
+    "index": 16,
+    "tier": "iron",
+    "seed": 1652303513,
+    "locks": [
+     {
+      "type": "bolts",
+      "parts": 8,
+      "information": "full",
+      "size": 6
+     },
+     {
+      "type": "rings",
+      "parts": 3,
+      "information": "clued",
+      "linkages": 2,
+      "steps": 8
+     }
+    ]
+   },
+   {
+    "id": "c2-17",
+    "chapter": 2,
+    "index": 17,
+    "tier": "iron",
+    "seed": 2567285085,
+    "locks": [
+     {
+      "type": "rings",
+      "parts": 3,
+      "information": "clued",
+      "linkages": 1,
+      "steps": 8
+     },
+     {
+      "type": "bolts",
+      "parts": 7,
+      "information": "full",
+      "size": 5
+     }
+    ]
+   },
+   {
+    "id": "c2-18",
+    "chapter": 2,
+    "index": 18,
+    "tier": "iron",
+    "seed": 4111736851,
+    "locks": [
+     {
+      "type": "bolts",
+      "parts": 6,
+      "information": "full",
+      "size": 5
+     },
+     {
+      "type": "padlock",
+      "parts": 4,
+      "information": "clued",
+      "depth": 1
+     }
+    ]
+   },
+   {
+    "id": "c2-19",
+    "chapter": 2,
+    "index": 19,
+    "tier": "silver",
+    "seed": 2848368965,
+    "locks": [
+     {
+      "type": "bottles",
+      "parts": 5,
+      "information": "feedback",
+      "depth": 1
+     },
+     {
+      "type": "rings",
+      "parts": 3,
+      "information": "clued",
+      "linkages": 2,
+      "steps": 8
+     }
+    ]
+   },
+   {
+    "id": "c2-20",
+    "chapter": 2,
+    "index": 20,
+    "tier": "silver",
+    "seed": 229349928,
+    "locks": [
+     {
+      "type": "padlock",
+      "parts": 4,
+      "information": "feedback",
+      "depth": 1
+     },
+     {
+      "type": "bolts",
+      "parts": 8,
+      "information": "full",
+      "size": 6
+     }
+    ]
+   },
+   {
+    "id": "c2-21",
+    "chapter": 2,
+    "index": 21,
+    "tier": "silver",
+    "seed": 4061828763,
+    "locks": [
+     {
+      "type": "rings",
+      "parts": 3,
+      "information": "feedback",
+      "linkages": 2,
+      "steps": 8
+     }
+    ]
+   },
+   {
+    "id": "c2-22",
+    "chapter": 2,
+    "index": 22,
+    "tier": "silver",
+    "seed": 1978639742,
+    "locks": [
+     {
+      "type": "bolts",
+      "parts": 6,
+      "information": "full",
+      "size": 5
+     },
+     {
+      "type": "rings",
+      "parts": 3,
+      "information": "clued",
+      "linkages": 1,
+      "steps": 8
+     },
+     {
+      "type": "bottles",
+      "parts": 5,
+      "information": "clued",
+      "depth": 1
+     }
+    ]
+   },
+   {
+    "id": "c2-23",
+    "chapter": 2,
+    "index": 23,
+    "tier": "silver",
+    "seed": 1515143700,
+    "locks": [
+     {
+      "type": "rings",
+      "parts": 3,
+      "information": "clued",
+      "linkages": 2,
+      "steps": 8
+     },
+     {
+      "type": "bolts",
+      "parts": 6,
+      "information": "full",
+      "size": 5
+     }
+    ]
+   },
+   {
+    "id": "c2-24",
+    "chapter": 2,
+    "index": 24,
+    "tier": "silver",
+    "seed": 1210084937,
+    "locks": [
+     {
+      "type": "padlock",
+      "parts": 5,
+      "information": "feedback",
+      "depth": 1
+     },
+     {
+      "type": "rings",
+      "parts": 3,
+      "information": "clued",
+      "linkages": 1,
+      "steps": 8
+     }
+    ]
+   },
+   {
+    "id": "c2-25",
+    "chapter": 2,
+    "index": 25,
+    "tier": "silver",
+    "seed": 1450340140,
+    "locks": [
+     {
+      "type": "rings",
+      "parts": 3,
+      "information": "clued",
+      "linkages": 1,
+      "steps": 8
+     },
+     {
+      "type": "bolts",
+      "parts": 8,
+      "information": "full",
+      "size": 6
+     }
+    ]
+   },
+   {
+    "id": "c2-26",
+    "chapter": 2,
+    "index": 26,
+    "tier": "silver",
+    "seed": 1420560783,
+    "locks": [
+     {
+      "type": "bolts",
+      "parts": 9,
+      "information": "full",
+      "size": 6
+     },
+     {
+      "type": "rings",
+      "parts": 3,
+      "information": "feedback",
+      "linkages": 2,
+      "steps": 8
+     },
+     {
+      "type": "padlock",
+      "parts": 5,
+      "information": "clued",
+      "depth": 1
+     }
+    ]
+   },
+   {
+    "id": "c2-27",
+    "chapter": 2,
+    "index": 27,
+    "tier": "gold",
+    "seed": 854857556,
+    "locks": [
+     {
+      "type": "rings",
+      "parts": 3,
+      "information": "clued",
+      "linkages": 1,
+      "steps": 8
+     },
+     {
+      "type": "bottles",
+      "parts": 6,
+      "information": "clued",
+      "depth": 1
+     },
+     {
+      "type": "bolts",
+      "parts": 9,
+      "information": "full",
+      "size": 6
+     }
+    ]
+   },
+   {
+    "id": "c2-28",
+    "chapter": 2,
+    "index": 28,
+    "tier": "gold",
+    "seed": 3394966121,
+    "locks": [
+     {
+      "type": "rings",
+      "parts": 3,
+      "information": "feedback",
+      "linkages": 1,
+      "steps": 8
+     },
+     {
+      "type": "padlock",
+      "parts": 5,
+      "information": "feedback",
+      "depth": 1
+     },
+     {
+      "type": "bottles",
+      "parts": 5,
+      "information": "feedback",
+      "depth": 1
+     }
+    ]
+   },
+   {
+    "id": "c2-29",
+    "chapter": 2,
+    "index": 29,
+    "tier": "gold",
+    "seed": 2898958204,
+    "locks": [
+     {
+      "type": "padlock",
+      "parts": 4,
+      "information": "feedback",
+      "depth": 1
+     },
+     {
+      "type": "bolts",
+      "parts": 8,
+      "information": "full",
+      "size": 6
+     },
+     {
+      "type": "bottles",
+      "parts": 6,
+      "information": "feedback",
+      "depth": 1
+     }
+    ]
+   },
+   {
+    "id": "c2-30",
+    "chapter": 2,
+    "index": 30,
+    "tier": "gold",
+    "seed": 2710881204,
+    "locks": [
+     {
+      "type": "rings",
+      "parts": 4,
+      "information": "feedback",
+      "linkages": 1,
+      "steps": 8
+     },
+     {
+      "type": "bolts",
+      "parts": 7,
+      "information": "full",
+      "size": 5
+     },
+     {
+      "type": "padlock",
+      "parts": 5,
+      "information": "clued",
+      "depth": 1
+     }
+    ]
+   }
+  ]
+ ]
+}

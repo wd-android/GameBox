@@ -1,0 +1,20 @@
+{
+ "padlock/3/howMany": 6,
+ "padlock/3/which": 6,
+ "padlock/4/howMany": 7,
+ "padlock/4/which": 6,
+ "padlock/5/howMany": 7,
+ "padlock/5/which": 6,
+ "bottles/3/howMany": 3,
+ "bottles/3/which": 3,
+ "bottles/4/howMany": 5,
+ "bottles/4/which": 3,
+ "bottles/5/howMany": 6,
+ "bottles/5/which": 4,
+ "bottles/6/howMany": 7,
+ "bottles/6/which": 5,
+ "bottles/7/howMany": 8,
+ "bottles/7/which": 5,
+ "bottles/8/howMany": 9,
+ "bottles/8/which": 6
+}
