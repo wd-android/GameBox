@@ -1,0 +1,40 @@
+night  1: seed 1, 4 boats [fishing], every 9s, fog 0, current 0, catch 40
+night  2: seed 1, 4 boats [fishing], every 9s, fog 0, current 0, catch 42
+night  3: seed 1, 5 boats [fishing], every 9s, fog 0, current 0, catch 54
+night  4: seed 1, 7 boats [fishing, dinghy], every 7s, fog 0, current 0, catch 95
+night  5: seed 1, 7 boats [fishing, dinghy], every 7s, fog 0, current 0.3, catch 99
+night  6: seed 1, 8 boats [fishing, dinghy], every 7s, fog 0, current 0.3, catch 108
+night  7: seed 1, 8 boats [fishing, dinghy], every 7s, fog 0, current 0.3, catch 118
+night  8: seed 1, 11 boats [fishing, dinghy, trawler], every 6s, fog 0, current 0.4, catch 218
+night  9: seed 1, 10 boats [fishing, dinghy, trawler], every 6s, fog 0, current 0.4, catch 211
+night 10: seed 1, 11 boats [fishing, dinghy, trawler], every 6s, fog 0, current 0.4, catch 211
+night 11: seed 1, 12 boats [fishing, dinghy, trawler], every 6s, fog 0, current 0.4, catch 308
+night 12: seed 1, 9 boats [fishing, dinghy, trawler], every 6s, fog 0, current 0.4, catch 209
+night 13: seed 1, 11 boats [fishing, dinghy, trawler], every 6s, fog 0, current 0.4, catch 296
+night 14: seed 1, 12 boats [fishing, dinghy, trawler], every 6s, fog 0, current 0.4, catch 319
+night 15: seed 1, 12 boats [fishing, dinghy, trawler], every 5s, fog 1, current 0.55, catch 359
+night 16: seed 1, 12 boats [fishing, dinghy, trawler], every 5s, fog 1, current 0.55, catch 360
+night 17: seed 1, 12 boats [fishing, dinghy, trawler], every 5s, fog 1, current 0.55, catch 344
+night 18: seed 1, 15 boats [fishing, dinghy, trawler], every 5s, fog 1, current 0.55, catch 403
+night 19: seed 1, 12 boats [fishing, dinghy, trawler], every 5s, fog 1, current 0.55, catch 353
+night 20: seed 1, 12 boats [fishing, dinghy, trawler], every 5s, fog 1, current 0.55, catch 414
+night 21: seed 1, 13 boats [fishing, dinghy, trawler], every 5s, fog 2, current 0.5, catch 459
+night 22: seed 1, 15 boats [fishing, dinghy, trawler], every 5s, fog 2, current 0.5, catch 506
+night 23: seed 1, 15 boats [fishing, dinghy, trawler], every 5s, fog 2, current 0.5, catch 489
+night 24: seed 1, 14 boats [fishing, dinghy, trawler], every 5s, fog 2, current 0.5, catch 586
+night 25: seed 1, 15 boats [fishing, dinghy, trawler], every 5s, fog 2, current 0.5, catch 510
+night 26: seed 1, 15 boats [fishing, dinghy, trawler], every 5s, fog 2, current 0.5, catch 530
+night 27: seed 1, 15 boats [fishing, dinghy, trawler], every 5s, fog 2, current 0.5, catch 469
+night 28: seed 1, 15 boats [fishing, dinghy, trawler], every 5s, fog 2, current 0.5, catch 686
+night 29: seed 1, 15 boats [fishing, dinghy, trawler], every 5s, fog 2, current 0.5, catch 488
+night 30: seed 1, 16 boats [fishing, dinghy, trawler], every 5s, fog 2, current 0.5, catch 583
+night 31: seed 1, 17 boats [fishing, dinghy, trawler], every 4s, fog 2, current 0.7, catch 583
+night 32: seed 1, 18 boats [fishing, dinghy, trawler], every 4s, fog 2, current 0.7, catch 672
+night 33: seed 1, 17 boats [fishing, dinghy, trawler], every 4s, fog 2, current 0.7, catch 536
+night 34: seed 1, 20 boats [fishing, dinghy, trawler], every 4s, fog 2, current 0.7, catch 905
+night 35: seed 1, 18 boats [fishing, dinghy, trawler], every 4s, fog 2, current 0.7, catch 625
+night 36: seed 1, 15 boats [fishing, dinghy, trawler], every 4s, fog 2, current 0.7, catch 564
+night 37: seed 1, 18 boats [fishing, dinghy, trawler], every 4s, fog 2, current 0.7, catch 708
+night 38: seed 1, 19 boats [fishing, dinghy, trawler], every 4s, fog 2, current 0.7, catch 794
+night 39: seed 1, 17 boats [fishing, dinghy, trawler], every 4s, fog 2, current 0.7, catch 970
+night 40: seed 1, 18 boats [fishing, dinghy, trawler], every 4s, fog 2, current 0.7, catch 781
