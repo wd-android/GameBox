@@ -20,8 +20,8 @@ export interface JarMask {
 }
 
 export function buildMask(halfWidthAt: (y: number) => number, topRow: number, bottomRow: number, fillRow: number): JarMask {
-  const w = TUNING.GRID_W;
-  const h = TUNING.GRID_H;
+  const w: number = TUNING.GRID_W;
+  const h: number = TUNING.GRID_H;
   const inside = new Uint8Array(w * h);
   const cx = w / 2;
   for (let y = topRow; y <= bottomRow; y++) {

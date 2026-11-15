@@ -1,10 +1,10 @@
 import { TUNING } from '../config/tuning';
 import { Rng } from '../sand/rng';
-import { encodeGrid, encodeRecording, decodeGrid, decodeRecording } from '../sand/rle';
-import { replay } from '../sand/sim';
+import { encodeGrid, encodeRecording, decodeRecording } from '../sand/rle';
+import { replay, Ev } from '../sand/sim';
 import { accuracy, toleranceMap } from '../sand/scoring';
 import { Designer } from './designer';
-import { maskFor, type ShapeId } from './shapes';
+import type { ShapeId } from './shapes';
 import { SETS, setForJar } from './sets';
 import type { JarDef } from './types';
 
@@ -280,7 +280,14 @@ export function author(plan: Plan): Authored {
         limits[c] = Math.ceil(used * (1 + TUNING.LIMIT_MARGIN));
       }
     }
-    const palette = plan.palette.filter((c) => sim.used[c] > 0);
+    // Palette in the order the colours were first poured, so the first pot is the bottom layer.
+    const order: number[] = [];
+    let current = 1;
+    for (const [, ev, v] of sim.recording) {
+      if (ev === Ev.Colour) current = v;
+      else if (ev === Ev.PourOn && !order.includes(current)) order.push(current);
+    }
+    const palette = [...order.filter((c) => sim.used[c] > 0), ...plan.palette.filter((c) => !order.includes(c) && sim.used[c] > 0)];
     const def: JarDef = {
       id: plan.id,
       stage: plan.stage,
@@ -301,7 +308,4 @@ export function author(plan: Plan): Authored {
   return best!;
 }
 
-export function targetGrid(def: JarDef): Uint8Array {
-  const m = maskFor(def.shape);
-  return decodeGrid(def.target, m.w * m.h);
-}
+export { targetGrid } from './target';

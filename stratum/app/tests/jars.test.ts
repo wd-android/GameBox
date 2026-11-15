@@ -55,3 +55,26 @@ for (const name of ['match', 'daily'] as const) {
     });
   });
 }
+
+describe('acceptance', () => {
+  const file = load<JarFile>('src/jars/data/match.json');
+
+  it('a careful pour that looks right to the eye scores at least two stars (flat jars 1–15)', async () => {
+    const { Designer } = await import('../src/jars/designer');
+    for (const def of file.jars.filter((j) => j.id <= 15)) {
+      const mask = maskFor(def.shape);
+      const target = targetGrid(def);
+      const counts = new Map<number, number>();
+      for (const c of target) if (c) counts.set(c, (counts.get(c) ?? 0) + 1);
+      // A different seed, a faster sweep and amounts judged by eye (±8%).
+      const d = new Designer(def.shape, def.seed + 77);
+      def.palette.forEach((c, i) => {
+        const jitter = 1 + (i % 2 ? 0.08 : -0.08);
+        if (i < def.palette.length - 1) d.sweep(c, Math.round((counts.get(c) ?? 0) * jitter), undefined, undefined, 2);
+        else d.fillUp(c, false);
+      });
+      const acc = accuracy(d.sim.cells, toleranceMap(target, mask), mask, target);
+      expect(starsFor(acc), `jar ${def.id} scored ${(acc * 100).toFixed(1)}%`).toBeGreaterThanOrEqual(2);
+    }
+  });
+});

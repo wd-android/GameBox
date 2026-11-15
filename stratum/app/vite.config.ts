@@ -6,11 +6,8 @@ export default defineConfig({
   build: {
     target: 'es2020',
     chunkSizeWarningLimit: 1500,
-    rollupOptions: {
-      input: {
-        main: resolve(__dirname, 'index.html'),
-        editor: resolve(__dirname, 'tools/jar-editor/index.html'),
-      },
-    },
+    // The jar editor (tools/jar-editor) is developer-only: it is served by
+    // `npm run dev` at /tools/jar-editor/ and never shipped in the app.
+    rollupOptions: { input: { main: resolve(__dirname, 'index.html') } },
   },
 });

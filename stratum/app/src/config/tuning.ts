@@ -25,8 +25,8 @@ export const TUNING = {
   // ── Pouring (§6.4) ─────────────────────────────────────────
   POUR_RATE: 5,
   POUR_SCATTER: 1,
-  /** Rows below the opening in which new grains may appear. */
-  POUR_DROP_ROWS: 3,
+  /** Rows at the opening in which new grains appear (the head of the stream). */
+  POUR_DROP_ROWS: 2,
 
   // ── Scoring (§6.7) ─────────────────────────────────────────
   SCORE_TOLERANCE: 2,

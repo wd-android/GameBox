@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Stratum jar editor</title>
+    <style>
+      body { margin: 0; font: 14px system-ui, sans-serif; background: #1b043b; color: #fff; display: flex; gap: 20px; padding: 16px; flex-wrap: wrap; }
+      canvas { image-rendering: pixelated; background: rgba(255,255,255,.06); border: 1px solid #ffffff44; border-radius: 8px; touch-action: none; cursor: crosshair; }
+      .panel { display: flex; flex-direction: column; gap: 10px; min-width: 280px; max-width: 360px; }
+      fieldset { border: 1px solid #ffffff33; border-radius: 10px; }
+      button { font: inherit; padding: 6px 12px; border-radius: 999px; border: 0; background: #06ffff; color: #1b043b; font-weight: 700; cursor: pointer; }
+      button.alt { background: #5b33a0; color: #fff; }
+      .pots { display: flex; flex-wrap: wrap; gap: 6px; }
+      .pot { width: 34px; height: 34px; border-radius: 8px; border: 2px solid transparent; }
+      .pot.on { border-color: #06ffff; }
+      .pot.off { opacity: .25; }
+      input[type=number] { width: 70px; }
+      pre { white-space: pre-wrap; font-size: 12px; background: #0004; padding: 8px; border-radius: 8px; max-height: 200px; overflow: auto; }
+    </style>
+  </head>
+  <body>
+    <canvas id="c" width="384" height="512"></canvas>
+    <canvas id="t" width="192" height="256" title="Target"></canvas>
+    <div class="panel">
+      <h2 style="margin:0">Jar editor</h2>
+      <fieldset>
+        <legend>Jar</legend>
+        <label>Shape <select id="shape"><option>straight</option><option>round-bottle</option><option>tall-vase</option></select></label>
+        <label>Id <input id="id" type="number" value="1" /></label>
+        <label>Stage <input id="stage" type="number" value="1" /></label>
+        <label>Set <input id="set" value="Stripes" /></label>
+        <label>Seed <input id="seed" type="number" value="1001" /></label>
+        <button class="alt" id="load">Load existing jar</button>
+      </fieldset>
+      <fieldset>
+        <legend>Palette (click to choose; shift-click to include/exclude)</legend>
+        <div class="pots" id="pots"></div>
+      </fieldset>
+      <label>Tilt <input id="tilt" type="range" min="-30" max="30" value="0" /> <span id="tiltv">0°</span></label>
+      <div>
+        <button id="reset" class="alt">Reset</button>
+        <button id="undo" class="alt">Undo</button>
+        <button id="target">Use as target</button>
+        <button id="replay">Replay &amp; score</button>
+        <button id="export">Export JSON</button>
+      </div>
+      <pre id="out">Hold the mouse on the jar to pour. Inputs are recorded tick by tick.</pre>
+    </div>
+    <script type="module" src="./editor.ts"></script>
+  </body>
+</html>

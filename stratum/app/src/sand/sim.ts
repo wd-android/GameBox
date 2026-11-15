@@ -66,6 +66,8 @@ export class SandSim {
   /** Grains moved during the latest tick (for the "sliding" cue). */
   movedThisTick = 0;
   lastChangeTick = 0;
+  /** Increases whenever any cell changes (for redrawing). */
+  version = 0;
 
   readonly recording: InputEvent[] = [];
   private undoStack: Snapshot[] = [];
@@ -88,6 +90,16 @@ export class SandSim {
     } else {
       this.remaining = null;
     }
+  }
+
+  /** Restores a jar in progress (saved when the app was closed). */
+  restore(cells: Uint8Array, remaining: number[] | null, tick: number, rngState: number): void {
+    this.cells.set(cells);
+    if (remaining) this.remaining = Int32Array.from(remaining);
+    this.tick = tick;
+    this.rng.state = rngState;
+    this.recountUsed();
+    this.wakeAll();
   }
 
   // ── Inputs (all recorded) ─────────────────────────────────
@@ -182,6 +194,7 @@ export class SandSim {
   }
 
   wakeAll(): void {
+    this.version++;
     this.quiet.fill(0);
     this.lastChangeTick = this.tick;
   }
@@ -222,8 +235,10 @@ export class SandSim {
   private pour(): void {
     const { w, inside, topRow, fillRow } = this.mask;
     const col = this.column;
-    // Stops by itself when sand reaches the fill line at the spout's column (§6.4).
-    if (this.cells[fillRow * w + col]) {
+    // Stops by itself when sand reaches the fill line at the spout's column
+    // (§6.4) – resting sand, not grains of the stream falling past it.
+    const fi = fillRow * w + col;
+    if (this.cells[fi] && this.stampId - this.stamp[fi] > 2) {
       this.reachedFillLine = true;
       return;
     }
@@ -233,18 +248,22 @@ export class SandSim {
       this.ranOut = true;
       return;
     }
+    // New grains fill the stream's head – the cells just vacated by the
+    // grains of the previous tick, which fall two cells per tick. The slots
+    // are visited from a random starting point, so the scatter is random but
+    // an even sweep still lays an even layer.
     const s = TUNING.POUR_SCATTER;
     const span = 2 * s + 1;
-    // The scatter starts at a random offset and then cycles across the
-    // stream, so an even sweep lays an even layer.
-    const start = this.rng.int(span);
+    const slots = span * TUNING.POUR_DROP_ROWS;
+    const start = this.rng.int(slots);
     for (let k = 0; k < TUNING.POUR_RATE; k++) {
       if (this.remaining && this.remaining[c] <= 0) {
         this.ranOut = true;
         break;
       }
-      const dx = ((start + k) % span) - s;
-      const dy = this.rng.int(TUNING.POUR_DROP_ROWS);
+      const slot = (start + k) % slots;
+      const dx = (slot % span) - s;
+      const dy = Math.floor(slot / span);
       const x = col + dx;
       const y = topRow + dy;
       const i = y * w + x;
@@ -258,6 +277,7 @@ export class SandSim {
   }
 
   private touch(y: number): void {
+    this.version++;
     this.quiet[y] = 0;
     if (y > 0) this.quiet[y - 1] = 0;
     this.lastChangeTick = this.tick;
