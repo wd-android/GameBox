@@ -166,7 +166,7 @@ export const BoltsLock: LockType<BoltsPuzzle, BoltsState, BoltsMove> = {
     if (kind !== 'nudge') return null;
     const r = search(p, s.pos);
     if (!r.first) return null;
-    return { move: r.first, message: `Slide bolt ${r.first.bolt === 0 ? '(the latch)' : r.first.bolt + 1} next.` };
+    return { move: r.first, message: r.first.bolt === 0 ? 'Slide the brass latch next.' : 'Slide the highlighted bolt next.' };
   },
 
   par(p) {
