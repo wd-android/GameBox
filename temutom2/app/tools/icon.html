@@ -1,0 +1,27 @@
+<!doctype html>
+<html><body style="margin:0;background:#000">
+<canvas id="c" width="1024" height="1024"></canvas>
+<script type="module">
+import { drawHead } from '/src/ui/scene/catArt.ts';
+const c = document.getElementById('c');
+const ctx = c.getContext('2d');
+const mode = new URLSearchParams(location.search).get('mode') ?? 'full';
+if (mode !== 'fg') {
+  const g = ctx.createRadialGradient(512, 420, 60, 512, 512, 760);
+  g.addColorStop(0, '#5a24b8'); g.addColorStop(0.6, '#2a0c5c'); g.addColorStop(1, '#180038');
+  ctx.fillStyle = g; ctx.fillRect(0, 0, 1024, 1024);
+  // Three claw marks across the corner: he has been at the icon too
+  ctx.lineCap = 'round';
+  for (let i = 0; i < 4; i++) {
+    ctx.beginPath(); ctx.moveTo(610 + i * 44, 70); ctx.quadraticCurveTo(820 + i * 30, 200, 930 + i * 20, 400 - i * 10);
+    ctx.lineWidth = 26; ctx.strokeStyle = 'rgba(0,0,0,0.35)'; ctx.stroke();
+    ctx.lineWidth = 18; ctx.strokeStyle = '#ffffff'; ctx.stroke();
+  }
+}
+const d = { mood: 'content', pose: 'closeUp', head: 'neutral', ears: 'forward', eyes: 'half', align: 0.3, glint: false, tail: 'still', paw: null, gaze: null, sound: 'none', rumble: null, tell: null, wiggle: false, confused: false };
+ctx.save();
+ctx.translate(512, mode === 'fg' ? 560 : 590);
+drawHead(ctx, mode === 'fg' ? 190 : 270, d, 0, { x: 0, y: 0.5 });
+ctx.restore();
+document.title = 'ready';
+</script></body></html>
