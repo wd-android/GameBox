@@ -3,7 +3,7 @@
 A portrait, one-thumb mobile game for iOS and Android. You live with an orange cat who believes you exist to serve him. Your thumb is the hand; when you get it wrong, he takes it out on your screen.
 Built from `../build-specification.md` and `../../concepts/11-living-with-temutom.md`, following `../../mobile-game-report.md`.
 
-- **App identifier:** `com.promethica.temutom2` (see below)
+- **App identifier:** `com.promethica.temutom2`
 - **Display name:** “Living with Temutom” (working title; one value in `src/config/app.ts`)
 - **Stack:** TypeScript, Vite, React, Capacitor 8 (Android min API 26, iOS 15), portrait only
 - **Style:** menus follow the *Battle Game Apps UI Kit* Figma file (Readex Pro, deep violet, cyan glow, pill buttons); the scenes use warm domestic colours so the cat is always the brightest thing.
@@ -12,7 +12,7 @@ Built from `../build-specification.md` and `../../concepts/11-living-with-temuto
 
 | Topic | Decision |
 |---|---|
-| App identifier | The spec records `com.temutom2.promethica`; the brief gave the domain `com.promethica.temutom`. That is already *Staff Management*’s identifier, and two apps cannot share one, so this app uses **`com.promethica.temutom2`** (your domain plus the package name). It is one value in `src/config/app.ts` and `capacitor.config.ts`; change it before first publication if you prefer the spec’s form. |
+| App identifier | **`com.promethica.temutom2`** (confirmed), as in the spec. It is set in `src/config/app.ts`, `capacitor.config.ts` and the native projects. |
 | Temutom’s look | The same round orange cat as *Staff Management*, with the real cat’s features from `temutomRef/`: rosette spots, white chin and whisker pads, dark eye-liner, green eyes, big ears, a ringed tail with a black tip. Built from parts (body pose, head, ears, eyes, tail, paws) as A2 asks. |
 | Stroke speed | Spec: 40–400 pt/s. Real finger strokes are often faster, so the upper limit is **600** (`tuning.ts`). |
 | Moment length | A moment always runs its full length (60–90 s); a met objective is kept. Only running out of plasters ends it early. |

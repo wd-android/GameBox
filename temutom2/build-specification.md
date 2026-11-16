@@ -12,7 +12,7 @@ It is a companion to [Temutom: Staff Management](../temutom/build-specification.
 |---|---|
 | Title | "Living with Temutom" is a **working title**. The display name is read from one configuration value. |
 | Package name | `temutom2` (confirmed 16 November 2026), used for the folder and all internal identifiers. |
-| App identifier | `com.temutom2.promethica` (confirmed 16 November 2026). See section 4. |
+| App identifier | `com.promethica.temutom2` (confirmed 16 November 2026). See section 4. |
 | Separate app | This is its own app, not a mode of *Temutom: Staff Management* (confirmed 16 November 2026). |
 | Red wash | The stylised wash in section 9.3 is accepted as specified, with no drips, wound or gore (confirmed 16 November 2026). |
 | Claw marks | Marks do not build up over time. They fade within a moment, and those left at the end last only until the next moment starts (confirmed 16 November 2026). |
@@ -59,7 +59,7 @@ It is a companion to [Temutom: Staff Management](../temutom/build-specification.
 | Item | Value |
 |---|---|
 | Package name | `temutom2` |
-| App identifier | `com.temutom2.promethica` (confirmed 16 November 2026) |
+| App identifier | `com.promethica.temutom2` (confirmed 16 November 2026) |
 | Display name | `Living with Temutom`, from `config/app.ts` |
 | Minimum Android / iOS | 8.0 (API 26) / 15 |
 
