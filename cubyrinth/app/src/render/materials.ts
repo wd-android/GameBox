@@ -1,3 +1,5 @@
+import { TUNING } from '../config/tuning';
+
 /** The two cube materials in v1 (§3). Colours follow the Figma style guide. */
 export type MaterialId = 'violet' | 'neon';
 
@@ -30,7 +32,7 @@ export const MATERIALS: Record<MaterialId, CubeMaterial> = {
   neon: {
     id: 'neon',
     name: 'Neon Grid',
-    price: 300,
+    price: TUNING.MATERIAL_PRICE,
     floor: '#160536',
     floorAlt: '#1c0842',
     floorRoughness: 0.35,

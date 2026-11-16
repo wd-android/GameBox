@@ -70,7 +70,7 @@ export function openSettings(app: App, onClose?: () => void): void {
       h('div', { class: 'row' }, h('span', {}, 'Reduce motion', h('small', {}, 'Turns become a short cross-fade')), toggle(s.reduceMotion, (v) => ((s.reduceMotion = v), save()))),
       done,
       reset,
-      h('div', { class: 'subtitle', style: 'text-align:center;font-size:11px' }, `${APP.DISPLAY_NAME} · v0.1 · saved on this device only`),
+      h('div', { class: 'subtitle', style: 'text-align:center;font-size:11px' }, `${APP.DISPLAY_NAME} · v${APP.VERSION} · saved on this device only`),
     ),
   );
   app.ui.append(overlay);

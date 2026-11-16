@@ -91,6 +91,13 @@ export function showResult(app: App, r: ResultInput): void {
   } else {
     actions.append(btn('New cube', 'primary', () => app.playExplore(r.cube.n, (Math.random() * 1e6) | 0)), btn('Home', 'ghost', () => app.goHome()));
   }
+  // Android back button: leave the finished level instead of uncovering it.
+  overlay.addEventListener('back', (e) => {
+    e.preventDefault();
+    overlay.remove();
+    if (r.cfg.kind === 'journey') app.openJourney();
+    else app.goHome();
+  });
   app.ui.append(overlay);
 
   if (showStars) {

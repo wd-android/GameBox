@@ -151,7 +151,8 @@ class Sound {
     const scale = [220, 246.94, 277.18, 329.63, 369.99, 440, 493.88, 554.37];
     let step = 0;
     const play = () => {
-      if (!this.ctx || !this.music) return;
+      // While suspended the clock stands still, so notes would pile up and all sound at once on return.
+      if (!this.ctx || !this.music || this.ctx.state !== 'running') return;
       const t = this.ctx.currentTime;
       const root = [0, 5, 3, 4][Math.floor(step / 8) % 4];
       const note = scale[(root + [0, 2, 4, 7, 4, 2, 4, 5][step % 8]) % scale.length];

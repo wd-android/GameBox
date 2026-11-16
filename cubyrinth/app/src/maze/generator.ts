@@ -368,7 +368,7 @@ export function defaultParams(n: number): GenParams {
   if (n <= 3) return { routeFaces: 3, windiness: 0.9, holeShare: 0 };
   if (n === 4) return { routeFaces: 4, windiness: 0.8, holeShare: 0 };
   if (n === 5) return { routeFaces: 4, windiness: 0.7, holeShare: 0.3 };
-  return { routeFaces: n >= 6 ? 5 : 4, windiness: 0.6, holeShare: 0.4 };
+  return { routeFaces: 5, windiness: 0.6, holeShare: 0.4 };
 }
 
 /** Cube code `version-n-seed` (§6.11). */

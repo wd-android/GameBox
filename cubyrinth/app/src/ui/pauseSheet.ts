@@ -24,6 +24,11 @@ export function openPause(app: App, o: PauseOptions): void {
   };
   const resume = h('button', { class: 'btn primary wide' }, 'Resume');
   resume.addEventListener('click', () => close(o.onResume));
+  // Android back button: the same as Resume.
+  overlay.addEventListener('back', (e) => {
+    e.preventDefault();
+    close(o.onResume);
+  });
   const restart = h('button', { class: 'btn secondary' }, 'Restart');
   restart.addEventListener('click', () => close(o.onRestart));
   const quit = h('button', { class: 'btn ghost' }, 'Home');

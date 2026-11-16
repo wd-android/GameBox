@@ -87,7 +87,6 @@ export class BallSim {
   // Step mode
   private stepTarget: { x: number; y: number } | null = null;
   private stepSide = -1;
-  private stepCell = -1;
   private stepQueued = -1;
 
   constructor(cube: Cube, opts: SimOptions) {
@@ -119,8 +118,10 @@ export class BallSim {
     this.p = { ...cp.p };
     this.prev = { ...cp.p };
     this.R = cp.R.slice();
-    this.disarmed = cp.disarmed;
-    this.checkpoint = { face: cp.face, p: { ...cp.p }, R: cp.R.slice(), disarmed: cp.disarmed };
+    // Step mode never disarms a gate (see finishTurn).
+    const disarmed = this.mode === 'step' ? -1 : cp.disarmed;
+    this.disarmed = disarmed;
+    this.checkpoint = { face: cp.face, p: { ...cp.p }, R: cp.R.slice(), disarmed };
     this.timerTicks = timerTicks;
     this.falls = falls;
   }
@@ -481,6 +482,10 @@ export class BallSim {
       this.v = { x: 0, y: 0 };
       this.checkpoint.p = { ...this.p };
       this.stepTarget = null;
+      // The ball has stopped clear of the edge, so the gate needs no disarming: it cannot flip
+      // back by itself, and a dead-end face can only be left through the gate it was entered by.
+      this.disarmed = -1;
+      this.checkpoint.disarmed = -1;
     }
     this.events.push({ type: 'turned', face: this.face });
   }
@@ -538,7 +543,6 @@ export class BallSim {
     const ncol = col + dc;
     const nrow = row + dr;
     this.stepSide = side;
-    this.stepCell = cell;
     if (ncol < 0 || ncol >= n || nrow < 0 || nrow >= n) {
       // Through a gate: slide to the edge line.
       this.stepTarget = { x: side === 0 ? n + 0.001 : side === 2 ? -0.001 : col + 0.5, y: side === 1 ? n + 0.001 : side === 3 ? -0.001 : row + 0.5 };
@@ -597,7 +601,6 @@ export class BallSim {
     this.v = { x: 0, y: 0 };
     this.speed = 0;
     this.events.push({ type: 'impact', strength: 0.8 });
-    void this.stepCell;
   }
 }
 

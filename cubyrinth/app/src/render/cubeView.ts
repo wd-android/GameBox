@@ -91,7 +91,6 @@ export class CubeView {
     this.cube = cube;
     const n = cube.n;
     this.n = n;
-    const h = n / 2;
     const mat = MATERIALS[material];
 
     // Core with a subtle checker on each face.
@@ -192,7 +191,6 @@ export class CubeView {
     this.trailPts = [];
     this.trail.count = 0;
     this.lastFace = -1;
-    void h;
     this.resize();
   }
 
@@ -222,14 +220,14 @@ export class CubeView {
     this.camera.updateProjectionMatrix();
   }
 
-  /** Draws one frame. `alpha` interpolates between the last two ticks. */
-  render(sim: BallSim, alpha: number, dt: number): void {
+  /** Draws one frame. `alpha` interpolates between the last two ticks; `settle` (0..1) sinks the ball into the finish cup. */
+  render(sim: BallSim, alpha: number, dt: number, settle = 0): void {
     this.time += dt;
-    const n = this.n;
     const r = TUNING.BALL_RADIUS;
 
     // Orientation, and the turn.
     let opacity = 1;
+    let level = 1;
     if (sim.state === 'TURNING' && sim.turn) {
       const p = sim.turnProgress;
       const e = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
@@ -243,6 +241,8 @@ export class CubeView {
       // The ball rides a quarter circle round the edge.
       const t = sim.turn;
       const phi = (this.reducedMotion ? (p < 0.5 ? 0 : 1) : e) * (Math.PI / 2);
+      // The tilt is reset to level when the turn ends (§7.7): ease it out, so the cube does not snap.
+      level = 1 - e;
       const pos = add3(t.edge, add3(scale3(t.N, r * Math.cos(phi)), scale3(t.d, r * Math.sin(phi))));
       this.ball.position.set(pos[0], pos[1], pos[2]);
       this.trail.count = 0;
@@ -294,7 +294,7 @@ export class CubeView {
 
     // Tilt: the cube leans by t × 15°.
     const tilt = (TUNING.CUBE_TILT_DEG * Math.PI) / 180;
-    this.tiltGroup.rotation.set(sim.t.y * tilt, 0, -sim.t.x * tilt);
+    this.tiltGroup.rotation.set(sim.t.y * tilt * level, 0, -sim.t.x * tilt * level);
 
     // Gates glow; the finish pulses.
     const pulse = 0.6 + 0.4 * Math.sin(this.time * 3);
@@ -302,8 +302,8 @@ export class CubeView {
     (this.finishGlow.material as THREE.MeshStandardMaterial).emissiveIntensity = 0.4 + 0.8 * pulse;
     this.finishGlow.scale.setScalar(0.85 + 0.15 * pulse);
 
+    if (settle > 0) this.settle(settle);
     this.canvas.style.opacity = String(opacity);
-    void n;
     this.renderer.render(this.scene, this.camera);
   }
 
@@ -322,17 +322,14 @@ export class CubeView {
     this.trail.instanceMatrix.needsUpdate = true;
   }
 
-  /** Settles the ball into the finish cup (drawn after FINISHED). */
-  settle(progress: number): void {
+  /** Settles the ball into the finish cup (after FINISHED). */
+  private settle(progress: number): void {
     if (!this.cube) return;
     const n = this.n;
     const f = this.cube.finish;
     const face = cellFace(n, f);
-    const N = NORMALS[face];
     const c = cubePoint(face, n, cellCol(n, f) + 0.5, cellRow(n, f) + 0.5, TUNING.BALL_RADIUS - 0.12 * progress);
     this.ball.position.lerp(new THREE.Vector3(c[0], c[1], c[2]), Math.min(1, progress * 1.5));
-    void N;
-    this.renderer.render(this.scene, this.camera);
   }
 
   dispose(): void {

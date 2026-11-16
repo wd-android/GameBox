@@ -21,7 +21,7 @@ npm run dev          # http://localhost:5173  (add ?autoplay to watch the automa
 ```
 
 ```bash
-npm test             # generator, physics and Journey tests
+npm test             # generator, physics, step-mode, Journey and progress tests
 ```
 
 ```bash
@@ -49,8 +49,11 @@ npm run android      # build, copy into android/, open Android Studio
 npm run ios          # build, copy into ios/, open Xcode (macOS; run `pod install` in ios/App first)
 ```
 
-Before release, set the real app identifier in `src/config/app.ts`. It is
-currently the placeholder `com.example.cubyrinth`.
+Before release, set the real app identifier. It is currently the placeholder
+`com.example.cubyrinth`, in `src/config/app.ts` and in the native projects
+(`android/app/build.gradle`, `strings.xml`, the `MainActivity` package and the
+Xcode bundle identifier). The version, `0.1.0`, is likewise in `package.json`,
+`src/config/app.ts`, `android/app/build.gradle` and the Xcode project.
 
 ## Layout (as §4)
 
@@ -87,15 +90,17 @@ tests/
 
 ## Decisions and deviations (please review)
 
-1. **Concept document.** Neither `concepts/06-cubyrinth.md` nor
-   `concepts/08-cubyrinth.md` (the one the spec links) is in the repository,
-   so this follows the spec and the report only.
+1. **Concept document.** The app was built from the spec and the report.
+   Where the [concept](../../concepts/08-cubyrinth.md) and the spec differ
+   (for example, the spec's exactly five gates), the spec wins.
 2. **Turn timing.** The turn lasts a fixed number of ticks inside the
    simulation (54 ticks, or 24 with Reduce motion), so it stays
    deterministic. The timer stops during the turn, as specified (open
    question 3).
 3. **Re-crossing a gate.** While a gate is disarmed, the ball is held at the
-   edge line instead of passing back through.
+   edge line instead of passing back through. Step mode does not disarm the
+   gate: the ball stops in the entry cell, so it cannot flip back by itself,
+   and a dead-end face has no other way out.
 4. **Coins.** Each ball's first medal on a level pays 10 coins, and each new
    star pays 10. The Daily Cube pays 30 coins the first time each day.
    The second cube material, Neon Grid, costs 300 coins.

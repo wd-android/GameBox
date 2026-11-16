@@ -30,9 +30,10 @@ const DT_MS = 1000 / TUNING.TICK_HZ;
 const AUTOPLAY = typeof location !== 'undefined' && new URLSearchParams(location.search).has('autoplay');
 
 export function formatTime(s: number): string {
-  const m = Math.floor(s / 60);
-  const sec = s - m * 60;
-  return `${m}:${sec.toFixed(1).padStart(4, '0')}`;
+  // Whole tenths first, so 59.96 s reads 1:00.0 and not 0:60.0.
+  const tenths = Math.round(s * 10);
+  const m = Math.floor(tenths / 600);
+  return `${m}:${((tenths - m * 600) / 10).toFixed(1).padStart(4, '0')}`;
 }
 
 /** Game states (§7.13) are kept by the simulation; this screen drives it, draws it and shows the HUD. */
@@ -166,8 +167,7 @@ export class PlayScreen implements Screen {
     const alpha = Math.min(1, this.accum / DT_MS);
     if (this.sim.state === 'FINISHED') {
       const k = Math.min(1, (now - this.finishedAt) / 700);
-      this.view.render(this.sim, 1, dtMs / 1000);
-      this.view.settle(k);
+      this.view.render(this.sim, 1, dtMs / 1000, k);
       if (k >= 1 && !this.resultShown) this.showResult();
     } else this.view.render(this.sim, alpha, dtMs / 1000);
 

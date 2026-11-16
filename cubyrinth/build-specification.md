@@ -229,7 +229,7 @@ A cube is accepted only if its measures fall inside the bands for its level. Oth
 ```
 generateCube(n, seed, params):
     for attempt in 0 .. 199:
-        rng   = mulberry32(hash(seed, attempt, GENERATOR_VERSION))
+        rng   = mulberry32(hash(seed, attempt, GENERATOR_VERSION, n))
         links = connectFaces(params.routeFaces, rng)
         carve all six faces
         open the gates

@@ -57,8 +57,8 @@ export class HomeScreen implements Screen {
     const dRec = save.daily.history[today];
     const daily = this.tile('Daily Cube', dRec ? `Best ${formatTime(dRec.best)} · ${d.n}×${d.n}` : `Today: ${d.n}×${d.n} · new every day`, () => app.playDaily());
     if (!dRec) daily.classList.add('glow');
-    const journey = this.tile('Journey', `${Math.min(next, LEVELS.length)} of ${LEVELS.length} levels`, () => app.openJourney());
-    const explore = this.tile('Explore', 'Any size · no timer · no holes', () => this.openExplore());
+    const journey = this.tile('Journey', `${LEVELS.filter((l) => levelDone(save, l.id)).length} of ${LEVELS.length} levels done`, () => app.openJourney());
+    const explore = this.tile('Explore', 'Unlocked sizes · no timer · no holes', () => this.openExplore());
     const ball = this.tile('Ball', `${BALLS[save.ball].name}`, () => this.openBalls());
     ball.prepend(h('span', { class: `ball-dot ${save.ball}`, style: 'margin-bottom:4px' }));
     const mat = this.tile('Cube', MATERIALS[save.material].name, () => this.openMaterials());
@@ -157,12 +157,17 @@ export class HomeScreen implements Screen {
       });
       sizes.append(b);
     }
-    const input = h('input', { class: 'code-input', placeholder: 'e.g. 1-5-48213', inputmode: 'numeric', 'aria-label': 'Cube code' }) as HTMLInputElement;
+    const input = h('input', { class: 'code-input', placeholder: 'e.g. 1-5-48213', autocomplete: 'off', autocapitalize: 'off', spellcheck: 'false', 'aria-label': 'Cube code' }) as HTMLInputElement;
     const go = h('button', { class: 'btn primary' }, 'Play code');
     go.addEventListener('click', () => {
       const c = parseCubeCode(input.value);
       if (!c) {
         toast('That is not a cube code');
+        return;
+      }
+      // Explore is for unlocked sizes only (§9.3), codes included.
+      if (!unlockedSizes(save).includes(c.n)) {
+        toast(c.n > 6 ? `${c.n}×${c.n} cubes are not in this version` : `Unlock ${c.n}×${c.n} in the Journey first`);
         return;
       }
       overlay.remove();
