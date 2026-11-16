@@ -1,3 +1,4 @@
+import { STRINGS as S } from '../config/strings';
 import { BALLS, TUNING } from '../config/tuning';
 import { cubeCode, type Cube } from '../maze/generator';
 import { FACE_NAMES } from '../maze/topology';
@@ -104,9 +105,9 @@ export class PlayScreen implements Screen {
 
   private title(): string {
     const n = this.cube.n;
-    if (this.cfg.kind === 'journey') return `Level ${this.cfg.level!.id} · ${n}×${n}`;
-    if (this.cfg.kind === 'daily') return `Daily Cube · ${n}×${n}`;
-    return `Explore · ${cubeCode(n, this.cube.seed)}`;
+    if (this.cfg.kind === 'journey') return S.play.levelTitle(this.cfg.level!.id, n);
+    if (this.cfg.kind === 'daily') return S.play.dailyTitle(n);
+    return S.play.exploreTitle(cubeCode(n, this.cube.seed));
   }
 
   private buildHud(): HTMLElement {
@@ -117,7 +118,7 @@ export class PlayScreen implements Screen {
     const top = h(
       'div',
       { class: 'topbar hit' },
-      iconButton(ICONS.pause, 'Pause', () => this.pause()),
+      iconButton(ICONS.pause, S.play.pause, () => this.pause()),
       h('div', { class: 'chip' }, h('span', { class: `ball-dot ${ball.id}` }), this.title()),
       h('div', { class: 'spacer' }),
       this.fallsEl,
@@ -130,8 +131,8 @@ export class PlayScreen implements Screen {
       el.append(wrap);
     }
     if (this.sim.state === 'READY') {
-      const text = this.sim.mode === 'step' ? 'Swipe to roll the ball from cell to cell' : 'Touch anywhere and drag to tilt the cube';
-      this.hint = h('div', { class: 'hint' }, h('div', { class: 'hint-hand' }, '👆'), text, h('small', {}, 'Roll into the glowing gates · reach the gold cup'));
+      const text = this.sim.mode === 'step' ? S.play.hintStep : S.play.hintTilt;
+      this.hint = h('div', { class: 'hint' }, h('div', { class: 'hint-hand' }, '👆'), text, h('small', {}, S.play.hintGoal));
       el.append(this.hint);
     }
     return el;
@@ -175,7 +176,7 @@ export class PlayScreen implements Screen {
     this.timerEl.textContent = formatTime(this.sim.seconds);
     if (this.sim.falls) {
       this.fallsEl.style.display = '';
-      this.fallsEl.textContent = `⤓ ${this.sim.falls}`;
+      this.fallsEl.textContent = S.play.falls(this.sim.falls);
     }
     this.drawRing();
     this.minimap?.draw(this.cube, this.sim.face, this.visited);

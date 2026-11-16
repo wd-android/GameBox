@@ -1,3 +1,4 @@
+import { STRINGS as S } from '../config/strings';
 import levelData from './levels.json';
 import { BALLS, TUNING, type BallId } from '../config/tuning';
 import { defaultParams, generateCube, type Bands, type Cube } from '../maze/generator';
@@ -17,11 +18,11 @@ export interface LevelDef {
 export const LEVELS = (levelData as unknown as { levels: LevelDef[] }).levels;
 
 export const STAGES = [
-  { stage: 1, name: 'First Rolls', n: 3, introduces: 'Rolling and gates' },
-  { stage: 2, name: 'Dead Ends', n: 4, introduces: 'Dead ends · silver ball' },
-  { stage: 3, name: 'Holes', n: 5, introduces: 'Holes · gold ball' },
-  { stage: 4, name: 'Long Routes', n: 6, introduces: 'Longer routes' },
-];
+  { stage: 1, n: 3 },
+  { stage: 2, n: 4 },
+  { stage: 3, n: 5 },
+  { stage: 4, n: 6 },
+].map((s, i) => ({ ...s, ...S.stages[i] }));
 
 /** First Journey level at which each ball becomes available. */
 export const BALL_UNLOCK_LEVEL: Record<BallId, number> = { bronze: 1, silver: 11, gold: 31 };

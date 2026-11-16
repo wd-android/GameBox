@@ -1,3 +1,4 @@
+import { STRINGS as S } from '../config/strings';
 import { sound } from '../audio/sound';
 import type { App } from './app';
 import { h, toggle } from './dom';
@@ -22,19 +23,19 @@ export function openPause(app: App, o: PauseOptions): void {
     sound.tap();
     fn();
   };
-  const resume = h('button', { class: 'btn primary wide' }, 'Resume');
+  const resume = h('button', { class: 'btn primary wide' }, S.pause.resume);
   resume.addEventListener('click', () => close(o.onResume));
   // Android back button: the same as Resume.
   overlay.addEventListener('back', (e) => {
     e.preventDefault();
     close(o.onResume);
   });
-  const restart = h('button', { class: 'btn secondary' }, 'Restart');
+  const restart = h('button', { class: 'btn secondary' }, S.pause.restart);
   restart.addEventListener('click', () => close(o.onRestart));
-  const quit = h('button', { class: 'btn ghost' }, 'Home');
+  const quit = h('button', { class: 'btn ghost' }, S.common.home);
   quit.addEventListener('click', () => close(o.onQuit));
 
-  const sens = h('input', { type: 'range', min: '50', max: '120', value: String(s.sensitivity), class: 'slider', 'aria-label': 'Tilt sensitivity' }) as HTMLInputElement;
+  const sens = h('input', { type: 'range', min: '50', max: '120', value: String(s.sensitivity), class: 'slider', 'aria-label': S.settings.sensitivity }) as HTMLInputElement;
   sens.addEventListener('input', () => {
     s.sensitivity = Number(sens.value);
     save();
@@ -44,13 +45,13 @@ export function openPause(app: App, o: PauseOptions): void {
     h(
       'div',
       { class: 'sheet card' },
-      h('h2', { class: 'title', style: 'text-align:center' }, 'Paused'),
-      h('div', { class: 'row' }, h('span', {}, 'Tilt radius', h('small', {}, 'Smaller is more sensitive')), sens),
-      h('div', { class: 'row' }, h('span', {}, 'Mini-map', h('small', {}, 'Applies from the next cube')), toggle(s.minimap, (v) => ((s.minimap = v), save()))),
-      h('div', { class: 'row' }, h('span', {}, 'Ball trail'), toggle(s.trail, (v) => ((s.trail = v), save()))),
-      h('div', { class: 'row' }, h('span', {}, 'Music'), toggle(s.music, (v) => ((s.music = v), save()))),
-      h('div', { class: 'row' }, h('span', {}, 'Sound effects'), toggle(s.sfx, (v) => ((s.sfx = v), save()))),
-      h('div', { class: 'row' }, h('span', {}, 'Vibration'), toggle(s.vibration, (v) => ((s.vibration = v), save()))),
+      h('h2', { class: 'title', style: 'text-align:center' }, S.pause.title),
+      h('div', { class: 'row' }, h('span', {}, S.pause.tiltRadius, h('small', {}, S.pause.tiltRadiusSub)), sens),
+      h('div', { class: 'row' }, h('span', {}, S.settings.minimap, h('small', {}, S.pause.minimapSub)), toggle(s.minimap, (v) => ((s.minimap = v), save()))),
+      h('div', { class: 'row' }, h('span', {}, S.settings.trail), toggle(s.trail, (v) => ((s.trail = v), save()))),
+      h('div', { class: 'row' }, h('span', {}, S.settings.music), toggle(s.music, (v) => ((s.music = v), save()))),
+      h('div', { class: 'row' }, h('span', {}, S.settings.sfx), toggle(s.sfx, (v) => ((s.sfx = v), save()))),
+      h('div', { class: 'row' }, h('span', {}, S.settings.vibration), toggle(s.vibration, (v) => ((s.vibration = v), save()))),
       resume,
       h('div', { class: 'result-actions' }, restart, quit),
     ),

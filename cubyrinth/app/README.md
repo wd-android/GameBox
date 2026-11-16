@@ -49,18 +49,17 @@ npm run android      # build, copy into android/, open Android Studio
 npm run ios          # build, copy into ios/, open Xcode (macOS; run `pod install` in ios/App first)
 ```
 
-Before release, set the real app identifier. It is currently the placeholder
-`com.example.cubyrinth`, in `src/config/app.ts` and in the native projects
-(`android/app/build.gradle`, `strings.xml`, the `MainActivity` package and the
-Xcode bundle identifier). The version, `0.1.0`, is likewise in `package.json`,
+The app identifier is `com.promethica.cubyrinth`. It is set in
+`src/config/app.ts` and in the native projects (`android/app/build.gradle`,
+`strings.xml`, the `MainActivity` package and the Xcode bundle identifier). The version, `0.1.0`, is likewise in `package.json`,
 `src/config/app.ts`, `android/app/build.gradle` and the Xcode project.
 
 ## Layout (as §4)
 
 ```
 src/
-  config/    app.ts, tuning.ts (every tuning constant)
-  maze/      topology, generator, solver, measures – no rendering code
+  config/    app.ts, tuning.ts (every tuning constant), strings.ts (every visible text)
+  maze/      topology, generator, solver, metrics – no rendering code
   physics/   ball simulation, wall geometry, orientation – no rendering code
   game/      levels (+ levels.json), scoring, progress, automatic player
   render/    Three.js cube, camera, ball, trail, materials

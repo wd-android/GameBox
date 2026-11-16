@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { bfs, defaultParams, finishCell, generateCube, startCell, type Cube } from '../src/maze/generator';
+import { defaultParams, finishCell, generateCube, startCell, type Cube } from '../src/maze/generator';
+import { bfs } from '../src/maze/solver';
 import { cellFace, topology } from '../src/maze/topology';
 
 const SEEDS_PER_SIZE = Number(process.env.SEEDS ?? 300);

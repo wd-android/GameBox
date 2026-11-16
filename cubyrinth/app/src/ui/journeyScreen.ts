@@ -1,3 +1,4 @@
+import { STRINGS as S } from '../config/strings';
 import { sound } from '../audio/sound';
 import { LEVELS, STAGES } from '../game/levels';
 import { bestStars, highestUnlocked, medals } from '../game/progress';
@@ -22,7 +23,7 @@ export class JourneyScreen implements Screen {
         const m = medals(save, l.id);
         const cell = h(
           'button',
-          { class: `level-cell${open ? '' : ' locked'}${l.id === unlocked && !m.length ? ' current' : ''}`, 'aria-label': `Level ${l.id}${open ? '' : ', locked'}` },
+          { class: `level-cell${open ? '' : ' locked'}${l.id === unlocked && !m.length ? ' current' : ''}`, 'aria-label': S.journey.levelLabel(l.id, open) },
           h('span', { class: 'n' }, open ? String(l.id) : '🔒'),
           h('span', { class: 'mini-stars' }, '★'.repeat(stars) + '☆'.repeat(m.length && stars < 3 ? 3 - stars : 0)),
           h('span', { class: 'medals' }, ...m.map((k) => h('span', { class: `ball-dot tiny ${k}` }))),
@@ -39,14 +40,14 @@ export class JourneyScreen implements Screen {
         h(
           'div',
           { class: 'card stage-card' },
-          h('div', { class: 'stage-head' }, h('b', {}, `${st.stage}. ${st.name}`), h('span', { class: 'subtitle' }, `${st.n}×${st.n} · ${done}/${levels.length}`)),
+          h('div', { class: 'stage-head' }, h('b', {}, S.journey.stageTitle(st.stage, st.name)), h('span', { class: 'subtitle' }, S.journey.stageProgress(st.n, done, levels.length))),
           h('div', { class: 'subtitle', style: 'font-size:12px' }, st.introduces),
           h('div', { class: 'bar' }, h('div', { style: `width:${(done / levels.length) * 100}%` })),
           grid,
         ),
       );
     }
-    const top = h('div', { class: 'topbar' }, iconButton(ICONS.back, 'Back', () => app.goHome()), h('h1', { class: 'title', style: 'font-size:24px' }, 'Journey'));
+    const top = h('div', { class: 'topbar' }, iconButton(ICONS.back, S.common.back, () => app.goHome()), h('h1', { class: 'title', style: 'font-size:24px' }, S.common.journey));
     this.el = h('div', { class: 'screen scroll' }, top, list);
     requestAnimationFrame(() => this.el.querySelector('.level-cell.current')?.scrollIntoView({ block: 'center' }));
   }

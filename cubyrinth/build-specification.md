@@ -47,7 +47,7 @@ The generator and physics are specified for all sizes up to 9 × 9 now, so the l
 | Item | Value |
 |---|---|
 | Package name | `cubyrinth` |
-| App identifier | `<your reverse domain>.cubyrinth` (to be supplied) |
+| App identifier | `com.promethica.cubyrinth` |
 | Display name | `Cubyrinth`, from `config/app.ts` |
 | Minimum Android / iOS | 8.0 (API 26) / 15 |
 
@@ -586,7 +586,7 @@ If stage 2 does not feel good after tuning, the project should pause there. Noth
 ## 14. Open questions
 
 1. Are assumptions A3 to A5 acceptable? (A1 and A2 are confirmed.)
-2. What is the app identifier (reverse domain)?
+2. ~~What is the app identifier (reverse domain)?~~ Answered: `com.promethica.cubyrinth`.
 3. Should the timer stop during the turn, as specified, or keep running?
 4. Should step mode have its own medal, as specified, or count towards bronze?
 5. Should small phones be capped at 7 × 7 when the larger sizes arrive, as the concept proposed?

@@ -1,3 +1,4 @@
+import { STRINGS as S } from '../config/strings';
 import { APP } from '../config/app';
 import { BALLS, BALL_ORDER } from '../config/tuning';
 import { sound } from '../audio/sound';
@@ -31,19 +32,19 @@ export class HomeScreen implements Screen {
     const top = h(
       'div',
       { class: 'topbar' },
-      h('div', { class: 'chip', 'aria-label': `${save.coins} coins` }, h('span', { html: coinIcon() }), String(save.coins)),
-      h('div', { class: 'chip', 'aria-label': 'Stars' }, '★', String(totalStars(save))),
-      h('div', { class: 'chip', 'aria-label': 'Streak' }, '🔥', String(streak)),
+      h('div', { class: 'chip', 'aria-label': S.home.coinsLabel(save.coins) }, h('span', { html: coinIcon() }), String(save.coins)),
+      h('div', { class: 'chip', 'aria-label': S.home.starsLabel }, '★', String(totalStars(save))),
+      h('div', { class: 'chip', 'aria-label': S.home.streakLabel }, '🔥', String(streak)),
       h('div', { class: 'spacer' }),
-      iconButton(ICONS.gear, 'Settings', () => openSettings(app, () => app.goHome())),
+      iconButton(ICONS.gear, S.common.settings, () => openSettings(app, () => app.goHome())),
     );
 
-    const hero = h('div', { class: 'hero' }, h('div', { class: 'hero-cube', html: cubeArt() }), h('h1', { class: 'title hero-title' }, APP.DISPLAY_NAME), h('div', { class: 'subtitle' }, 'Roll the ball across all six faces'));
+    const hero = h('div', { class: 'hero' }, h('div', { class: 'hero-cube', html: cubeArt() }), h('h1', { class: 'title hero-title' }, APP.DISPLAY_NAME), h('div', { class: 'subtitle' }, S.home.tagline));
 
     const next = highestUnlocked(save);
     const p = save.inProgress;
     const allDone = levelDone(save, LEVELS.length);
-    const label = p && p.kind === 'journey' ? `Continue level ${p.levelId}` : allDone ? 'Journey complete' : `Play · Level ${next}`;
+    const label = p && p.kind === 'journey' ? S.home.continueLevel(p.levelId!) : allDone ? S.home.journeyComplete : S.home.playLevel(next);
     const play = h('button', { class: 'btn primary' }, label);
     play.addEventListener('click', () => {
       sound.unlock();
@@ -55,13 +56,13 @@ export class HomeScreen implements Screen {
 
     const d = dailyFor(today);
     const dRec = save.daily.history[today];
-    const daily = this.tile('Daily Cube', dRec ? `Best ${formatTime(dRec.best)} · ${d.n}×${d.n}` : `Today: ${d.n}×${d.n} · new every day`, () => app.playDaily());
+    const daily = this.tile(S.common.dailyCube, dRec ? S.home.dailyBest(formatTime(dRec.best), d.n) : S.home.dailyToday(d.n), () => app.playDaily());
     if (!dRec) daily.classList.add('glow');
-    const journey = this.tile('Journey', `${LEVELS.filter((l) => levelDone(save, l.id)).length} of ${LEVELS.length} levels done`, () => app.openJourney());
-    const explore = this.tile('Explore', 'Unlocked sizes · no timer · no holes', () => this.openExplore());
-    const ball = this.tile('Ball', `${BALLS[save.ball].name}`, () => this.openBalls());
+    const journey = this.tile(S.common.journey, S.home.journeyProgress(LEVELS.filter((l) => levelDone(save, l.id)).length, LEVELS.length), () => app.openJourney());
+    const explore = this.tile(S.common.explore, S.home.exploreSub, () => this.openExplore());
+    const ball = this.tile(S.home.ballTile, BALLS[save.ball].name, () => this.openBalls());
     ball.prepend(h('span', { class: `ball-dot ${save.ball}`, style: 'margin-bottom:4px' }));
-    const mat = this.tile('Cube', MATERIALS[save.material].name, () => this.openMaterials());
+    const mat = this.tile(S.home.cubeTile, MATERIALS[save.material].name, () => this.openMaterials());
 
     return h('div', { class: 'screen' }, top, hero, h('div', { class: 'home-actions' }, play, journey, daily, explore, ball, mat));
   }
@@ -97,7 +98,7 @@ export class HomeScreen implements Screen {
         'button',
         { class: `choice${save.ball === id ? ' selected' : ''}${open ? '' : ' locked'}` },
         h('span', { class: `ball-dot big ${id}` }),
-        h('span', { class: 'choice-text' }, h('b', {}, `${b.name} ball`), h('small', {}, open ? `Speed ×${b.speedFactor} · score ×${b.scoreFactor}` : `Unlocks at level ${BALL_UNLOCK_LEVEL[id]}`)),
+        h('span', { class: 'choice-text' }, h('b', {}, S.ballSheet.ballName(b.name)), h('small', {}, open ? S.ballSheet.stats(b.speedFactor, b.scoreFactor) : S.ballSheet.unlocksAt(BALL_UNLOCK_LEVEL[id]))),
       );
       btn.addEventListener('click', () => {
         if (!open) {
@@ -112,7 +113,7 @@ export class HomeScreen implements Screen {
       });
       list.append(btn);
     }
-    overlay = this.sheet(h('h2', { class: 'title', style: 'text-align:center' }, 'Choose a ball'), h('div', { class: 'subtitle', style: 'text-align:center' }, 'Faster balls score more and have shorter par times. Every ball earns its own medal.'), list);
+    overlay = this.sheet(h('h2', { class: 'title', style: 'text-align:center' }, S.ballSheet.title), h('div', { class: 'subtitle', style: 'text-align:center' }, S.ballSheet.intro), list);
   }
 
   private openMaterials(): void {
@@ -126,12 +127,12 @@ export class HomeScreen implements Screen {
         'button',
         { class: `choice${save.material === id ? ' selected' : ''}` },
         h('span', { class: 'swatch-sq', style: `background:${m.swatch}` }),
-        h('span', { class: 'choice-text' }, h('b', {}, m.name), h('small', {}, owned ? (save.material === id ? 'In use' : 'Owned') : `${m.price} coins`)),
+        h('span', { class: 'choice-text' }, h('b', {}, m.name), h('small', {}, owned ? (save.material === id ? S.materialSheet.inUse : S.materialSheet.owned) : S.materialSheet.price(m.price))),
       );
       btn.addEventListener('click', () => {
         if (!buyMaterial(save, id)) {
           haptic.double();
-          toast(`Need ${m.price - save.coins} more coins`);
+          toast(S.materialSheet.needCoins(m.price - save.coins));
           return;
         }
         save.material = id;
@@ -142,7 +143,7 @@ export class HomeScreen implements Screen {
       });
       list.append(btn);
     }
-    overlay = this.sheet(h('h2', { class: 'title', style: 'text-align:center' }, 'Cube material'), list);
+    overlay = this.sheet(h('h2', { class: 'title', style: 'text-align:center' }, S.materialSheet.title), list);
   }
 
   private openExplore(): void {
@@ -150,35 +151,35 @@ export class HomeScreen implements Screen {
     let overlay: HTMLElement;
     const sizes = h('div', { class: 'size-row' });
     for (const n of unlockedSizes(save)) {
-      const b = h('button', { class: 'btn secondary size-btn' }, `${n}×${n}`);
+      const b = h('button', { class: 'btn secondary size-btn' }, S.size(n));
       b.addEventListener('click', () => {
         overlay.remove();
         this.app.playExplore(n, (Math.random() * 1e6) | 0);
       });
       sizes.append(b);
     }
-    const input = h('input', { class: 'code-input', placeholder: 'e.g. 1-5-48213', autocomplete: 'off', autocapitalize: 'off', spellcheck: 'false', 'aria-label': 'Cube code' }) as HTMLInputElement;
-    const go = h('button', { class: 'btn primary' }, 'Play code');
+    const input = h('input', { class: 'code-input', placeholder: S.explore.codePlaceholder(cubeCode(5, 48213)), autocomplete: 'off', autocapitalize: 'off', spellcheck: 'false', 'aria-label': S.explore.codeLabel }) as HTMLInputElement;
+    const go = h('button', { class: 'btn primary' }, S.explore.playCode);
     go.addEventListener('click', () => {
       const c = parseCubeCode(input.value);
       if (!c) {
-        toast('That is not a cube code');
+        toast(S.explore.notACode);
         return;
       }
       // Explore is for unlocked sizes only (§9.3), codes included.
       if (!unlockedSizes(save).includes(c.n)) {
-        toast(c.n > 6 ? `${c.n}×${c.n} cubes are not in this version` : `Unlock ${c.n}×${c.n} in the Journey first`);
+        toast(c.n > 6 ? S.explore.sizeNotInVersion(c.n) : S.explore.sizeLocked(c.n));
         return;
       }
       overlay.remove();
       this.app.playExplore(c.n, c.seed);
     });
     overlay = this.sheet(
-      h('h2', { class: 'title', style: 'text-align:center' }, 'Explore'),
-      h('div', { class: 'subtitle', style: 'text-align:center' }, 'A random cube in any unlocked size. No timer, no holes.'),
+      h('h2', { class: 'title', style: 'text-align:center' }, S.common.explore),
+      h('div', { class: 'subtitle', style: 'text-align:center' }, S.explore.intro),
       sizes,
       h('div', { class: 'row' }, input, go),
-      h('div', { class: 'subtitle', style: 'text-align:center;font-size:12px' }, `Every cube has a code like ${cubeCode(5, 48213)} to share.`),
+      h('div', { class: 'subtitle', style: 'text-align:center;font-size:12px' }, S.explore.shareHint(cubeCode(5, 48213))),
     );
   }
 

@@ -1,3 +1,4 @@
+import { STRINGS as S } from '../config/strings';
 import { TUNING } from '../config/tuning';
 
 /** The two cube materials in v1 (§3). Colours follow the Figma style guide. */
@@ -19,7 +20,7 @@ export interface CubeMaterial {
 export const MATERIALS: Record<MaterialId, CubeMaterial> = {
   violet: {
     id: 'violet',
-    name: 'Amethyst',
+    name: S.materials.violet,
     price: 0,
     floor: '#5b33a0',
     floorAlt: '#53308f',
@@ -31,7 +32,7 @@ export const MATERIALS: Record<MaterialId, CubeMaterial> = {
   },
   neon: {
     id: 'neon',
-    name: 'Neon Grid',
+    name: S.materials.neon,
     price: TUNING.MATERIAL_PRICE,
     floor: '#160536',
     floorAlt: '#1c0842',

@@ -1,4 +1,4 @@
-package com.example.cubyrinth;
+package com.promethica.cubyrinth;
 
 import com.getcapacitor.BridgeActivity;
 

@@ -1,3 +1,4 @@
+import { STRINGS as S } from '../config/strings';
 import { BALLS, type BallId } from '../config/tuning';
 import { sound } from '../audio/sound';
 import { haptic } from '../audio/haptics';
@@ -24,23 +25,23 @@ export function showResult(app: App, r: ResultInput): void {
   const step = r.control === 'step';
   let coins = 0;
   let note = '';
-  let title = 'Cube solved!';
+  let title: string = S.result.solved;
 
   if (r.cfg.kind === 'journey') {
     const id = r.cfg.level!.id;
     const out = recordLevel(save, id, step ? 'step' : r.ball, { time: r.seconds, stars: step ? 0 : res.stars, falls: r.falls, score: step ? 0 : res.score });
     coins = out.coins;
-    title = `Level ${id}`;
-    if (out.newMedal) note = step ? 'Step medal earned' : `${BALLS[r.ball].name} medal earned`;
-    else if (out.improved) note = 'New best time';
+    title = S.result.levelTitle(id);
+    if (out.newMedal) note = step ? S.result.stepMedal : S.result.ballMedal(BALLS[r.ball].name);
+    else if (out.improved) note = S.result.newBest;
   } else if (r.cfg.kind === 'daily') {
     const out = recordDaily(save, r.cfg.date ?? dateKey(), cubeCode(r.cube.n, r.cube.seed), r.seconds);
     coins = out.coins;
-    title = 'Daily Cube';
-    note = `${out.best ? 'Best time today · ' : ''}Streak ${out.streak} 🔥`;
+    title = S.common.dailyCube;
+    note = S.result.dailyNote(out.best, out.streak);
   } else {
-    title = 'Explore';
-    note = `Cube code ${cubeCode(r.cube.n, r.cube.seed)}`;
+    title = S.common.explore;
+    note = S.result.cubeCode(cubeCode(r.cube.n, r.cube.seed));
   }
   save.inProgress = null;
   app.persist();
@@ -51,10 +52,10 @@ export function showResult(app: App, r: ResultInput): void {
   const stats = h(
     'div',
     { class: 'stats' },
-    r.cfg.kind !== 'explore' && !step ? stat('Par', formatTime(res.par)) : null,
-    r.cfg.kind !== 'explore' && !step ? stat('Score', String(res.score)) : null,
-    stat('Falls', String(r.falls)),
-    coins ? stat('Coins', `+${coins}`) : null,
+    r.cfg.kind !== 'explore' && !step ? stat(S.result.par, formatTime(res.par)) : null,
+    r.cfg.kind !== 'explore' && !step ? stat(S.result.score, String(res.score)) : null,
+    stat(S.result.falls, String(r.falls)),
+    coins ? stat(S.result.coins, S.result.coinsEarned(coins)) : null,
   );
   const actions = h('div', { class: 'result-actions' });
   const overlay = h(
@@ -64,7 +65,7 @@ export function showResult(app: App, r: ResultInput): void {
       'div',
       { class: 'sheet card result' },
       h('h2', { class: 'title' }, title),
-      h('div', { class: 'medal-row' }, h('span', { class: `ball-dot big ${step ? 'step' : r.ball}` }), h('span', { class: 'subtitle' }, step ? 'Step mode' : `${BALLS[r.ball].name} ball`)),
+      h('div', { class: 'medal-row' }, h('span', { class: `ball-dot big ${step ? 'step' : r.ball}` }), h('span', { class: 'subtitle' }, step ? S.result.stepMode : S.ballSheet.ballName(BALLS[r.ball].name))),
       time,
       showStars ? h('div', { class: 'stars' }, ...starEls) : null,
       stats,
@@ -83,13 +84,13 @@ export function showResult(app: App, r: ResultInput): void {
   };
   if (r.cfg.kind === 'journey') {
     const next = r.cfg.level!.id + 1;
-    if (next <= LEVELS.length && next <= highestUnlocked(save)) actions.append(btn('Next', 'primary', () => app.playLevel(next)));
-    actions.append(btn('Retry', 'secondary', () => app.restart(r.cfg)));
-    actions.append(btn('Journey', 'ghost', () => app.openJourney()));
+    if (next <= LEVELS.length && next <= highestUnlocked(save)) actions.append(btn(S.result.next, 'primary', () => app.playLevel(next)));
+    actions.append(btn(S.result.retry, 'secondary', () => app.restart(r.cfg)));
+    actions.append(btn(S.common.journey, 'ghost', () => app.openJourney()));
   } else if (r.cfg.kind === 'daily') {
-    actions.append(btn('Try again', 'primary', () => app.restart(r.cfg)), btn('Home', 'ghost', () => app.goHome()));
+    actions.append(btn(S.result.tryAgain, 'primary', () => app.restart(r.cfg)), btn(S.common.home, 'ghost', () => app.goHome()));
   } else {
-    actions.append(btn('New cube', 'primary', () => app.playExplore(r.cube.n, (Math.random() * 1e6) | 0)), btn('Home', 'ghost', () => app.goHome()));
+    actions.append(btn(S.result.newCube, 'primary', () => app.playExplore(r.cube.n, (Math.random() * 1e6) | 0)), btn(S.common.home, 'ghost', () => app.goHome()));
   }
   // Android back button: leave the finished level instead of uncovering it.
   overlay.addEventListener('back', (e) => {

@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.example.cubyrinth", appContext.getPackageName());
+        assertEquals("com.promethica.cubyrinth", appContext.getPackageName());
     }
 }

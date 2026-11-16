@@ -1,3 +1,5 @@
+import { STRINGS } from './strings';
+
 /**
  * Every tuning constant (spec: "Every number marked as a tuning constant lives
  * in one configuration file").
@@ -23,9 +25,9 @@ function ball(id: BallId, name: string, speedFactor: number, scoreFactor: number
 }
 
 export const BALLS: Record<BallId, BallSpec> = {
-  bronze: ball('bronze', 'Bronze', 1.0, 1),
-  silver: ball('silver', 'Silver', 1.4, 1.5),
-  gold: ball('gold', 'Gold', 1.8, 2),
+  bronze: ball('bronze', STRINGS.balls.bronze, 1.0, 1),
+  silver: ball('silver', STRINGS.balls.silver, 1.4, 1.5),
+  gold: ball('gold', STRINGS.balls.gold, 1.8, 2),
 };
 export const BALL_ORDER: BallId[] = ['bronze', 'silver', 'gold'];
 
