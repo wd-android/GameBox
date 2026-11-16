@@ -1,0 +1,25 @@
+<!doctype html>
+<html><body style="margin:0;background:#000">
+<canvas id="c" width="1024" height="1024"></canvas>
+<script type="module">
+import { drawCat } from '/src/ui/art/cat.ts';
+const c = document.getElementById('c');
+const ctx = c.getContext('2d');
+const mode = new URLSearchParams(location.search).get('mode') ?? 'full';
+const g = ctx.createRadialGradient(512, 380, 60, 512, 512, 760);
+g.addColorStop(0, '#5a24b8'); g.addColorStop(0.6, '#2a0c5c'); g.addColorStop(1, '#180038');
+if (mode !== 'fg') { ctx.fillStyle = g; ctx.fillRect(0, 0, 1024, 1024); }
+// Cyan glow ring, from the style guide
+if (mode !== 'fg') {
+  ctx.beginPath(); ctx.arc(512, 560, 370, 0, Math.PI * 2);
+  ctx.strokeStyle = 'rgba(0,245,245,0.55)'; ctx.lineWidth = 18; ctx.shadowColor = '#00f5f5'; ctx.shadowBlur = 60; ctx.stroke();
+  ctx.shadowBlur = 0;
+}
+const k = mode === 'fg' ? 17 : 25;
+ctx.save();
+ctx.translate(512 + 1.5 * k, 512 + 11.5 * k);
+ctx.scale(k, k);
+drawCat(ctx, 0, 0, { facing: 1, action: 'idle', t: 0, eyesApart: false, content: false, lash: 0, mouthOpen: 0, puffed: false, flat: false, inBox: false, held: false, reduceMotion: true });
+ctx.restore();
+document.title = 'ready';
+</script></body></html>
