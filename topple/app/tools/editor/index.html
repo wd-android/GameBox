@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Topple puzzle editor</title>
+    <style>
+      body { margin: 0; font: 14px system-ui, sans-serif; background: #1b043b; color: #fff; display: flex; gap: 18px; padding: 16px; flex-wrap: wrap; }
+      canvas { background: #3b1878; border-radius: 10px; cursor: crosshair; }
+      .panel { display: flex; flex-direction: column; gap: 10px; width: 340px; }
+      button { font: inherit; padding: 6px 12px; border-radius: 999px; border: 0; background: #06ffff; color: #1b043b; font-weight: 700; cursor: pointer; }
+      button.alt { background: #5b33a0; color: #fff; }
+      button.on { outline: 2px solid #ffc93c; }
+      fieldset { border: 1px solid #ffffff33; border-radius: 10px; display: flex; flex-wrap: wrap; gap: 6px; }
+      pre { white-space: pre-wrap; font-size: 12px; background: #0004; padding: 8px; border-radius: 8px; max-height: 260px; overflow: auto; margin: 0; }
+      textarea { width: 100%; height: 90px; background: #0004; color: #fff; border-radius: 8px; border: 1px solid #ffffff33; font: 11px monospace; }
+    </style>
+  </head>
+  <body>
+    <canvas id="c" width="450" height="700"></canvas>
+    <div class="panel">
+      <h2 style="margin:0">Puzzle editor</h2>
+      <fieldset>
+        <legend>Tool</legend>
+        <button data-tool="run">Draw run</button>
+        <button data-tool="gap" class="alt">Toggle gap</button>
+        <button data-tool="start" class="alt">Start</button>
+        <button data-tool="flag" class="alt">Flag</button>
+        <button data-tool="link" class="alt">Join (fork / merge)</button>
+        <button data-tool="ramp" class="alt">Ramp</button>
+        <button data-tool="erase" class="alt">Delete slot</button>
+      </fieldset>
+      <div style="font-size:12px;color:#d0c8df">Draw run: click waypoints, double-click to finish. Click on an existing slot first to branch from it (a fork). Join: click a slot, then the slot it strikes. Ramp: click the trigger, then the target.</div>
+      <label>Tray <select id="tray"><option value="sss">3 standard</option><option value="sst">2 standard + 1 tall</option><option value="s">1 standard</option></select></label>
+      <div><button id="play">Play chain</button> <button id="clear" class="alt">Clear</button> <button id="save" class="alt">Save</button> <button id="load" class="alt">Load</button></div>
+      <pre id="report">Draw a run to begin.</pre>
+      <textarea id="json" placeholder="Puzzle JSON (save writes here; paste here and Load)"></textarea>
+    </div>
+    <script type="module" src="./editor.ts"></script>
+  </body>
+</html>
