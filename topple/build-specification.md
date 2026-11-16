@@ -424,7 +424,7 @@ A script that runs the solver over every puzzle and writes a table of all measur
 ## 18. Open questions
 
 1. Are the remaining assumptions acceptable, in particular fixed-facing pieces (A4)? (A3, bundled daily puzzles, is confirmed.)
-2. What is the app identifier (reverse domain)?
+2. ~~What is the app identifier (reverse domain)?~~ Answered: `com.promethica.topple`.
 3. What is the launch date, from which puzzles are numbered?
 4. Should a hint be recorded in the shared result, as specified?
 5. Should the Archive be entirely free, as specified?
