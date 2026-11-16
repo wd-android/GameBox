@@ -1,11 +1,11 @@
 import { TUNING } from '../config/tuning';
 import { LADDER, type MomentState } from './types';
-import { dropDemand } from './demands';
+import { dropDemand, LADDER_AT } from './demands';
 import { emit, note } from './util';
 import { range } from './cat';
 
 const L = TUNING.ladder;
-const AT = [0, L.near, L.scream, L.knockOff, L.sitOn, L.closeStare, L.smack];
+const AT = LADDER_AT;
 
 export function ladderStepAt(elapsed: number): number {
   let i = 0;
@@ -88,7 +88,7 @@ function enterStep(s: MomentState, step: (typeof LADDER)[number]) {
 export function acknowledgeCloseStare(s: MomentState) {
   const d = s.cat.demand;
   if (!d) return;
-  d.step = 4;
+  d.step = LADDER.indexOf('sitOn');
   d.startedAt = s.time - L.sitOn;
   emit(s, { type: 'stareAcknowledged' });
 }

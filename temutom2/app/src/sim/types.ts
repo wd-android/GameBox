@@ -145,7 +145,7 @@ export interface CatState extends Pt {
   lapUntil: number;
   treat: { x: number; y: number; until: number } | null;
   sulkUntil: number;
-  lapse: { kind: LapseKind; until: number } | null;
+  lapse: { kind: LapseKind; until: number; seen?: boolean } | null;
   lastLapse: number;
   scheme: { id: SchemeId; step: number; t: number } | null;
   confusedUntil: number;

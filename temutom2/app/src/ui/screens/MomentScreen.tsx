@@ -58,6 +58,7 @@ export function MomentScreen({ def, options, reduceMotion, moodHints, onFinish, 
   const finished = useRef(false);
   const lastMood = useRef<string>('');
   const pausedRef = useRef(false);
+  const hooverSaid = useRef(false);
   const [paused, setPaused] = useState(false);
   const [attempt, setAttempt] = useState(0);
   const [, setFrame] = useState(0);
@@ -66,6 +67,7 @@ export function MomentScreen({ def, options, reduceMotion, moodHints, onFinish, 
 
   useEffect(() => {
     finished.current = false;
+    hooverSaid.current = false;
     simRef.current = createMoment(def, options);
     if (import.meta.env.DEV) (window as unknown as { __sim: unknown }).__sim = simRef.current;
     narr.current = new Narrator();
@@ -121,7 +123,7 @@ export function MomentScreen({ def, options, reduceMotion, moodHints, onFinish, 
       case 'bite': sound.play('crunch'); haptics.firm(); n.say(e.kind === 'belly' ? 'bellyBite' : 'bite', t, true); break;
       case 'snap': n.say('snap', t, true); break;
       case 'plaster': sound.play('peel'); haptics.tick(); break;
-      case 'scream': if (Math.random() < 0.4) n.say('scream', t); break;
+      case 'scream': if (Math.random() < 0.4) n.say(s.def.teach === 'feed' ? 'firstScream' : 'scream', t); break;
       case 'knocked': sound.play('crash', 1); haptics.tick(); n.say('knocked', t); break;
       case 'uiKnocked': sound.play('clatter'); haptics.tick(); n.say('uiKnocked', t, true); break;
       case 'ladder': if (e.kind === 'sitOn') n.say('sitOn', t); if (e.kind === 'closeStare') n.say('closeStare', t, true); break;
@@ -186,7 +188,9 @@ export function MomentScreen({ def, options, reduceMotion, moodHints, onFinish, 
       if (sc && !screaming) { sound.screamStart(); haptics.rumble('scream'); }
       if (!sc && screaming) { sound.screamStop(); haptics.rumble(null); }
       screaming = sc;
-      if (!sc) haptics.rumble(live && d.rumble === 'purr' ? 'purr' : live && d.rumble === 'tremor' ? 'purr' : null);
+      if (!sc) haptics.rumble(live ? d.rumble : null);
+      sound.musicTension(s.status === 'running' && s.length - s.time <= 10);
+      if (live && s.chore?.hoover?.running && !hooverSaid.current) { hooverSaid.current = true; narr.current.say('hoover', s.time); }
       if (live && d.sound === 'chirp' && Math.random() < dt / 3) sound.play('chirp');
       sceneR.current.draw(s, vis, dt, reduceMotion);
       const st = s.cat.strike;

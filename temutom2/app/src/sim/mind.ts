@@ -281,7 +281,7 @@ export function deriveDisplay(s: MomentState): Display {
   // The Brain Cell: his eyes line up
   const b = c.brain;
   if (s.def.systems.brainCell) {
-    if (b.phase === 'present') { d.align = 1; d.glint = b.t > 0 && (TUNING.brainCell.present[0] - b.t) < 0.6; }
+    if (b.phase === 'present') { d.align = 1; d.glint = b.t > 0 && b.full !== undefined && b.full - b.t < 0.6; }
     else if (b.phase === 'arriving') d.align = Math.max(0, 1 - b.t / TUNING.brainCell.arriving);
   } else d.align = 0;
   if (c.lapse) d.align = 0;

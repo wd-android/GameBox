@@ -286,7 +286,8 @@ class SoundEngine {
     const scale = [0, 2, 4, 7, 9, 12, 14, 16];
     const bass = [0, 0, 5, 5, 7, 7, 3, 4];
     const tick = () => {
-      if (!this.ctx || !this.musicBus) return;
+      // While suspended (paused, or in the background) the clock stands still: notes would pile up and all sound at once.
+      if (!this.ctx || !this.musicBus || this.ctx.state !== 'running') return;
       const t = this.ctx.currentTime + 0.05;
       const st = this.musicStep++;
       const root = 196;

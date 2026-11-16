@@ -4,6 +4,9 @@ import { scoreMoment, standingFor, standingStars, starsFor } from './scoring';
 import { dayCard, reviewKey, type DayCard, type ReviewKey } from './reviews';
 import { REVIEW } from '../content/lines';
 import { MOMENTS } from '../content/moments';
+import { FIELD_NOTES } from '../content/fieldNotes';
+
+const NOTE_IDS = new Set(FIELD_NOTES.map((f) => f.id));
 import { dateKey, prettyDate, previousKey } from './daily';
 
 export interface MomentResult {
@@ -36,7 +39,8 @@ export function applyResult(save: SaveData, s: MomentState): MomentResult {
   const stars = starsFor(won, parts.total);
   const key = reviewKey(s, stars);
   const before = standing(save).name;
-  const newNotes = s.tally.notes.filter((n) => !save.notes.includes(n));
+  // The simulation records more than the journal holds; only real entries are kept and counted.
+  const newNotes = s.tally.notes.filter((n) => NOTE_IDS.has(n) && !save.notes.includes(n));
   save.notes.push(...newNotes);
   const newCabinet = [...new Set(s.tally.knocked)].filter((k) => !save.cabinet.includes(k));
   save.cabinet.push(...newCabinet);
@@ -60,12 +64,13 @@ export function applyResult(save: SaveData, s: MomentState): MomentResult {
     save.moments[s.def.id] = { stars: Math.max(prev.stars, stars), best: Math.max(prev.best, won ? parts.total : 0) };
     if (won) {
       const dk = `w${s.def.week}d${s.def.day}`;
-      const log = (save.dayLog[dk] ??= { scores: {}, keys: [] });
+      const log = (save.dayLog[dk] ??= { scores: {}, keys: {} });
+      if (Array.isArray(log.keys)) log.keys = {}; // older saves kept a list, which counted replays twice
       log.scores[s.def.id] = parts.total;
-      log.keys.push(key);
+      log.keys[s.def.id] = key;
       const all = MOMENTS.filter((m) => m.week === s.def.week && m.day === s.def.day).every((m) => log.scores[m.id] !== undefined);
       if (all && !save.archive.some((c) => c.week === s.def.week && c.day === s.def.day)) {
-        card = dayCard(s.def.week, s.def.day, Object.values(log.scores), log.keys, dateKey(new Date()));
+        card = dayCard(s.def.week, s.def.day, Object.values(log.scores), Object.values(log.keys), dateKey(new Date()));
         save.archive.unshift(card);
         if (standing(save).rank >= 4 && !save.notes.includes('love-sleep')) save.notes.push('love-sleep');
       }

@@ -24,7 +24,8 @@ export interface SaveData {
   notes: string[];
   cabinet: string[];
   archive: DayCard[];
-  dayLog: Record<string, { scores: Record<string, number>; keys: ReviewKey[] }>;
+  /** Per day in progress: the latest score and review of each moment won */
+  dayLog: Record<string, { scores: Record<string, number>; keys: Record<string, ReviewKey> }>;
   mood: { history: Record<string, number>; streak: number; last: string | null; quote: Record<string, string> };
   /** Claw marks from the last moment, shown on Home until the next one starts */
   marks: Mark[];

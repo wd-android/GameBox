@@ -58,7 +58,7 @@ const boss: Objective = { kind: 'boss' };
 const W1: Row[][] = [
   // Day 1 – Kitchen: Screaming and Food; stroking the head; the purr; the first, scripted swipe
   [
-    { place: 'kitchen', obj: survive, title: '4:50am. He is screaming.', length: 45, timed: [{ t: 0, kind: 'food', step: 2 }], start: 'bowl', teach: 'feed', script: [{ t: 0, do: 'swipeFree' }] },
+    { place: 'kitchen', obj: survive, title: '4:50am. He is screaming.', length: 45, timed: [{ t: 0, kind: 'food', step: 2 }], start: 'bowl', teach: 'feed', script: [{ t: 28, do: 'swipeFree' }] },
     { place: 'kitchen', obj: content(10), title: 'Head, not tail', length: 60, timed: [{ t: 2, kind: 'food' }], start: 'near', teach: 'stroke' },
     { place: 'kitchen', obj: serve(2), title: 'Second breakfast', length: 70, timed: [{ t: 3, kind: 'food' }, { t: 35, kind: 'food' }], start: 'near' },
     { place: 'kitchen', obj: content(15), title: 'Purring is the target', length: 70, timed: [{ t: 30, kind: 'food' }], start: 'near', teach: 'purr' },
@@ -140,7 +140,7 @@ const W2: Row[][] = [
     { place: 'study', obj: finish, chore: 'email', title: 'Working from home, with company', length: 90, kinds: ['door', 'play'], interval: [12, 18], start: 'near', guest: true },
     { place: 'sofa', obj: content(30), chore: 'tidy', title: 'Everyone on the sofa', length: 85, kinds: ['lap', 'play', 'nothing'], interval: [14, 20], start: 'near', guest: true },
     { place: 'bedroom', obj: finish, chore: 'washing', title: 'Socks, everywhere', length: 90, kinds: ['lap', 'door', 'nothing'], interval: [12, 18], start: 'near' },
-    { place: 'kitchen', obj: boss, title: 'Hoover round the visitor', length: 85, hoover: 2, kinds: ['food', 'nothing'], interval: [16, 22], start: 'near' },
+    { place: 'kitchen', obj: boss, title: 'Hoover before the visitor is up', length: 85, hoover: 2, kinds: ['food', 'nothing'], interval: [16, 22], start: 'near' },
     { place: 'hallway', obj: survive, title: 'Coats on, coats off', length: 80, kinds: ['door', 'nothing'], interval: [10, 14], start: 'near', guest: true },
   ],
   [

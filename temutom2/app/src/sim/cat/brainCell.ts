@@ -1,7 +1,8 @@
 import { type Rng, range } from './rng';
 
 export type BrainPhase = 'away' | 'arriving' | 'present';
-export interface BrainCell { phase: BrainPhase; t: number }
+/** `t` is the time left in the phase; `full` is how long the current visit was when it began. */
+export interface BrainCell { phase: BrainPhase; t: number; full?: number }
 export interface BrainConfig { away: readonly [number, number]; arriving: number; present: readonly [number, number] }
 
 /** All orange cats share one brain cell. A moment always starts with it away. */
@@ -24,5 +25,6 @@ export function stepBrainCell(b: BrainCell, rng: Rng, dt: number, cfg: BrainConf
   }
   b.phase = 'present';
   b.t = range(rng, cfg.present[0], cfg.present[1]);
+  b.full = b.t;
   return 'present';
 }

@@ -1,9 +1,12 @@
 import { TUNING } from '../config/tuning';
 import { addAttention, addIrritation, pick, range } from './cat';
-import type { DemandKind, MomentState } from './types';
+import { LADDER, type DemandKind, type MomentState } from './types';
 import { emit, note, place } from './util';
 
 const D = TUNING.demands;
+const L = TUNING.ladder;
+/** Seconds into a demand at which each ladder step begins (§8.2) */
+export const LADDER_AT = [0, L.near, L.scream, L.knockOff, L.sitOn, L.closeStare, L.smack];
 
 export function demandKinds(s: MomentState): DemandKind[] {
   if (s.def.modifiers?.includes('ravenous')) return ['food'];
@@ -16,7 +19,7 @@ export function issueDemand(s: MomentState, kind: DemandKind, step = 0) {
     if (s.def.systems.queue && !c.queued) c.queued = kind;
     return;
   }
-  const started = s.time - [0, 4, 8, 14, 20, 26, 32][step];
+  const started = s.time - (LADDER_AT[step] ?? 0);
   c.demand = { kind, startedAt: started, step: -1, nextScream: 0, answered: null };
   c.onScreen = true;
   s.tally.issued++;
@@ -55,6 +58,8 @@ export function tellShown(s: MomentState): boolean {
 
 function settle(s: MomentState) {
   const c = s.cat;
+  // Meeting (or forgetting) the demand ends the ladder at any step, including a smack not yet thrown (§8.2).
+  if (c.demand && c.demand.step >= LADDER.length - 1) c.forcedWarning = false;
   c.demand = null;
   if (c.queued) {
     const q = c.queued;

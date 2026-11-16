@@ -50,8 +50,8 @@ export function stepLapse(s: MomentState) {
 /** Tapping him during a lapse counts as having seen it */
 export function seeLapse(s: MomentState) {
   const c = s.cat;
-  if (!c.lapse || (c.lapse as { seen?: boolean }).seen) return false;
-  (c.lapse as { seen?: boolean }).seen = true;
+  if (!c.lapse || c.lapse.seen) return false;
+  c.lapse.seen = true;
   s.tally.lapsesSeen++;
   note(s, `lapse-${c.lapse.kind}`);
   emit(s, { type: 'lapseSeen', kind: c.lapse.kind });

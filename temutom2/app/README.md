@@ -16,6 +16,8 @@ Built from `../build-specification.md` and `../../concepts/11-living-with-temuto
 | Temutom’s look | The same round orange cat as *Staff Management*, with the real cat’s features from `temutomRef/`: rosette spots, white chin and whisker pads, dark eye-liner, green eyes, big ears, a ringed tail with a black tip. Built from parts (body pose, head, ears, eyes, tail, paws) as A2 asks. |
 | Stroke speed | Spec: 40–400 pt/s. Real finger strokes are often faster, so the upper limit is **600** (`tuning.ts`). |
 | Moment length | A moment always runs its full length (60–90 s); a met objective is kept. Only running out of plasters ends it early. |
+| First swipe | The scripted swipe of the first moment comes 28 s in, after he has been fed. It goes through the Warning like any other and never costs a plaster. |
+| Version | `0.1.0` in `package.json`, `android/app/build.gradle` and the Xcode project. |
 | Houseguest | Unchanged: Week 2, as in this spec (unlike *Staff Management*, where the Dog moved forward). |
 
 ## Commands
@@ -24,6 +26,7 @@ Built from `../build-specification.md` and `../../concepts/11-living-with-temuto
 npm install
 npm run dev                 # http://localhost:5173  (dev only: ?m=w1d5evening jumps to a moment, ?m=mood to Today's Mood)
 npm test                    # simulation tests (spec §17)
+npm run typecheck           # TypeScript only
 FAIRNESS_RUNS=10000 npx vitest run -t fairness   # the fairness rule over 10,000 random moments
 npm run balance -- 40       # balance script
 npm run build && npx cap sync
@@ -54,7 +57,7 @@ tests/      vitest
 
 ## Status
 
-- **Tests:** 14 pass, including the fairness rule checked over 10,000 random-input moments: no strike ever begins without the minimum Warning, and a thumb lifted during a wind-up never costs a plaster. The flash limits (one wash per 3 s), the six-mark cap, the ladder times, his tells and save round-trip are tested.
+- **Tests:** 17 pass, including the fairness rule checked over 10,000 random-input moments: no strike ever begins without the minimum Warning, and a thumb lifted during a wind-up never costs a plaster. The flash limits (one wash per 3 s), the six-mark cap, the ladder times, his tells and save round-trip are tested. So are the scripted first swipe (a Warning, a mark, never a plaster), a smack cancelled by meeting the demand, and the journal keeping only its 40 real entries.
 - **Balance (not yet met).** Latest run, 10 runs per moment:
 
   | Player | Objective met | Three stars | Spec target |

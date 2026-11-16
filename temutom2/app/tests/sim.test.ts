@@ -14,6 +14,8 @@ import { applyResult } from '../src/game/progress';
 import { reader, ignorer } from '../tools/bots';
 import { distToPath } from '../src/sim/util';
 import { PLACES } from '../src/content/places';
+import { FIELD_NOTES } from '../src/content/fieldNotes';
+import { answer } from '../src/sim/demands';
 
 const def = (id: string) => MOMENTS.find((m) => m.id === id)!;
 type Thumb = { down: boolean; x: number; y: number };
@@ -183,6 +185,42 @@ describe('demands and the ladder', () => {
   });
 });
 
+describe('scripted events and the smack', () => {
+  it('the first moment has its scripted swipe: a Warning, then a mark, and never a plaster', () => {
+    const s = createMoment(def('w1d1dawn'));
+    const policy = reader(false);
+    let forced = -1, marksBefore = 0, struck = -1;
+    while (s.status === 'running') {
+      const p = policy(s);
+      if (p) applyInput(s, { type: 'hand', ...p });
+      step(s);
+      if (forced < 0 && s.cat.forcedWarning) { forced = s.time; marksBefore = s.markSeq; }
+      if (forced >= 0 && struck < 0 && s.markSeq > marksBefore) struck = s.time;
+      s.events.length = 0;
+    }
+    expect(forced).toBeGreaterThanOrEqual(28);
+    expect(forced).toBeLessThan(29);
+    expect(struck - forced).toBeGreaterThanOrEqual(minWarning(s) + TUNING.strike.swipeWindup - 1e-6);
+    expect(s.tally.plastersLost).toBe(0);
+    expect(s.plasters).toBe(s.plastersStart);
+    expect(s.status).toBe('won');
+  });
+
+  it('meeting the demand cancels a smack that has not been thrown yet', () => {
+    const s = createMoment(def('w1d5dawn'));
+    s.def = { ...s.def, demands: {} };
+    s.nextDemandAt = Infinity;
+    issueDemand(s, 'nothing', LADDER.indexOf('smack'));
+    step(s);
+    expect(s.cat.forcedWarning).toBe(true);
+    expect(answer(s, 'nothing')).toBe(true);
+    expect(s.cat.forcedWarning).toBe(false);
+    for (let i = 0; i < 90; i++) step(s);
+    expect(s.tally.strikes).toBe(0);
+    expect(s.marks.length).toBe(0);
+  });
+});
+
 describe('lapses and schemes', () => {
   it('no strike begins and Irritation does not rise during a lapse', () => {
     const s = createMoment(def('w1d6dawn'));
@@ -232,6 +270,20 @@ describe('save', () => {
     const save = freshSave();
     applyResult(save, runMoment(createMoment(def('w1d1morning')), reader(false)));
     expect(deserialise(serialise(save))).toEqual(save);
+  });
+
+  it('only real journal entries are kept, and a replayed moment is not counted twice in the day', () => {
+    const save = freshSave();
+    const ids = new Set(FIELD_NOTES.map((f) => f.id));
+    expect(ids.size).toBe(40);
+    for (let i = 0; i < 2; i++) {
+      const s = runMoment(createMoment(def('w1d3dawn')), reader(true));
+      s.status = 'won';
+      const r = applyResult(save, s);
+      for (const n of r.newNotes) expect(ids.has(n)).toBe(true);
+    }
+    for (const n of save.notes) expect(ids.has(n)).toBe(true);
+    expect(Object.keys(save.dayLog.w1d3.keys)).toEqual(['w1d3dawn']);
   });
 });
 

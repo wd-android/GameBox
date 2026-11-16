@@ -5,7 +5,7 @@ import { Capacitor } from '@capacitor/core';
 class HapticEngine {
   on = true;
   private rumbleTimer: number | null = null;
-  private rumbleKind: 'purr' | 'scream' | null = null;
+  private rumbleKind: 'purr' | 'tremor' | 'scream' | null = null;
   private native = Capacitor.isNativePlatform();
 
   set(on: boolean) {
@@ -35,17 +35,20 @@ class HapticEngine {
     else navigator.vibrate?.(300);
   }
 
-  /** Continuous rumble: a soft purr, or a strong buzz while screaming */
-  rumble(kind: 'purr' | 'scream' | null) {
+  /** Continuous rumble: a soft even purr, a faint uneven tremor (Warning), or a strong buzz while screaming */
+  rumble(kind: 'purr' | 'tremor' | 'scream' | null) {
     if (kind === this.rumbleKind) return;
     if (this.rumbleTimer != null) window.clearInterval(this.rumbleTimer);
     this.rumbleTimer = null;
     this.rumbleKind = kind;
     if (!kind || !this.on) return;
-    const every = kind === 'scream' ? 90 : 420;
+    const every = kind === 'scream' ? 90 : kind === 'tremor' ? 110 : 420;
+    // Uneven on purpose: two quick ticks, a gap, one tick, a longer gap.
+    const tremor = [1, 1, 0, 1, 0, 0, 0];
+    let n = 0;
     this.rumbleTimer = window.setInterval(() => {
       if (kind === 'scream') this.impact(ImpactStyle.Heavy);
-      else this.impact(ImpactStyle.Light);
+      else if (kind === 'purr' || tremor[n++ % tremor.length]) this.impact(ImpactStyle.Light);
     }, every);
   }
 }

@@ -94,7 +94,7 @@ export function App() {
       )}
       {screen.id === 'moment' && (
         <MomentScreen key={screen.key} def={screen.def} options={options(screen.def)} reduceMotion={reduceMotion} moodHints={save.settings.moodHints}
-          onFinish={finish} onQuit={() => (save.played >= 3 ? home() : play(screen.def.id))} onSettings={() => setScreen({ id: 'settings', back: { id: 'home' } })} pausedExternally={bg} />
+          onFinish={finish} onQuit={() => (save.played >= 3 ? home() : play(screen.def.id))} onSettings={() => setScreen({ id: 'settings', back: { id: 'moment', def: screen.def, key: Date.now() } })} pausedExternally={bg} />
       )}
       {screen.id === 'result' && (
         <Result r={screen.r} save={save} marks={screen.marks} nextLabel={screen.def.daily ? 'Done' : 'Next moment'}

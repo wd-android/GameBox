@@ -283,6 +283,22 @@ function checkEnd(s: MomentState) {
   }
 }
 
+/** Fixed events for teaching moments (§13.1 "script"). */
+function stepScript(s: MomentState) {
+  const script = s.def.script;
+  const c = s.cat;
+  while (script && s.scriptIdx < script.length && script[s.scriptIdx].t <= s.time) {
+    const e = script[s.scriptIdx];
+    if (e.do === 'swipeFree') {
+      // The scripted swipe still goes through the Warning, like any other (the fairness rule). It waits its turn.
+      if (!c.onScreen || c.lapse || c.strike || c.forcedWarning) return;
+      c.forcedWarning = true;
+    } else if (e.do === 'demand' && e.kind) issueDemand(s, e.kind, e.step ?? 0);
+    else if (e.do === 'come') { c.onScreen = true; c.pos = 'near'; }
+    s.scriptIdx++;
+  }
+}
+
 export function step(s: MomentState) {
   if (s.status !== 'running') return;
   const dt = TUNING.dt;
@@ -292,7 +308,6 @@ export function step(s: MomentState) {
 
   // 1. The thumb
   const f = updateHand(s, r, dt);
-  if (c.strike || c.lapse || c.activity === 'striking') { /* input still accepted */ }
   handlePlayer(s, f, dt);
 
   // 2. Hidden state
@@ -304,6 +319,7 @@ export function step(s: MomentState) {
     if (ch === 'away' && c.scheme) stopScheme(s, false);
   }
   stepDemandSchedule(s);
+  stepScript(s);
   stepLadder(s);
   const diff = difficultyModule(s)?.step(s, dt, f) ?? { irritation: 0, suspend: false };
   attentionStep(s, f, dt, diff.suspend, diff.irritation);
