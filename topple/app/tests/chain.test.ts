@@ -89,6 +89,23 @@ describe('chain calculation', () => {
     expect(r2.fallen.find((f) => f.slot === far)!.cause).toBe('reach1');
   });
 
+  it('a ball that rolls to an empty gap strikes nothing: its trigger is a stopping point and a near miss', () => {
+    const b = new PuzzleBuilder();
+    const s = b.add({ x: 2, y: 1, h: 90 });
+    const a = b.straight(b.pose(s), 3, s);
+    const far = b.add({ x: 7, y: 8, h: 90 });
+    const tail = b.straight(b.pose(far), 3, far);
+    b.ramp(a[2], far, 900);
+    b.setGaps([far]);
+    const p = b.build('ramp-gap', s, tail[2], ['standard']);
+    const miss = calculate(p, new Map());
+    expect(miss.won).toBe(false);
+    expect(miss.balls.length).toBe(1);
+    expect(miss.stops).toEqual([a[2]]);
+    expect(miss.nearMisses).toEqual([{ slot: a[2], gap: far }]);
+    expect(calculate(p, place([[far, 'standard']])).won).toBe(true);
+  });
+
   it('the same puzzle and placement always give the same events in the same order', () => {
     const { p, run } = line(30, [7, 15, 16], ['standard', 'standard', 'tall']);
     const pl = place([

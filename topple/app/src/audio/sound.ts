@@ -161,7 +161,8 @@ class Sound {
     const scale = [261.63, 293.66, 329.63, 392, 440, 523.25];
     let step = 0;
     const play = () => {
-      if (!this.ctx || !this.music || !this.planning) {
+      // While suspended the clock stands still, so notes would pile up and all sound at once on return.
+      if (!this.ctx || !this.music || !this.planning || this.ctx.state !== 'running') {
         step++;
         return;
       }

@@ -50,7 +50,7 @@ This document specifies the first playable release (v1) in enough detail to buil
 | Item | Value |
 |---|---|
 | Package name | `topple` |
-| App identifier | `<your reverse domain>.topple` (to be supplied) |
+| App identifier | `com.promethica.topple` |
 | Display name | `Topple`, from `config/app.ts` |
 | Minimum Android / iOS | 8.0 (API 26) / 15 |
 

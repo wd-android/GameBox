@@ -36,7 +36,7 @@ export class HomeScreen implements Screen {
     const today = h(
       'button',
       { class: `today-card${rec?.solved ? ' solved' : ''}` },
-      h('small', {}, `${WEEKDAYS[weekday(date)]} · Daily Topple`),
+      h('small', {}, `${WEEKDAYS[weekday(date)]} · Daily ${APP.DISPLAY_NAME}`),
       h('b', {}, `#${n}`),
       h('span', {}, rec?.solved ? `Solved on topple ${rec.topples}${rec.gold ? ' · ★ gold' : ''}` : rec?.topples ? `${rec.topples} topples so far` : 'Tap to play'),
     );

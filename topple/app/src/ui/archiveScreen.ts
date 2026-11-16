@@ -1,3 +1,4 @@
+import { APP } from '../config/app';
 import { sound } from '../audio/sound';
 import { todayNumber } from '../game/puzzles';
 import { dateForNumber, weekday } from '../game/schedule';
@@ -39,7 +40,7 @@ export class ArchiveScreen implements Screen {
           continue;
         }
         const colour = dayColour(save.daily[n]);
-        const cell = h('button', { class: `cal-day ${colour}${n === today ? ' today' : ''}`, 'aria-label': `Topple #${n}, ${date}` }, String(day), shields.has(date) ? h('span', { class: 'cal-shield' }, '🛡') : null);
+        const cell = h('button', { class: `cal-day ${colour}${n === today ? ' today' : ''}`, 'aria-label': `${APP.DISPLAY_NAME} #${n}, ${date}` }, String(day), shields.has(date) ? h('span', { class: 'cal-shield' }, '🛡') : null);
         cell.addEventListener('click', () => {
           sound.unlock();
           sound.tap();

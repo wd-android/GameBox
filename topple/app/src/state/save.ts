@@ -41,6 +41,7 @@ export interface SaveData {
   styles: { owned: string[]; domino: string; table: string };
   daily: Record<string, DailyRecord>;
   pack: Record<string, PackRecord>;
+  /** 7-day milestones already paid in the current streak. */
   streakMilestonesPaid: number;
   tutorialDone: number;
   inProgress: { key: string; state: SessionState } | null;

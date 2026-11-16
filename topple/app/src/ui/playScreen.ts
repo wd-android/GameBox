@@ -1,3 +1,4 @@
+import { APP } from '../config/app';
 import { TUNING } from '../config/tuning';
 import type { PieceKind } from '../chain/model';
 import type { ChainResult } from '../chain/chain';
@@ -38,6 +39,10 @@ export class PlayScreen implements Screen {
   ) {
     const { puzzle, replay } = puzzleFor(key);
     this.session = new PuzzleSession(puzzle, state);
+    // Reopened without a saved session (another puzzle was played in between): the count carries on from the
+    // record, so the result and the shared text agree with the Archive and the statistics.
+    const rec = key.kind === 'daily' ? app.save.daily[key.n] : key.kind === 'pack' ? app.save.pack[key.n] : undefined;
+    if (!state && rec && !rec.solved) this.session.topples = rec.topples;
     this.canvas = h('canvas', { class: 'board-canvas' });
     app.stageEl.append(this.canvas);
     this.view = new BoardView(this.canvas);
@@ -79,7 +84,7 @@ export class PlayScreen implements Screen {
     const k = this.key;
     if (k.kind === 'daily') {
       const date = dateForNumber(k.n);
-      return `Topple #${k.n} · ${WEEKDAYS[weekday(date)]}`;
+      return `${APP.DISPLAY_NAME} #${k.n} · ${WEEKDAYS[weekday(date)]}`;
     }
     return this.session.puzzle.title ?? 'Puzzle';
   }

@@ -45,8 +45,12 @@ npm run android      # build, copy into android/, open Android Studio
 npm run ios          # build, copy into ios/, open Xcode (macOS; run `pod install` in ios/App first)
 ```
 
-Before release, set these in `src/config/app.ts`:
-- the real app identifier (`APP_ID`, currently `com.example.topple`);
+The app identifier is `com.promethica.topple`, set in `src/config/app.ts` and in the
+native projects (`android/app/build.gradle`, `strings.xml`, the `MainActivity` package and
+the Xcode bundle identifier). The version, `0.1.0`, is in `package.json`, `src/config/app.ts`,
+`android/app/build.gradle` and the Xcode project.
+
+Before release, set in `src/config/app.ts`:
 - the launch date (`LAUNCH_DATE`, open question 3; currently 15 November 2026). Puzzle #1 falls on this date. After changing it, run `npm run report` so the weekday order follows the new dates.
 
 ## Layout (as §4)
@@ -87,8 +91,9 @@ tests/
 
 ## Decisions and deviations (please review)
 
-1. **Concept document.** `concepts/03-topple.md` is not in the repository,
-   so this follows the spec and the report only.
+1. **Concept document.** The app was built from the spec and the report.
+   Where the [concept](../../concepts/03-topple.md) and the spec differ
+   (for example, pieces are not turned, A4), the spec wins.
 2. **Puzzle authoring.** The 120 dailies, 4 monthly specials and the
    30-puzzle pack were proposed by a template generator (`src/puzzles/generator.ts`),
    the "later addition" §17 suggests, and filtered by the solver's §6.3 rules.

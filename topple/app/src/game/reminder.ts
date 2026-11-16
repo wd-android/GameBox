@@ -1,4 +1,5 @@
 import { Capacitor } from '@capacitor/core';
+import { APP } from '../config/app';
 import { LocalNotifications } from '@capacitor/local-notifications';
 
 /** Daily reminder notification (§13), scheduled on the device only. Returns false where unavailable. */
@@ -11,7 +12,7 @@ export async function scheduleReminder(on: boolean, time: string): Promise<boole
     if (perm.display !== 'granted') return false;
     const [hour, minute] = time.split(':').map(Number);
     await LocalNotifications.schedule({
-      notifications: [{ id: 1, title: "Today's Topple is ready", body: 'A new chain is waiting to fall.', schedule: { on: { hour, minute }, allowWhileIdle: true } }],
+      notifications: [{ id: 1, title: `Today's ${APP.DISPLAY_NAME} is ready`, body: 'A new chain is waiting to fall.', schedule: { on: { hour, minute }, allowWhileIdle: true } }],
     });
     return true;
   } catch {

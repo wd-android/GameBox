@@ -9,6 +9,7 @@ import { SplashScreen } from '@capacitor/splash-screen';
 import { APP } from './config/app';
 import { loadSave } from './state/save';
 import { App } from './ui/app';
+import { HomeScreen } from './ui/homeScreen';
 
 async function boot(): Promise<void> {
   document.title = APP.DISPLAY_NAME;
@@ -29,8 +30,12 @@ async function boot(): Promise<void> {
     void CapApp.addListener('pause', () => app.background());
     void CapApp.addListener('resume', () => app.foreground());
     void CapApp.addListener('backButton', () => {
-      const overlay = app.ui.querySelector('.overlay');
-      if (overlay) overlay.remove();
+      const overlays = app.ui.querySelectorAll('.overlay');
+      const overlay = overlays[overlays.length - 1];
+      if (overlay) {
+        // A sheet may handle 'back' itself (the result moves on); otherwise it just closes.
+        if (overlay.dispatchEvent(new CustomEvent('back', { cancelable: true }))) overlay.remove();
+      } else if (app.current instanceof HomeScreen) void CapApp.minimizeApp().catch(() => {});
       else if (app.save.tutorialDone >= 2) {
         app.current?.saveProgress?.();
         app.goHome();

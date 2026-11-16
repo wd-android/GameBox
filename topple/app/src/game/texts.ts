@@ -1,3 +1,4 @@
+import { APP } from '../config/app';
 import type { ChainResult } from '../chain/chain';
 
 /**
@@ -43,7 +44,7 @@ export function dominoes(n: number): string {
 
 /** The shared result (§8.4). Always states par: it is sent after solving. Never reveals which gaps. */
 export function shareText(o: { number: number | null; title?: string; topples: number; used: number; par: number; gold: boolean; hint: boolean }): string {
-  const head = o.number !== null ? `Topple #${o.number}` : `Topple · ${o.title ?? ''}`.trim();
+  const head = o.number !== null ? `${APP.DISPLAY_NAME} #${o.number}` : `${APP.DISPLAY_NAME} · ${o.title ?? ''}`.trim();
   const line = `Solved on the ${ordinal(o.topples)} topple with ${dominoes(o.used)} (par ${o.par})${o.hint ? ' with a hint' : ''}${o.gold ? ' ★' : ''}`;
   return `${head}\n${line}`;
 }

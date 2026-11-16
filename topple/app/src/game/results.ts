@@ -65,6 +65,8 @@ export function recordSolve(save: SaveData, key: PuzzleKey, o: { used: number; g
   }
   const streak = streakInfo(save, o.today).current;
   const due = Math.floor(streak / 7);
+  // A broken streak starts its milestones again; otherwise a second streak would pay nothing until it beat the first.
+  if (due < save.streakMilestonesPaid) save.streakMilestonesPaid = due;
   if (key.kind === 'daily' && due > save.streakMilestonesPaid) {
     tokens += TUNING.TOKENS_STREAK_7 * (due - save.streakMilestonesPaid);
     save.streakMilestonesPaid = due;

@@ -1,4 +1,5 @@
 import { Capacitor } from '@capacitor/core';
+import { APP } from '../config/app';
 import { Share } from '@capacitor/share';
 import { recordSolve } from '../game/results';
 import { todayNumber } from '../game/puzzles';
@@ -67,7 +68,7 @@ export function showResult(app: App, screen: PlayScreen): void {
     actions.append(btn('Home', 'ghost', () => (overlay.remove(), app.goHome())));
   }
 
-  const heading = key.kind === 'daily' ? `Topple #${key.n}` : (s.puzzle.title ?? 'Solved');
+  const heading = key.kind === 'daily' ? `${APP.DISPLAY_NAME} #${key.n}` : (s.puzzle.title ?? 'Solved');
   overlay.append(
     h(
       'div',
@@ -82,6 +83,14 @@ export function showResult(app: App, screen: PlayScreen): void {
       actions,
     ),
   );
+  // Android back button: never uncover the finished board, which has no controls of its own.
+  // During the first-launch puzzles there is no menu yet, so the sheet stays.
+  overlay.addEventListener('back', (e) => {
+    e.preventDefault();
+    if (key.kind === 'tutorial') return;
+    overlay.remove();
+    app.goHome();
+  });
   app.ui.append(overlay);
   if (gold) {
     sound.star();

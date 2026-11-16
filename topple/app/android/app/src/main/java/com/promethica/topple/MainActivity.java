@@ -1,4 +1,4 @@
-package com.example.topple;
+package com.promethica.topple;
 
 import com.getcapacitor.BridgeActivity;
 

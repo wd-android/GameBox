@@ -118,7 +118,8 @@ export function calculate(p: Puzzle, placement: Placement): ChainResult {
       const ri = p.ramps.indexOf(r);
       balls.push({ ramp: ri, time: e.time });
       push({ time: e.time + r.travelMs, slot: r.target, by: e.slot, depth: e.depth + 1, cause: 'ball', seq: seq++ });
-      struckSomething[e.slot] = 1;
+      // The ball always rolls, but it only strikes something if a piece stands at the far end.
+      if (pieceAt(p, placement, r.target)) struckSomething[e.slot] = 1;
     }
   }
 
@@ -130,6 +131,7 @@ export function calculate(p: Puzzle, placement: Placement): ChainResult {
       if (struckSomething[f.slot]) continue;
       stops.push(f.slot);
       for (const b of idx.reach1[f.slot]) if (!pieceAt(p, placement, b) && p.slots[b].holds === 'gap') nearMisses.push({ slot: f.slot, gap: b });
+      for (const r of idx.ramps[f.slot]) if (!pieceAt(p, placement, r.target) && p.slots[r.target].holds === 'gap') nearMisses.push({ slot: f.slot, gap: r.target });
     }
   }
   const duration = fallen.length ? fallen[fallen.length - 1].time : 0;

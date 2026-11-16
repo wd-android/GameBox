@@ -2,6 +2,6 @@
 <resources>
     <string name="app_name">Topple</string>
     <string name="title_activity_main">Topple</string>
-    <string name="package_name">com.example.topple</string>
-    <string name="custom_url_scheme">com.example.topple</string>
+    <string name="package_name">com.promethica.topple</string>
+    <string name="custom_url_scheme">com.promethica.topple</string>
 </resources>

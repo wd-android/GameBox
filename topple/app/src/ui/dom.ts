@@ -67,7 +67,3 @@ export function toast(text: string, ms = 1800): void {
   document.getElementById('ui')!.append(t);
   window.setTimeout(() => t.remove(), ms);
 }
-
-export function corkIcon(): string {
-  return '<svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M4 6h12l-1.6 10.2a2 2 0 0 1-2 1.8H7.6a2 2 0 0 1-2-1.8z" fill="#c8955a"/><ellipse cx="10" cy="6" rx="6" ry="2.2" fill="#e0b27a"/><circle cx="8" cy="11" r=".9" fill="#8a5a2b"/><circle cx="12" cy="13" r=".9" fill="#8a5a2b"/></svg>';
-}

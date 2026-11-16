@@ -64,7 +64,7 @@ export function openSettings(app: App, onClose?: () => void): void {
       h('div', { class: 'row' }, h('span', {}, 'Reduce motion', h('small', {}, 'Camera stays still during the topple')), toggle(s.reduceMotion, (v) => ((s.reduceMotion = v), save()))),
       done,
       reset,
-      h('div', { class: 'subtitle', style: 'text-align:center;font-size:11px' }, `${APP.DISPLAY_NAME} · v0.1 · no personal data · nothing leaves this device`),
+      h('div', { class: 'subtitle', style: 'text-align:center;font-size:11px' }, `${APP.DISPLAY_NAME} · v${APP.VERSION} · no personal data · nothing leaves this device`),
     ),
   );
   app.ui.append(overlay);

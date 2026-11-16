@@ -4,8 +4,10 @@
  */
 export const APP = {
   DISPLAY_NAME: 'Topple',
-  /** Placeholder – replace with the real reverse domain (spec §18, question 2). */
-  APP_ID: 'com.example.topple',
+  /** Reverse-domain identifier (spec §18, question 2). Also set in the native projects. */
+  APP_ID: 'com.promethica.topple',
+  /** Shown in Settings. Keep in step with package.json and the native projects. */
+  VERSION: '0.1.0',
   /** Puzzle #1's date (spec §18, question 3 – placeholder until a launch date is chosen). */
   LAUNCH_DATE: '2026-11-15',
   SAVE_KEY: 'topple.save',

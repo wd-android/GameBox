@@ -121,6 +121,22 @@ describe('results', () => {
     expect(save.streakMilestonesPaid).toBe(1);
     expect(save.tokens).toBe(20 + 7 * 10 + 20);
   });
+
+  it('a new streak after a break earns its own 7-day milestone', () => {
+    const save = freshSave();
+    const solve1 = (n: number) => {
+      recordTopple(save, { kind: 'daily', n });
+      return recordSolve(save, { kind: 'daily', n }, { used: 3, gold: false, hint: false, today: n, todayDate: dateForNumber(n) });
+    };
+    for (let n = 1; n <= 14; n++) solve1(n);
+    expect(save.streakMilestonesPaid).toBe(2);
+    // Days 15 to 17 missed: one is forgiven, the next breaks the streak.
+    let paid = 0;
+    for (let n = 18; n <= 24; n++) paid += solve1(n).milestone ? 1 : 0;
+    expect(streakInfo(save, 24).current).toBe(7);
+    expect(paid).toBe(1);
+    expect(save.tokens).toBe(20 + 21 * 10 + 3 * 20);
+  });
 });
 
 describe('save', () => {
