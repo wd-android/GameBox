@@ -1,0 +1,1305 @@
+{
+ "generated": "2026-11-15",
+ "levels": [
+  {
+   "id": 1,
+   "stage": 1,
+   "n": 3,
+   "seed": 1186,
+   "routeFaces": 3,
+   "windiness": 0.9,
+   "holeShare": 0,
+   "bands": {
+    "length": [
+     13,
+     15
+    ]
+   }
+  },
+  {
+   "id": 2,
+   "stage": 1,
+   "n": 3,
+   "seed": 2149,
+   "routeFaces": 3,
+   "windiness": 0.9,
+   "holeShare": 0,
+   "bands": {
+    "length": [
+     13,
+     15
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "stage": 1,
+   "n": 3,
+   "seed": 3001,
+   "routeFaces": 3,
+   "windiness": 0.9,
+   "holeShare": 0,
+   "bands": {
+    "length": [
+     13,
+     15
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "stage": 1,
+   "n": 3,
+   "seed": 4038,
+   "routeFaces": 3,
+   "windiness": 0.9,
+   "holeShare": 0,
+   "bands": {
+    "length": [
+     13,
+     15
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "stage": 1,
+   "n": 3,
+   "seed": 5149,
+   "routeFaces": 3,
+   "windiness": 0.9,
+   "holeShare": 0,
+   "bands": {
+    "length": [
+     13,
+     15
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "stage": 1,
+   "n": 3,
+   "seed": 6149,
+   "routeFaces": 3,
+   "windiness": 0.9,
+   "holeShare": 0,
+   "bands": {
+    "length": [
+     13,
+     15
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "stage": 1,
+   "n": 3,
+   "seed": 7149,
+   "routeFaces": 3,
+   "windiness": 0.9,
+   "holeShare": 0,
+   "bands": {
+    "length": [
+     13,
+     15
+    ]
+   }
+  },
+  {
+   "id": 8,
+   "stage": 1,
+   "n": 3,
+   "seed": 8075,
+   "routeFaces": 3,
+   "windiness": 0.9,
+   "holeShare": 0,
+   "bands": {
+    "length": [
+     13,
+     15
+    ]
+   }
+  },
+  {
+   "id": 9,
+   "stage": 1,
+   "n": 3,
+   "seed": 9001,
+   "routeFaces": 3,
+   "windiness": 0.9,
+   "holeShare": 0,
+   "bands": {
+    "length": [
+     13,
+     15
+    ]
+   }
+  },
+  {
+   "id": 10,
+   "stage": 1,
+   "n": 3,
+   "seed": 10186,
+   "routeFaces": 3,
+   "windiness": 0.9,
+   "holeShare": 0,
+   "bands": {
+    "length": [
+     13,
+     15
+    ]
+   }
+  },
+  {
+   "id": 11,
+   "stage": 2,
+   "n": 4,
+   "seed": 11075,
+   "routeFaces": 3,
+   "windiness": 0.8,
+   "holeShare": 0,
+   "bands": {
+    "length": [
+     18,
+     22
+    ]
+   }
+  },
+  {
+   "id": 12,
+   "stage": 2,
+   "n": 4,
+   "seed": 12075,
+   "routeFaces": 3,
+   "windiness": 0.8,
+   "holeShare": 0,
+   "bands": {
+    "length": [
+     18,
+     22
+    ]
+   }
+  },
+  {
+   "id": 13,
+   "stage": 2,
+   "n": 4,
+   "seed": 13186,
+   "routeFaces": 3,
+   "windiness": 0.8,
+   "holeShare": 0,
+   "bands": {
+    "length": [
+     18,
+     22
+    ]
+   }
+  },
+  {
+   "id": 14,
+   "stage": 2,
+   "n": 4,
+   "seed": 14186,
+   "routeFaces": 3,
+   "windiness": 0.8,
+   "holeShare": 0,
+   "bands": {
+    "length": [
+     18,
+     22
+    ]
+   }
+  },
+  {
+   "id": 15,
+   "stage": 2,
+   "n": 4,
+   "seed": 15001,
+   "routeFaces": 3,
+   "windiness": 0.8,
+   "holeShare": 0,
+   "bands": {
+    "length": [
+     18,
+     22
+    ]
+   }
+  },
+  {
+   "id": 16,
+   "stage": 2,
+   "n": 4,
+   "seed": 16001,
+   "routeFaces": 3,
+   "windiness": 0.8,
+   "holeShare": 0,
+   "bands": {
+    "length": [
+     18,
+     22
+    ]
+   }
+  },
+  {
+   "id": 17,
+   "stage": 2,
+   "n": 4,
+   "seed": 17001,
+   "routeFaces": 3,
+   "windiness": 0.8,
+   "holeShare": 0,
+   "bands": {
+    "length": [
+     18,
+     22
+    ]
+   }
+  },
+  {
+   "id": 18,
+   "stage": 2,
+   "n": 4,
+   "seed": 18149,
+   "routeFaces": 3,
+   "windiness": 0.8,
+   "holeShare": 0,
+   "bands": {
+    "length": [
+     18,
+     22
+    ]
+   }
+  },
+  {
+   "id": 19,
+   "stage": 2,
+   "n": 4,
+   "seed": 19075,
+   "routeFaces": 3,
+   "windiness": 0.8,
+   "holeShare": 0,
+   "bands": {
+    "length": [
+     18,
+     22
+    ]
+   }
+  },
+  {
+   "id": 20,
+   "stage": 2,
+   "n": 4,
+   "seed": 20075,
+   "routeFaces": 3,
+   "windiness": 0.8,
+   "holeShare": 0,
+   "bands": {
+    "length": [
+     18,
+     22
+    ]
+   }
+  },
+  {
+   "id": 21,
+   "stage": 2,
+   "n": 4,
+   "seed": 21001,
+   "routeFaces": 4,
+   "windiness": 0.8,
+   "holeShare": 0,
+   "bands": {
+    "length": [
+     21,
+     27
+    ]
+   }
+  },
+  {
+   "id": 22,
+   "stage": 2,
+   "n": 4,
+   "seed": 22075,
+   "routeFaces": 4,
+   "windiness": 0.8,
+   "holeShare": 0,
+   "bands": {
+    "length": [
+     21,
+     27
+    ]
+   }
+  },
+  {
+   "id": 23,
+   "stage": 2,
+   "n": 4,
+   "seed": 23112,
+   "routeFaces": 4,
+   "windiness": 0.8,
+   "holeShare": 0,
+   "bands": {
+    "length": [
+     21,
+     27
+    ]
+   }
+  },
+  {
+   "id": 24,
+   "stage": 2,
+   "n": 4,
+   "seed": 24112,
+   "routeFaces": 4,
+   "windiness": 0.8,
+   "holeShare": 0,
+   "bands": {
+    "length": [
+     21,
+     27
+    ]
+   }
+  },
+  {
+   "id": 25,
+   "stage": 2,
+   "n": 4,
+   "seed": 25001,
+   "routeFaces": 4,
+   "windiness": 0.8,
+   "holeShare": 0,
+   "bands": {
+    "length": [
+     21,
+     27
+    ]
+   }
+  },
+  {
+   "id": 26,
+   "stage": 2,
+   "n": 4,
+   "seed": 26075,
+   "routeFaces": 4,
+   "windiness": 0.8,
+   "holeShare": 0,
+   "bands": {
+    "length": [
+     21,
+     27
+    ]
+   }
+  },
+  {
+   "id": 27,
+   "stage": 2,
+   "n": 4,
+   "seed": 27112,
+   "routeFaces": 4,
+   "windiness": 0.8,
+   "holeShare": 0,
+   "bands": {
+    "length": [
+     21,
+     27
+    ]
+   }
+  },
+  {
+   "id": 28,
+   "stage": 2,
+   "n": 4,
+   "seed": 28075,
+   "routeFaces": 4,
+   "windiness": 0.8,
+   "holeShare": 0,
+   "bands": {
+    "length": [
+     21,
+     27
+    ]
+   }
+  },
+  {
+   "id": 29,
+   "stage": 2,
+   "n": 4,
+   "seed": 29149,
+   "routeFaces": 4,
+   "windiness": 0.8,
+   "holeShare": 0,
+   "bands": {
+    "length": [
+     21,
+     27
+    ]
+   }
+  },
+  {
+   "id": 30,
+   "stage": 2,
+   "n": 4,
+   "seed": 30112,
+   "routeFaces": 4,
+   "windiness": 0.8,
+   "holeShare": 0,
+   "bands": {
+    "length": [
+     21,
+     27
+    ]
+   }
+  },
+  {
+   "id": 31,
+   "stage": 3,
+   "n": 5,
+   "seed": 31112,
+   "routeFaces": 4,
+   "windiness": 0.8,
+   "holeShare": 0.3,
+   "bands": {
+    "length": [
+     28,
+     36
+    ]
+   }
+  },
+  {
+   "id": 32,
+   "stage": 3,
+   "n": 5,
+   "seed": 32075,
+   "routeFaces": 4,
+   "windiness": 0.8,
+   "holeShare": 0.3,
+   "bands": {
+    "length": [
+     28,
+     36
+    ]
+   }
+  },
+  {
+   "id": 33,
+   "stage": 3,
+   "n": 5,
+   "seed": 33186,
+   "routeFaces": 4,
+   "windiness": 0.8,
+   "holeShare": 0.3,
+   "bands": {
+    "length": [
+     28,
+     36
+    ]
+   }
+  },
+  {
+   "id": 34,
+   "stage": 3,
+   "n": 5,
+   "seed": 34186,
+   "routeFaces": 4,
+   "windiness": 0.8,
+   "holeShare": 0.3,
+   "bands": {
+    "length": [
+     28,
+     36
+    ]
+   }
+  },
+  {
+   "id": 35,
+   "stage": 3,
+   "n": 5,
+   "seed": 35186,
+   "routeFaces": 4,
+   "windiness": 0.8,
+   "holeShare": 0.3,
+   "bands": {
+    "length": [
+     28,
+     36
+    ]
+   }
+  },
+  {
+   "id": 36,
+   "stage": 3,
+   "n": 5,
+   "seed": 36186,
+   "routeFaces": 4,
+   "windiness": 0.8,
+   "holeShare": 0.3,
+   "bands": {
+    "length": [
+     28,
+     36
+    ]
+   }
+  },
+  {
+   "id": 37,
+   "stage": 3,
+   "n": 5,
+   "seed": 37038,
+   "routeFaces": 4,
+   "windiness": 0.8,
+   "holeShare": 0.3,
+   "bands": {
+    "length": [
+     28,
+     36
+    ]
+   }
+  },
+  {
+   "id": 38,
+   "stage": 3,
+   "n": 5,
+   "seed": 38186,
+   "routeFaces": 4,
+   "windiness": 0.7,
+   "holeShare": 0.3,
+   "bands": {
+    "length": [
+     28,
+     36
+    ]
+   }
+  },
+  {
+   "id": 39,
+   "stage": 3,
+   "n": 5,
+   "seed": 39186,
+   "routeFaces": 4,
+   "windiness": 0.7,
+   "holeShare": 0.3,
+   "bands": {
+    "length": [
+     28,
+     36
+    ]
+   }
+  },
+  {
+   "id": 40,
+   "stage": 3,
+   "n": 5,
+   "seed": 40038,
+   "routeFaces": 4,
+   "windiness": 0.7,
+   "holeShare": 0.3,
+   "bands": {
+    "length": [
+     28,
+     36
+    ]
+   }
+  },
+  {
+   "id": 41,
+   "stage": 3,
+   "n": 5,
+   "seed": 41075,
+   "routeFaces": 4,
+   "windiness": 0.7,
+   "holeShare": 0.3,
+   "bands": {
+    "length": [
+     28,
+     36
+    ]
+   }
+  },
+  {
+   "id": 42,
+   "stage": 3,
+   "n": 5,
+   "seed": 42149,
+   "routeFaces": 4,
+   "windiness": 0.7,
+   "holeShare": 0.3,
+   "bands": {
+    "length": [
+     28,
+     36
+    ]
+   }
+  },
+  {
+   "id": 43,
+   "stage": 3,
+   "n": 5,
+   "seed": 43001,
+   "routeFaces": 5,
+   "windiness": 0.7,
+   "holeShare": 0.3,
+   "bands": {
+    "length": [
+     37,
+     47
+    ]
+   }
+  },
+  {
+   "id": 44,
+   "stage": 3,
+   "n": 5,
+   "seed": 44149,
+   "routeFaces": 5,
+   "windiness": 0.7,
+   "holeShare": 0.3,
+   "bands": {
+    "length": [
+     37,
+     47
+    ]
+   }
+  },
+  {
+   "id": 45,
+   "stage": 3,
+   "n": 5,
+   "seed": 45149,
+   "routeFaces": 5,
+   "windiness": 0.7,
+   "holeShare": 0.3,
+   "bands": {
+    "length": [
+     37,
+     47
+    ]
+   }
+  },
+  {
+   "id": 46,
+   "stage": 3,
+   "n": 5,
+   "seed": 46075,
+   "routeFaces": 5,
+   "windiness": 0.7,
+   "holeShare": 0.3,
+   "bands": {
+    "length": [
+     37,
+     47
+    ]
+   }
+  },
+  {
+   "id": 47,
+   "stage": 3,
+   "n": 5,
+   "seed": 47149,
+   "routeFaces": 5,
+   "windiness": 0.7,
+   "holeShare": 0.3,
+   "bands": {
+    "length": [
+     37,
+     47
+    ]
+   }
+  },
+  {
+   "id": 48,
+   "stage": 3,
+   "n": 5,
+   "seed": 48001,
+   "routeFaces": 5,
+   "windiness": 0.7,
+   "holeShare": 0.3,
+   "bands": {
+    "length": [
+     47,
+     77
+    ]
+   }
+  },
+  {
+   "id": 49,
+   "stage": 3,
+   "n": 5,
+   "seed": 49112,
+   "routeFaces": 5,
+   "windiness": 0.7,
+   "holeShare": 0.3,
+   "bands": {
+    "length": [
+     47,
+     77
+    ]
+   }
+  },
+  {
+   "id": 50,
+   "stage": 3,
+   "n": 5,
+   "seed": 50038,
+   "routeFaces": 5,
+   "windiness": 0.6,
+   "holeShare": 0.3,
+   "bands": {
+    "length": [
+     45,
+     69
+    ]
+   }
+  },
+  {
+   "id": 51,
+   "stage": 3,
+   "n": 5,
+   "seed": 51149,
+   "routeFaces": 5,
+   "windiness": 0.6,
+   "holeShare": 0.3,
+   "bands": {
+    "length": [
+     45,
+     69
+    ]
+   }
+  },
+  {
+   "id": 52,
+   "stage": 3,
+   "n": 5,
+   "seed": 52001,
+   "routeFaces": 5,
+   "windiness": 0.6,
+   "holeShare": 0.3,
+   "bands": {
+    "length": [
+     45,
+     69
+    ]
+   }
+  },
+  {
+   "id": 53,
+   "stage": 3,
+   "n": 5,
+   "seed": 53112,
+   "routeFaces": 5,
+   "windiness": 0.6,
+   "holeShare": 0.3,
+   "bands": {
+    "length": [
+     45,
+     69
+    ]
+   }
+  },
+  {
+   "id": 54,
+   "stage": 3,
+   "n": 5,
+   "seed": 54001,
+   "routeFaces": 5,
+   "windiness": 0.6,
+   "holeShare": 0.3,
+   "bands": {
+    "length": [
+     45,
+     69
+    ]
+   }
+  },
+  {
+   "id": 55,
+   "stage": 3,
+   "n": 5,
+   "seed": 55038,
+   "routeFaces": 5,
+   "windiness": 0.6,
+   "holeShare": 0.3,
+   "bands": {
+    "length": [
+     45,
+     69
+    ]
+   }
+  },
+  {
+   "id": 56,
+   "stage": 4,
+   "n": 6,
+   "seed": 56149,
+   "routeFaces": 5,
+   "windiness": 0.7,
+   "holeShare": 0.4,
+   "bands": {
+    "length": [
+     48,
+     60
+    ],
+    "detour": [
+     36,
+     55
+    ]
+   }
+  },
+  {
+   "id": 57,
+   "stage": 4,
+   "n": 6,
+   "seed": 57112,
+   "routeFaces": 5,
+   "windiness": 0.7,
+   "holeShare": 0.4,
+   "bands": {
+    "length": [
+     48,
+     60
+    ],
+    "detour": [
+     36,
+     55
+    ]
+   }
+  },
+  {
+   "id": 58,
+   "stage": 4,
+   "n": 6,
+   "seed": 58112,
+   "routeFaces": 5,
+   "windiness": 0.7,
+   "holeShare": 0.4,
+   "bands": {
+    "length": [
+     48,
+     60
+    ],
+    "detour": [
+     36,
+     55
+    ]
+   }
+  },
+  {
+   "id": 59,
+   "stage": 4,
+   "n": 6,
+   "seed": 59186,
+   "routeFaces": 5,
+   "windiness": 0.7,
+   "holeShare": 0.4,
+   "bands": {
+    "length": [
+     48,
+     60
+    ],
+    "detour": [
+     36,
+     55
+    ]
+   }
+  },
+  {
+   "id": 60,
+   "stage": 4,
+   "n": 6,
+   "seed": 60075,
+   "routeFaces": 5,
+   "windiness": 0.7,
+   "holeShare": 0.4,
+   "bands": {
+    "length": [
+     48,
+     60
+    ],
+    "detour": [
+     36,
+     55
+    ]
+   }
+  },
+  {
+   "id": 61,
+   "stage": 4,
+   "n": 6,
+   "seed": 61112,
+   "routeFaces": 5,
+   "windiness": 0.7,
+   "holeShare": 0.4,
+   "bands": {
+    "length": [
+     48,
+     60
+    ],
+    "detour": [
+     36,
+     55
+    ]
+   }
+  },
+  {
+   "id": 62,
+   "stage": 4,
+   "n": 6,
+   "seed": 62038,
+   "routeFaces": 5,
+   "windiness": 0.6,
+   "holeShare": 0.4,
+   "bands": {
+    "length": [
+     48,
+     56
+    ],
+    "detour": [
+     36,
+     54
+    ]
+   }
+  },
+  {
+   "id": 63,
+   "stage": 4,
+   "n": 6,
+   "seed": 63001,
+   "routeFaces": 5,
+   "windiness": 0.6,
+   "holeShare": 0.4,
+   "bands": {
+    "length": [
+     48,
+     56
+    ],
+    "detour": [
+     36,
+     54
+    ]
+   }
+  },
+  {
+   "id": 64,
+   "stage": 4,
+   "n": 6,
+   "seed": 64038,
+   "routeFaces": 5,
+   "windiness": 0.6,
+   "holeShare": 0.4,
+   "bands": {
+    "length": [
+     48,
+     56
+    ],
+    "detour": [
+     36,
+     54
+    ]
+   }
+  },
+  {
+   "id": 65,
+   "stage": 4,
+   "n": 6,
+   "seed": 65001,
+   "routeFaces": 5,
+   "windiness": 0.6,
+   "holeShare": 0.4,
+   "bands": {
+    "length": [
+     48,
+     56
+    ],
+    "detour": [
+     36,
+     54
+    ]
+   }
+  },
+  {
+   "id": 66,
+   "stage": 4,
+   "n": 6,
+   "seed": 66038,
+   "routeFaces": 5,
+   "windiness": 0.6,
+   "holeShare": 0.4,
+   "bands": {
+    "length": [
+     48,
+     56
+    ],
+    "detour": [
+     36,
+     54
+    ]
+   }
+  },
+  {
+   "id": 67,
+   "stage": 4,
+   "n": 6,
+   "seed": 67038,
+   "routeFaces": 5,
+   "windiness": 0.6,
+   "holeShare": 0.4,
+   "bands": {
+    "length": [
+     48,
+     56
+    ],
+    "detour": [
+     36,
+     54
+    ]
+   }
+  },
+  {
+   "id": 68,
+   "stage": 4,
+   "n": 6,
+   "seed": 68112,
+   "routeFaces": 6,
+   "windiness": 0.6,
+   "holeShare": 0.4,
+   "bands": {
+    "length": [
+     59,
+     69
+    ],
+    "detour": [
+     10,
+     30
+    ]
+   }
+  },
+  {
+   "id": 69,
+   "stage": 4,
+   "n": 6,
+   "seed": 69186,
+   "routeFaces": 6,
+   "windiness": 0.6,
+   "holeShare": 0.4,
+   "bands": {
+    "length": [
+     59,
+     69
+    ],
+    "detour": [
+     10,
+     30
+    ]
+   }
+  },
+  {
+   "id": 70,
+   "stage": 4,
+   "n": 6,
+   "seed": 70112,
+   "routeFaces": 6,
+   "windiness": 0.6,
+   "holeShare": 0.4,
+   "bands": {
+    "length": [
+     59,
+     69
+    ],
+    "detour": [
+     10,
+     30
+    ]
+   }
+  },
+  {
+   "id": 71,
+   "stage": 4,
+   "n": 6,
+   "seed": 71112,
+   "routeFaces": 6,
+   "windiness": 0.6,
+   "holeShare": 0.4,
+   "bands": {
+    "length": [
+     69,
+     105
+    ],
+    "detour": [
+     10,
+     30
+    ]
+   }
+  },
+  {
+   "id": 72,
+   "stage": 4,
+   "n": 6,
+   "seed": 72001,
+   "routeFaces": 6,
+   "windiness": 0.6,
+   "holeShare": 0.4,
+   "bands": {
+    "length": [
+     69,
+     105
+    ],
+    "detour": [
+     10,
+     30
+    ]
+   }
+  },
+  {
+   "id": 73,
+   "stage": 4,
+   "n": 6,
+   "seed": 73149,
+   "routeFaces": 6,
+   "windiness": 0.6,
+   "holeShare": 0.4,
+   "bands": {
+    "length": [
+     69,
+     105
+    ],
+    "detour": [
+     10,
+     30
+    ]
+   }
+  },
+  {
+   "id": 74,
+   "stage": 4,
+   "n": 6,
+   "seed": 74186,
+   "routeFaces": 6,
+   "windiness": 0.6,
+   "holeShare": 0.4,
+   "bands": {
+    "length": [
+     69,
+     105
+    ],
+    "detour": [
+     10,
+     30
+    ]
+   }
+  },
+  {
+   "id": 75,
+   "stage": 4,
+   "n": 6,
+   "seed": 75038,
+   "routeFaces": 6,
+   "windiness": 0.5,
+   "holeShare": 0.4,
+   "bands": {
+    "length": [
+     67,
+     107
+    ],
+    "detour": [
+     9,
+     30
+    ]
+   }
+  },
+  {
+   "id": 76,
+   "stage": 4,
+   "n": 6,
+   "seed": 76112,
+   "routeFaces": 6,
+   "windiness": 0.5,
+   "holeShare": 0.4,
+   "bands": {
+    "length": [
+     67,
+     107
+    ],
+    "detour": [
+     9,
+     30
+    ]
+   }
+  },
+  {
+   "id": 77,
+   "stage": 4,
+   "n": 6,
+   "seed": 77001,
+   "routeFaces": 6,
+   "windiness": 0.5,
+   "holeShare": 0.4,
+   "bands": {
+    "length": [
+     67,
+     107
+    ],
+    "detour": [
+     9,
+     30
+    ]
+   }
+  },
+  {
+   "id": 78,
+   "stage": 4,
+   "n": 6,
+   "seed": 78001,
+   "routeFaces": 6,
+   "windiness": 0.5,
+   "holeShare": 0.4,
+   "bands": {
+    "length": [
+     67,
+     107
+    ],
+    "detour": [
+     9,
+     30
+    ]
+   }
+  },
+  {
+   "id": 79,
+   "stage": 4,
+   "n": 6,
+   "seed": 79038,
+   "routeFaces": 6,
+   "windiness": 0.5,
+   "holeShare": 0.4,
+   "bands": {
+    "length": [
+     67,
+     107
+    ],
+    "detour": [
+     9,
+     30
+    ]
+   }
+  },
+  {
+   "id": 80,
+   "stage": 4,
+   "n": 6,
+   "seed": 80075,
+   "routeFaces": 6,
+   "windiness": 0.5,
+   "holeShare": 0.4,
+   "bands": {
+    "length": [
+     67,
+     107
+    ],
+    "detour": [
+     9,
+     30
+    ]
+   }
+  }
+ ]
+}
