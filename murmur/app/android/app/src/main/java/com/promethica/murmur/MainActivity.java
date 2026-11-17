@@ -1,4 +1,4 @@
-package com.example.murmur;
+package com.promethica.murmur;
 
 import com.getcapacitor.BridgeActivity;
 

@@ -55,7 +55,7 @@ export class FlightScreen implements Screen {
     app.pixi.stage.addChild(this.view.root);
 
     // The steering setting takes effect when a run starts (§8).
-    this.steer = new SteeringInput(save.settings.steering, app.pixi.canvas, (x, y) => this.view.toWorld(x, y, this.flight.camY), () => this.flight.leader);
+    this.steer = new SteeringInput(save.settings.steering, app.pixi.canvas, (x, y) => this.view.toWorld(x, y, this.flight.camY), () => this.flight.leader, () => this.flight.camY);
     this.steer.onFirstTouch = () => {
       sound.unlock();
       this.hand?.remove();
@@ -198,6 +198,11 @@ export class FlightScreen implements Screen {
     };
     yes.addEventListener('click', () => close(true));
     no.addEventListener('click', () => close(false));
+    // Android back button: the same as "No thanks".
+    overlay.addEventListener('back', (e) => {
+      e.preventDefault();
+      close(false);
+    });
     overlay.append(h('div', { class: 'sheet card result' }, h('h2', { class: 'title' }, 'Keep flying?'), ring, h('div', { class: 'subtitle' }, `Your unbanked +${Math.floor(this.flight.unbanked)} is kept. You have ${save.feathers} feathers.`), yes, no));
     this.app.ui.append(overlay);
   }
@@ -240,11 +245,11 @@ export class FlightScreen implements Screen {
     const lost = Math.floor(f.unbanked);
     const overlay = h(
       'div',
-      { class: 'overlay' },
+      { class: 'overlay result-overlay' },
       h(
         'div',
         { class: 'sheet card result' },
-        h('h2', { class: 'title' }, f.overCause === 'hawk' ? 'Taken by a hawk' : 'The flock is gone'),
+        h('h2', { class: 'title' }, !f.over ? 'Run ended' : f.overCause === 'hawk' ? 'Taken by a hawk' : 'The flock is gone'),
         h('div', { class: 'big-number' }, String(f.score)),
         out.newBest && f.score > 0 ? h('div', { class: 'subtitle best' }, 'New best!') : h('div', { class: 'subtitle' }, `Best ${save.best}`),
         lost > 0 ? h('div', { class: 'subtitle', style: 'font-size:12px' }, `${lost} unbanked points were lost – circle a roost tree to bank them.`) : null,
@@ -255,7 +260,17 @@ export class FlightScreen implements Screen {
         home,
       ),
     );
+    // Android back button: leave for Home rather than uncover a finished run with no controls.
+    overlay.addEventListener('back', (e) => {
+      e.preventDefault();
+      this.app.goHome();
+    });
     this.app.ui.append(overlay);
+  }
+
+  /** Android back button with nothing open: pause, as the pause button does. */
+  back(): void {
+    this.pause();
   }
 
   /** A run is not saved (§11), but leaving the app pauses it. */
@@ -272,7 +287,11 @@ export class FlightScreen implements Screen {
         this.view.reducedMotion = this.app.save.settings.reduceMotion;
       },
       onQuit: () => {
-        this.app.goHome();
+        // Ending a run early still counts it: the banked score, birds gathered and missions are kept (§11).
+        this.paused = false;
+        this.ended = true;
+        sound.over();
+        this.showResult();
       },
     });
   }

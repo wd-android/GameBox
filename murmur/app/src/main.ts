@@ -37,8 +37,12 @@ async function boot(): Promise<void> {
     void CapApp.addListener('pause', () => app.background());
     void CapApp.addListener('resume', () => app.foreground());
     void CapApp.addListener('backButton', () => {
-      const overlay = app.ui.querySelector('.overlay');
-      if (overlay) overlay.remove();
+      const overlays = app.ui.querySelectorAll('.overlay');
+      const overlay = overlays[overlays.length - 1];
+      // A sheet may handle 'back' itself; otherwise it just closes. With no sheet, the screen decides.
+      if (overlay) {
+        if (overlay.dispatchEvent(new CustomEvent('back', { cancelable: true }))) overlay.remove();
+      } else if (app.current?.back) app.current.back();
       else app.goHome();
     });
     void StatusBar.setStyle({ style: Style.Dark }).catch(() => {});

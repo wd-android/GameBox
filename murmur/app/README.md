@@ -49,8 +49,10 @@ npm run android      # build, copy into android/, open Android Studio
 npm run ios          # build, copy into ios/, open Xcode (macOS; run `pod install` in ios/App first)
 ```
 
-Before release, set the real app identifier in `src/config/app.ts`. It is
-currently the placeholder `com.example.murmur`.
+The app identifier is `com.promethica.murmur`, set in `src/config/app.ts` and in
+the native projects (`android/app/build.gradle`, `strings.xml`, the `MainActivity`
+package and the Xcode bundle identifier). The version, `0.1.0`, is in
+`package.json`, `src/config/app.ts`, `android/app/build.gradle` and the Xcode project.
 
 ## Layout (as §4)
 
@@ -87,8 +89,9 @@ tests/
 
 ## Decisions and deviations (please review)
 
-1. **Concept document.** `concepts/04-murmur.md` is not in the repository,
-   so this follows the spec and the report only.
+1. **Concept document.** The app was built from the spec and the report.
+   Where the [concept](../../concepts/04-murmur.md) and the spec differ, the
+   spec wins.
 2. **Leader speed is measured on screen.** The leader moves at up to its
    species speed relative to the screen, and the scroll carries it up the
    sky. Measured in the sky instead, geese (6.5 tiles/s) could barely move
@@ -106,5 +109,7 @@ tests/
 6. **Open question 3.** Unbanked score is lost entirely when a run ends, as
    specified.
 7. **`?debug`** exposes the app object for automated browser checks.
-8. **TypeScript** is pinned to 5.9, because the Capacitor CLI needs its
+8. **Ending a run from the pause menu** counts as a finished run: the banked
+   score, birds gathered and mission progress are kept, as after any other run.
+9. **TypeScript** is pinned to 5.9, because the Capacitor CLI needs its
    compiler API.

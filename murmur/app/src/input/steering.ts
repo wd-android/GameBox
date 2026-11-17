@@ -29,6 +29,8 @@ export class SteeringInput {
     private el: HTMLElement,
     private toWorld: (px: number, py: number) => Point,
     private leader: () => Point,
+    /** World y of the bottom of the visible sky. */
+    private bottom: () => number = () => -Infinity,
   ) {
     this.mode = mode;
     el.addEventListener('pointerdown', this.down);
@@ -51,6 +53,10 @@ export class SteeringInput {
     const lead = this.leader();
     // Drop points the leader has reached.
     while (this.path.length && Math.hypot(this.path[0].x - lead.x, this.path[0].y - lead.y) < 0.35) this.path.shift();
+    // The line is fixed to the sky: once part of it has scrolled off the bottom it cannot be reached,
+    // and chasing it pinned the leader to the bottom edge for the rest of the run.
+    const floor = this.bottom() + 0.6;
+    while (this.path.length && this.path[0].y < floor) this.path.shift();
     return this.path[0] ?? null;
   }
 

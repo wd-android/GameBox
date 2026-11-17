@@ -10,6 +10,8 @@ export interface Screen {
   destroy(): void;
   /** The app is going to the background. */
   background?(): void;
+  /** Android back button with no sheet open. */
+  back?(): void;
 }
 
 export class App {

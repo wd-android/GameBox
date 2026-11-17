@@ -185,7 +185,8 @@ class Sound {
     let step = 0;
     const bus = () => this.musicBus!;
     const play = () => {
-      if (!this.ctx || !this.music) return;
+      // While suspended the clock stands still, so notes would pile up and all sound at once on return.
+      if (!this.ctx || !this.music || this.ctx.state !== 'running') return;
       const chord = chords[Math.floor(step / 8) % 4];
       if (step % 8 === 0) chord.forEach((f) => this.tone(f, 3.6, 'triangle', 0.025, 0, undefined, bus()));
       if (this.layers >= 2 && step % 2 === 0) this.tone(chord[(step / 2) % 3] * 2, 0.5, 'sine', 0.03, 0, undefined, bus());

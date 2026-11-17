@@ -1,3 +1,4 @@
+import { App as CapApp } from '@capacitor/app';
 import { APP } from '../config/app';
 import { SPECIES, SPECIES_ORDER, TUNING } from '../config/tuning';
 import { sound } from '../audio/sound';
@@ -60,6 +61,12 @@ export class HomeScreen implements Screen {
     });
     const done = h('button', { class: 'btn primary wide' }, 'Done');
     done.addEventListener('click', () => {
+      overlay.remove();
+      this.app.goHome();
+    });
+    // Android back button: the same as Done, so the tiles show the new choice.
+    overlay.addEventListener('back', (e) => {
+      e.preventDefault();
       overlay.remove();
       this.app.goHome();
     });
@@ -180,8 +187,13 @@ export class HomeScreen implements Screen {
       h('div', { class: 'row' }, h('span', {}, 'Vibration'), toggle(s.vibration, (v) => ((s.vibration = v), save()))),
       h('div', { class: 'row' }, h('span', {}, 'Reduce motion'), toggle(s.reduceMotion, (v) => ((s.reduceMotion = v), save()))),
       reset,
-      h('div', { class: 'subtitle', style: 'text-align:center;font-size:11px' }, `${APP.DISPLAY_NAME} · v0.1 · nothing leaves this device`),
+      h('div', { class: 'subtitle', style: 'text-align:center;font-size:11px' }, `${APP.DISPLAY_NAME} · v${APP.VERSION} · nothing leaves this device`),
     );
+  }
+
+  /** Android back button on Home: leave the app. */
+  back(): void {
+    void CapApp.minimizeApp().catch(() => {});
   }
 
   destroy(): void {

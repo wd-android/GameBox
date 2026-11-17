@@ -33,7 +33,7 @@ This document specifies the first playable release (v1). Every number marked as 
 | Item | Value |
 |---|---|
 | Package name | `murmur` |
-| App identifier | `<your reverse domain>.murmur` (to be supplied) |
+| App identifier | `com.promethica.murmur` |
 | Display name | `Murmur`, from `config/app.ts` |
 | Minimum Android / iOS | 8.0 (API 26) / 15 |
 
@@ -290,5 +290,5 @@ Saved as one JSON document after every run: settings; feathers; rank; best score
 ## 15. Open questions
 
 1. Are assumptions A1 to A5 acceptable, in particular hawks striking a marked spot (A3)?
-2. What is the app identifier (reverse domain)?
+2. ~~What is the app identifier (reverse domain)?~~ Answered: `com.promethica.murmur`.
 3. Should unbanked score be lost entirely when a run ends, as specified, or partly kept?

@@ -17,6 +17,12 @@ export function openPause(app: App, o: { onResume: () => void; onQuit: () => voi
     sound.tap();
     o.onResume();
   });
+  // Android back button: the same as Resume (removing the sheet alone left the run paused for good).
+  overlay.addEventListener('back', (e) => {
+    e.preventDefault();
+    overlay.remove();
+    o.onResume();
+  });
   const quit = h('button', { class: 'btn ghost' }, 'End run');
   quit.addEventListener('click', () => {
     overlay.remove();
